@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>青熊兽的侵略</string>
+			<key>pic</key>
+			<string>l1_1</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>狩猎	1800z
+150z
+溪流（昼）	*小狗龙
+*丸鸟</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>突进、猛进、大野猪王</string>
+			<key>pic</key>
+			<string>l1_2</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>野猪王1头狩猎	狩猎	1800z
+150z
+溪流（昼）	*野猪
+*小狗龙</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>示范如何狩猎狗龙！</string>
+			<key>pic</key>
+			<string>l1_3</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>	青熊兽1头狩猎	狩猎	1800z
+150z
+溪流（昼）	*小狗龙
+*雌狗龙</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>帮助收集蜂蜜</string>
+			<key>pic</key>
+			<string>l1_4</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>皇家蜂蜜7个交纳	采集	900z
+100z
+溪流（昼）	*青熊兽
+*小狗龙</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>沙漠的狗龙</string>
+			<key>pic</key>
+			<string>l1_5</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>	小狗龙10头讨伐	讨伐	1200z
+100z
+砂原（昼）	*狗龙王
+*小狗龙	</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>古代的浪漫？龙骨结晶！</string>
+			<key>pic</key>
+			<string>l1_6</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>小狗龙10头讨伐	采集	900z
+100z
+砂原（夜）	*狗龙王
+*小狗龙</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>水没林暴力团</string>
+			<key>pic</key>
+			<string>l1_7</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>	毒狗龙1头狩猎	狩猎	1800z
+150z
+水没林（昼）	*小毒狗龙
+*水生兽	</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>毒之毒狗龙</string>
+			<key>pic</key>
+			<string>l1_8</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>小毒狗龙10头讨伐	讨伐	1200z
+100z
+水没林（夜）	*毒狗龙
+*小毒狗龙</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>特产蘑菇盛宴</string>
+			<key>pic</key>
+			<string>l1_9</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>特产蘑菇20个交纳	采集	900z
+100z
+水没林（昼）	*野猪王
+*甲虫</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>疾走嘉年华</string>
+			<key>pic</key>
+			<string>l2_0</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>野猪10头讨伐	讨伐	1200z
+100z
+溪流（夜）	*野猪王
+*野猪</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>击退溪流的雌狗龙</string>
+			<key>pic</key>
+			<string>l2_1</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>雌狗龙3头讨伐	讨伐	1200z
+100z
+溪流（昼）	*狗龙王
+*雌狗龙</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>土砂龙</string>
+			<key>pic</key>
+			<string>l2_2</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>	土砂龙1头狩猎	狩猎	2400z
+200z
+砂原（昼）	*小狗龙
+*草食龙</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>沙上的礼节</string>
+			<key>pic</key>
+			<string>l2_3</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>潜口龙1头狩猎	狩猎	3000z
+250z
+砂原（昼）	*草食龙
+*砂鱼</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>击退欺诈师</string>
+			<key>pic</key>
+			<string>l2_4</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>彩鸟1头狩猎	狩猎	2400z
+200z
+砂原（昼）	*小狗龙
+*草食龙</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>注意落石</string>
+			<key>pic</key>
+			<string>l2_5</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>赤甲兽1头狩猎	狩猎	2400z
+200z
+砂原（夜）	*小狗龙
+*甲虫</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>游走在沙原的美味</string>
+			<key>pic</key>
+			<string>l2_6</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>怪物的肝5个交纳	采集	1200z
+100z
+砂原（昼）	*赤甲兽
+*砂鱼</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>强袭的孤岛水流</string>
+			<key>pic</key>
+			<string>l2_7</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>水兽1头狩猎	狩猎	2400z
+200z
+孤島（昼）	*水生兽
+*野猪</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>孤岛的海贼团</string>
+			<key>pic</key>
+			<string>l2_8</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>	水生兽10头讨伐	讨伐	1200z
+100z
+孤島（昼）	*青熊兽
+*水生兽</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>黑暗中蠕动的猛毒</string>
+			<key>pic</key>
+			<string>l2_9</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>	毒怪龙1头狩猎	狩猎	3000z
+250z
+冻土（昼）	*小眠狗龙
+*小狗龙	</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>雪中的白兔兽</string>
+			<key>pic</key>
+			<string>l2_10</string>
+			<key>brief</key>
+			<string>白兔兽1头狩猎	狩猎	2400z
+200z
+冻土（昼）	*小眠狗龙
+*波波</string>
+			<key>key</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>极寒之地的采掘委托</string>
+			<key>pic</key>
+			<string>l2_11</string>
+			<key>key</key>
+			<false/>
+			<key>brief</key>
+			<string>血石8个交纳	采集	900z
+100z
+冻土（夜）	*野猪王
+*野猪</string>
+		</dict>
+	</array>
+	<array>
+		<string></string>
+	</array>
+	<array/>
+	<array/>
+</array>
+</plist>
