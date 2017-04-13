@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class HunterProfile;
 @interface ProfileAddViewController : UIViewController
 
 @property(nonatomic,assign) int16_t ID;
+@property(nonatomic,strong) HunterProfile * modifyHunterProfile;
 
 @end

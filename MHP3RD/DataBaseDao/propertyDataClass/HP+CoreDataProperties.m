@@ -2,7 +2,7 @@
 //  HP+CoreDataProperties.m
 //  
 //
-//  Created by Ivan_deng on 2017/3/27.
+//  Created by Ivan_deng on 2017/4/12.
 //
 //
 
@@ -15,13 +15,13 @@
 }
 
 @dynamic hunterRank;
-@dynamic name;
-@dynamic title;
-@dynamic selfIntroduce;
-@dynamic questVillage;
-@dynamic questGuildLow;
-@dynamic questGuildHigh;
 @dynamic id;
+@dynamic name;
 @dynamic pic;
+@dynamic questGuildHigh;
+@dynamic questGuildLow;
+@dynamic questVillage;
+@dynamic selfIntroduce;
+@dynamic title;
 
 @end

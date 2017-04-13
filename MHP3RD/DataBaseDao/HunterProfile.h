@@ -18,7 +18,7 @@
 @property(nonatomic,assign) float questGuildHigh;
 @property(nonatomic,assign) float HunterRank;
 @property(nonatomic,assign) int16_t ID;
-@property(nonatomic,strong) NSData * pic;
+@property(nonatomic,strong) NSString * pic;
 
 - (instancetype)initWithName:(NSString *)name
                        andID:(int16_t)ID
@@ -28,6 +28,6 @@
                       andQGL:(float)questGuildLow
                       andQGH:(float)questGuildHigh
                        andHR:(float)HunterRank
-                      andPic:(NSData *)pic;
+                      andPic:(NSString *)pic;
 
 @end

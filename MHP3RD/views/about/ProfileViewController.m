@@ -8,12 +8,15 @@
 
 #import "ProfileViewController.h"
 #import "HunterProfile.h"
+#import "ProfileAddViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #define KEYBOARDHEIGHT 300
 #define LABELHEIGHT 40
 #define LABELWIDTH 60
 #define GAP 10
 #define TEXTFIELDWIDTH 150
+#define HEADICON 120
 #define NAVBAR 64
 #define TABBAR 48
 #define SCREENWIDTH self.view.frame.size.width
@@ -23,6 +26,7 @@
 
 {
     UIScrollView *backGroundScroll;
+    NSMutableArray *labels;
 }
 
 @end
@@ -31,6 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    labels = [NSMutableArray array];
     self.view.backgroundColor = [UIColor blackColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     backGroundScroll = [[UIScrollView alloc]initWithFrame:self.view.frame];
@@ -41,6 +46,8 @@
     [self.view addSubview:backGroundScroll];
     [backGroundScroll addSubview:background];
     self.navigationItem.title = self.hunterInfo.name;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editHunterProfile)];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadAction:) name:@"profileChange" object:nil];
     [self ConfigureUI];
     // Do any additional setup after loading the view.
 }
@@ -68,8 +75,36 @@
         label.backgroundColor = [UIColor clearColor];
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor whiteColor];
+        label.tag = 300 + i;
+        [labels addObject:label];
         [backGroundScroll addSubview:label];
     }
+    
+    
+    UIImageView *header = [[UIImageView alloc]initWithFrame:CGRectMake((SCREENWIDTH - HEADICON)/2, SCREENWIDTH + HEADICON, HEADICON, HEADICON)];
+    header.backgroundColor = [UIColor whiteColor];
+    NSLog(@"pic url: %@",_hunterInfo.pic);
+    [header setImage:[UIImage imageWithContentsOfFile:_hunterInfo.pic]];
+    [backGroundScroll addSubview:header];
+    
+}
+
+#pragma mark - edit profile
+
+- (void)editHunterProfile {
+    ProfileAddViewController *edit = [[ProfileAddViewController alloc]init];
+    edit.modifyHunterProfile = self.hunterInfo;
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:edit];
+    [self presentViewController:nav animated:true completion:nil];
+}
+
+- (void)reloadAction:(NSNotification *)sender {
+    self.hunterInfo = sender.object;
+    for(UILabel *label in labels) {
+        [label removeFromSuperview];
+    }
+    [self ConfigureUI];
+    NSLog(@"ALL labels were changed");
 }
 
 /*

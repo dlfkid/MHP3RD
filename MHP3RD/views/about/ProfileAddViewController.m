@@ -9,6 +9,7 @@
 #import "ProfileAddViewController.h"
 #import "Communicator.h"
 #import "HunterProfile.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 #define KEYBOARDHEIGHT 300
 #define LABELHEIGHT 40
 #define LABELWIDTH 60
@@ -24,6 +25,7 @@
     UIScrollView *backgroundScroll;
     int keyBoardHeight;
     UIImagePickerController * imagePicker;
+    UIImage *headerIcon;
 }
 
 @end
@@ -53,6 +55,7 @@
     [self configureNavBarButton];
     [self configureTapGesture];
     [self configureImageAddButton];
+    [self placeData];
     // Do any additional setup after loading the view.
 }
 
@@ -83,7 +86,13 @@
 }
 
 - (void)configureNavBarButton {
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(buttonConfirmAction:)];
+    if(self.modifyHunterProfile == nil){
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(buttonConfirmAction:)];
+    }else {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(buttonSaveAction:)];
+    }
+    
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemUndo target:self action:@selector(buttonCancelAction:)];
 }
 
@@ -101,6 +110,21 @@
     UIButton *cancel = [backgroundScroll viewWithTag:101];
     [cancel addTarget:self action:@selector(buttonCancelAction:) forControlEvents:UIControlEventTouchUpInside];
     cancel.frame = CGRectMake(confirm.frame.origin.x + 2 * GAP + LABELWIDTH, confirm.frame.origin.y, LABELWIDTH, LABELHEIGHT);
+}
+
+- (void)placeData {
+        if(self.modifyHunterProfile != nil) {
+        NSString *QuestVillage = [NSString stringWithFormat:@"%f",_modifyHunterProfile.questVillage];
+        NSString *QuestGuildLow = [NSString stringWithFormat:@"%f",_modifyHunterProfile.questGuildLow];
+        NSString *QuestGuildHigh = [NSString stringWithFormat:@"%f",_modifyHunterProfile.questGuildHigh];
+        NSString *HunterRank = [NSString stringWithFormat:@"%f",_modifyHunterProfile.HunterRank];
+        
+        NSArray *data = @[_modifyHunterProfile.name,_modifyHunterProfile.title,QuestVillage,QuestGuildLow,QuestGuildHigh,HunterRank,_modifyHunterProfile.selfIntroduce];
+        for(int i = 0; i < 7; i++) {
+            UITextField *textField = [backgroundScroll viewWithTag:200 + i];
+            textField.text = data[i];
+        }
+    }
 }
 
 - (void)configureImageAddButton {
@@ -138,6 +162,48 @@
     [self presentViewController:addAction animated:true completion:nil];
 }
 
+- (void)buttonSaveAction:(UIButton *)sender {
+    NSMutableArray *array = [NSMutableArray array];
+    for(int i = 0; i < 7; i++) {
+        UITextField *textfield = [backgroundScroll viewWithTag:200 + i];
+        if([self isBlankString:textfield.text]){
+            [self presentViewController:[self configureAlertView] animated:true completion:nil];
+            return;
+        }
+        [array addObject:textfield.text];
+    }
+    
+    NSString *picURL;
+    
+    if(headerIcon != nil){
+        NSArray *sandBoxPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true);
+        NSString *picPath = [[sandBoxPath objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"header%d.png",self.ID]];
+        [UIImagePNGRepresentation(headerIcon)writeToFile:picPath   atomically:YES];
+        picURL = picPath;
+    }
+    if (self.modifyHunterProfile.pic != nil) {
+        picURL = self.modifyHunterProfile.pic;
+        UIImage *image = [UIImage imageWithContentsOfFile:picURL];
+        [UIImagePNGRepresentation(image)writeToFile:picURL   atomically:YES];
+    }
+    
+    NSString *name = array[0];
+    int16_t ID = self.modifyHunterProfile.ID;
+    NSString *title = array[1];
+    float QV = [[NSString stringWithFormat:@"%@",array[2]] floatValue];
+    float GL = [[NSString stringWithFormat:@"%@",array[3]] floatValue];
+    float GH = [[NSString stringWithFormat:@"%@",array[4]] floatValue];
+    float HR = [[NSString stringWithFormat:@"%@",array[5]] floatValue];
+    NSString *brief = array[6];
+    HunterProfile *HP = [[HunterProfile   alloc]initWithName:name andID:ID andTitile:title andSelfy:brief andQV:QV andQGL:GL andQGH:GH andHR:HR andPic:picURL];
+    [Communicator changeHunterProfile:HP];
+    NSNotification *note = [[NSNotification alloc]initWithName:@"ProfileAdded" object:nil userInfo:nil];
+    NSNotification *save = [[NSNotification alloc]initWithName:@"profileChange" object:HP userInfo:nil];
+    [[NSNotificationCenter defaultCenter]postNotification:save];
+    [[NSNotificationCenter defaultCenter]postNotification:note];
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
 - (void)buttonConfirmAction:(UIButton *)sender {
     
     NSMutableArray *array = [NSMutableArray array];
@@ -149,6 +215,16 @@
         }
         [array addObject:textfield.text];
     }
+    
+    NSString *picURL;
+    
+    if(headerIcon != nil){
+        NSArray *sandBoxPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true);
+        NSString *picPath = [[sandBoxPath objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"header%d.png",self.ID]];
+        [UIImagePNGRepresentation(headerIcon)writeToFile:picPath   atomically:YES];
+        picURL = picPath;
+    }
+    
     NSString *name = array[0];
     int16_t ID = self.ID;
     NSString *title = array[1];
@@ -157,7 +233,7 @@
     float GH = [[NSString stringWithFormat:@"%@",array[4]] floatValue];
     float HR = [[NSString stringWithFormat:@"%@",array[5]] floatValue];
     NSString *brief = array[6];
-    HunterProfile *HP = [[HunterProfile   alloc]initWithName:name andID:ID andTitile:title andSelfy:brief andQV:QV andQGL:GL andQGH:GH andHR:HR andPic:nil];
+    HunterProfile *HP = [[HunterProfile   alloc]initWithName:name andID:ID andTitile:title andSelfy:brief andQV:QV andQGL:GL andQGH:GH andHR:HR andPic:picURL];
     [Communicator AddHunterProfile:HP];
     NSNotification *note = [[NSNotification alloc]initWithName:@"ProfileAdded" object:nil userInfo:nil];
     [[NSNotificationCenter defaultCenter]postNotification:note];
@@ -242,6 +318,7 @@
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     UIImageView *header = [[UIImageView alloc]initWithFrame:CGRectMake((SCREENWIDTH - 100)/2, GAP, 100, 100)];
     header.image = image;
+    headerIcon = image;
     [backgroundScroll addSubview:header];
 }
 

@@ -10,7 +10,7 @@
 
 @implementation HunterProfile
 
-- (instancetype)initWithName:(NSString *)name andID:(int16_t)ID andTitile:(NSString *)title andSelfy:(NSString *)selfInfroduce andQV:(float)questvillage andQGL:(float)questGuildLow andQGH:(float)questGuildHigh andHR:(float)HunterRank andPic:(NSData *)pic {
+- (instancetype)initWithName:(NSString *)name andID:(int16_t)ID andTitile:(NSString *)title andSelfy:(NSString *)selfInfroduce andQV:(float)questvillage andQGL:(float)questGuildLow andQGH:(float)questGuildHigh andHR:(float)HunterRank andPic:(NSString *)pic {
     self = [super init];
     self.name = name;
     self.ID = ID;
