@@ -16,6 +16,10 @@
 
 @interface AppDelegate ()
 
+{
+    UITabBarController *mainTabBar;
+}
+
 @end
 
 @implementation AppDelegate
@@ -27,8 +31,8 @@
     [self.window makeKeyAndVisible];
     self.window.backgroundColor = [UIColor clearColor];
     
-    UITabBarController *tabBar = [self setTabBar];
-    [self.window setRootViewController:tabBar];
+    mainTabBar = [self setTabBar];
+    [self.window setRootViewController:mainTabBar];
     
     return YES;
 }
@@ -96,7 +100,49 @@
         tabBar.viewControllers[i].tabBarItem.title = names[i];
         tabBar.viewControllers[i].tabBarItem.image = images[i];
     }
+    
+    UIApplicationShortcutIcon *mapIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation];
+    UIApplicationShortcutIcon *questIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeTaskCompleted];
+    UIApplicationShortcutIcon *monsterIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLove];
+    UIApplicationShortcutIcon *armouryIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeContact];
+    
+    NSDictionary *mapDic = [NSDictionary dictionaryWithObject:@"map" forKey:@"type"];
+    NSDictionary *questDic = [NSDictionary dictionaryWithObject:@"quest" forKey:@"type"];
+    NSDictionary *monsterDic = [NSDictionary dictionaryWithObject:@"monster" forKey:@"type"];
+    NSDictionary *armouryDic = [NSDictionary dictionaryWithObject:@"armoury" forKey:@"type"];
+    
+    UIApplicationShortcutItem *mapItem = [[UIApplicationShortcutItem alloc]initWithType:@"map" localizedTitle:@"地图" localizedSubtitle:@"查看地图" icon:mapIcon userInfo:mapDic];
+    UIApplicationShortcutItem *questItem = [[UIApplicationShortcutItem alloc]initWithType:@"quest" localizedTitle:@"任务" localizedSubtitle:@"查看任务列表" icon:questIcon userInfo:questDic];
+    UIApplicationShortcutItem *monsterItem = [[UIApplicationShortcutItem alloc]initWithType:@"monster" localizedTitle:@"怪物" localizedSubtitle:@"怪物信息" icon:monsterIcon userInfo:monsterDic];
+    UIApplicationShortcutItem *armouryItem = [[UIApplicationShortcutItem alloc]initWithType:@"armoury" localizedTitle:@"装备" localizedSubtitle:@"装备信息" icon:armouryIcon userInfo:armouryDic];
+    
+    NSArray *shortCuts = @[mapItem,questItem,monsterItem,armouryItem];
+    
+    [UIApplication sharedApplication].shortcutItems = shortCuts;
+    
+    
     return tabBar;
 }
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    NSString *type = (NSString *)[shortcutItem.userInfo objectForKey:@"type"];
+    if([type isEqualToString:@"map"]) {
+        NSLog(@"开启地图");
+        [mainTabBar setSelectedIndex:0];
+    }
+    if([type isEqualToString:@"quest"]){
+        NSLog(@"开启任务");
+        [mainTabBar setSelectedIndex:1];
+    }
+    if([type isEqualToString:@"monster"]){
+        NSLog(@"开启怪物");
+        [mainTabBar setSelectedIndex:2];
+    }
+    if([type isEqualToString:@"armoury"]){
+        NSLog(@"开启装备");
+        [mainTabBar setSelectedIndex:3];
+    }
+}
+
 
 @end

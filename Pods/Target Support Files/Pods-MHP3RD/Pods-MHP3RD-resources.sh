@@ -76,6 +76,12 @@ EOM
       ;;
   esac
 }
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "ShareSDK3/ShareSDK/Support/Required/ShareSDK.bundle"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "ShareSDK3/ShareSDK/Support/Required/ShareSDK.bundle"
+fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

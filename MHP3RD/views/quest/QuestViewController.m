@@ -124,7 +124,6 @@
     detail.starNum = starNum;
     detail.missionType = missionType;
     [self.navigationController pushViewController:detail animated:true];
-    [self.tabBarController.tabBar setHidden:true];
 }
 
 /*

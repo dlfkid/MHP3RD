@@ -1,14 +1,23 @@
 PODS:
+  - MOBFoundation (2.2.13)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - ShareSDK3 (3.6.0):
+    - MOBFoundation
+    - ShareSDK3/ShareSDK (= 3.6.0)
+  - ShareSDK3/ShareSDK (3.6.0):
+    - MOBFoundation
 
 DEPENDENCIES:
   - SDWebImage (~> 4.0.0)
+  - ShareSDK3 (~> 3.6.0)
 
 SPEC CHECKSUMS:
+  MOBFoundation: 1db1fdc4f1cf9130277cd01f66d6ee7d42a32510
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  ShareSDK3: f3cf584b1e753cce25535ac8161d0e3557e9b406
 
-PODFILE CHECKSUM: 25a3926be8c16c16ee3bfab24838a9c4cd72a9d5
+PODFILE CHECKSUM: 49ebe6ce6f1815eda0e3ddb8be93e51a261e1b11
 
 COCOAPODS: 1.2.0

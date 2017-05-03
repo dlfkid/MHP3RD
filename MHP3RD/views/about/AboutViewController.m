@@ -15,11 +15,12 @@
 #import <MapKit/MapKit.h>
 #define TABBARHEIGHT 48
 #define SLIDEDISTANCE 130
+#define NAVBARHEIGHT 64
 #define LABELHEIGHT 40
 #define LABELWIDTH 60
 #define GAP 10
-#define VIEWHEIGHT _basicScroll.frame.size.height
-#define VIEWWIDTH _basicScroll.frame.size.width
+#define VIEWHEIGHT self.view.frame.size.height
+#define VIEWWIDTH self.view.frame.size.width
 
 @interface AboutViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate,MKMapViewDelegate>
 
@@ -41,12 +42,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationController.navigationBar setTranslucent:false];
-    [self.tabBarController.tabBar setTranslucent:false];
     //构建侧边栏和主栏
-    _mainView = [[UIView alloc]init];
+    [self configureBasicScroll];
     _sliderView = [[UIView alloc]init];
-    
+    _mainView = _basicScroll;
     //将侧边栏和主栏添加到主界面，并把边框设置成一样。
     [self.view addSubview:_mainView];
     _mainView.tag = 101;
@@ -54,7 +53,8 @@
     
     [self.view addSubview:_sliderView];
     _sliderView.tag = 102;
-    [_sliderView setFrame:self.view.bounds];
+    _sliderView.backgroundColor = [UIColor whiteColor];
+    [_sliderView setFrame:CGRectMake(0, 0, 130, self.view.frame.size.height)];
     //将主栏设置为默认显示
     [self.view bringSubviewToFront:_mainView];
     
@@ -64,7 +64,6 @@
     [self setBackgroundImage];
     [self configureButtons];
     //set up mainview
-    [self configureBasicScroll];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -144,7 +143,7 @@
 
 #pragma mark - sliders
 - (void)setBackgroundImage {
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 130, self.view.frame.size.height - 48 - 64)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, NAVBARHEIGHT   , _sliderView.frame.size.width, _sliderView.frame.size.height - NAVBARHEIGHT - TABBARHEIGHT)];
     [imageView setImage:[UIImage imageNamed:@"cat_bg"]];
     [_sliderView addSubview:imageView];
 }
@@ -155,7 +154,7 @@
     for(int i = 0; i < titles.count; i++) {
         CGFloat labelWidth = 130;
         CGFloat labelHeight = 44;
-        CGFloat topGap = labelHeight * 1;
+        CGFloat topGap = labelHeight * 1 + NAVBARHEIGHT;
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0,topGap + i * labelHeight, labelWidth, labelHeight)];
         label.text = titles[i];
         label.textAlignment = NSTextAlignmentCenter;
@@ -171,13 +170,12 @@
 - (void)buttonTouchDown:(UIButton *)sender {
     viewType type = (int)sender.tag - 100;
     [self changeMainViewContentWithType:type];
-    NSLog(@"Button tapped");
 }
 
 #pragma mark - MainViews
 
 - (void)configureBasicScroll {
-    _basicScroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - TABBARHEIGHT)];
+    _basicScroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     _basicScroll.contentSize = CGSizeMake(_basicScroll.frame.size.width, _basicScroll.frame.size.height * 5);
     _basicScroll.pagingEnabled = true;
     _basicScroll.delegate = self;
@@ -201,10 +199,10 @@
 
 #pragma mark - setting up views
 - (void)configureHunterProfile {
-    UIView *hunterProfile = [[UIView alloc]initWithFrame:_basicScroll.frame];
+    UIView *hunterProfile = [[UIView alloc]initWithFrame:CGRectMake(0, 0, VIEWWIDTH, VIEWHEIGHT)];
     hunterProfile.backgroundColor = [UIColor redColor];
     hunterProfile.tag = 0;
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:hunterProfile.frame];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0,0, hunterProfile.frame.size.width, hunterProfile.frame.size.height)];
     imageView.image = [UIImage imageNamed:@"card"];
     [hunterProfile addSubview:imageView];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(addProfileAction:)];
@@ -222,7 +220,7 @@
 }
 
 - (void)configureFrieds {
-    UIView *friends = [[UIView alloc]initWithFrame:CGRectMake(0, VIEWHEIGHT, VIEWWIDTH, VIEWHEIGHT)];
+    UIView *friends = [[UIView alloc]initWithFrame:CGRectMake(0, VIEWHEIGHT, VIEWWIDTH,VIEWHEIGHT)];
     friends.backgroundColor = [UIColor orangeColor];
     friends.tag = 1;
     friendsTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, VIEWWIDTH, VIEWHEIGHT) style:UITableViewStylePlain];
@@ -283,11 +281,10 @@
     ProfileViewController *profile = [[ProfileViewController alloc]init];
     profile.hunterInfo = hunter;
     [self.navigationController pushViewController:profile animated:true];
-    [self.tabBarController.tabBar setHidden:true];
 }
 
 - (void)configureGPSLocation {
-    UIView *GPSLocation = [[UIView alloc]initWithFrame:CGRectMake(0, VIEWHEIGHT * 2, VIEWWIDTH, VIEWHEIGHT)];
+    UIView *GPSLocation = [[UIView alloc]initWithFrame:CGRectMake(0, VIEWHEIGHT * 2,VIEWWIDTH, VIEWHEIGHT)];
     GPSLocation.backgroundColor = [UIColor whiteColor];
     GPSLocation.tag = 2;
     self.map = [self configureMapKitView];
@@ -308,7 +305,7 @@
 }
 
 - (void)configureOfficialSite {
-    UIView *officialSite = [[UIView alloc]initWithFrame:CGRectMake(0, VIEWHEIGHT * 3, VIEWWIDTH, VIEWHEIGHT)];
+    UIView *officialSite = [[UIView alloc]initWithFrame:CGRectMake(0, VIEWHEIGHT * 3,VIEWWIDTH, VIEWHEIGHT)];
     officialSite.backgroundColor = [UIColor whiteColor];
     officialSite.tag = 3;
     UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake((VIEWWIDTH - LABELWIDTH * 3)/2, (VIEWHEIGHT - LABELHEIGHT)/2, LABELWIDTH * 3, LABELHEIGHT)];
