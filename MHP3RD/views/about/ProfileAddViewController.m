@@ -9,7 +9,6 @@
 #import "ProfileAddViewController.h"
 #import "Communicator.h"
 #import "HunterProfile.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #define KEYBOARDHEIGHT 300
 #define LABELHEIGHT 40
 #define LABELWIDTH 60
@@ -181,7 +180,7 @@
         [UIImagePNGRepresentation(headerIcon)writeToFile:picPath   atomically:YES];
         picURL = picPath;
     }
-    if (self.modifyHunterProfile.pic != nil) {
+    if (self.modifyHunterProfile.pic != nil && headerIcon == nil) {
         picURL = self.modifyHunterProfile.pic;
         UIImage *image = [UIImage imageWithContentsOfFile:picURL];
         [UIImagePNGRepresentation(image)writeToFile:picURL   atomically:YES];

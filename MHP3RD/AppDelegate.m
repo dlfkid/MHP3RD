@@ -6,6 +6,8 @@
 //  Copyright © 2017年 Ivan_deng. All rights reserved.
 //
 
+#define APP_KEY @"598a813a734be43251000ab2"
+
 #import "AppDelegate.h"
 
 #import "AboutViewController.h"
@@ -13,8 +15,13 @@
 #import "MonsterViewController.h"
 #import "ArmouryViewController.h"
 #import "MapScrollerViewController.h"
+#import <UMSocialCore/UMSocialCore.h>
 
 @interface AppDelegate ()
+
+{
+    UITabBarController *mainTabBar;
+}
 
 @end
 
@@ -26,13 +33,31 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     self.window.backgroundColor = [UIColor clearColor];
-    
-    UITabBarController *tabBar = [self setTabBar];
-    [self.window setRootViewController:tabBar];
+    mainTabBar = [self setTabBar];
+    [self.window setRootViewController:mainTabBar];
+    UMSocialManager *shareManager = [UMSocialManager defaultManager];
+    [shareManager openLog:true];
+    [shareManager setUmSocialAppkey:APP_KEY];
+    [self setConfigUshareSetting];
+    [self setConfigUsharePlatform];
     
     return YES;
 }
 
+- (void)setConfigUshareSetting {
+    //打开图片水印
+    [[UMSocialGlobal shareInstance] setIsUsingWaterMark:true];
+    [[UMSocialGlobal shareInstance] setIsUsingHttpsWhenShareContent:false];
+}
+
+- (void)setConfigUsharePlatform {
+    //设置微信的APPKEY和APPSecret
+    UMSocialManager *shareManager = [UMSocialManager defaultManager];
+    [shareManager setPlaform:UMSocialPlatformType_WechatSession appKey:@"wxdc1e388c3822c80b" appSecret:@"3baf1193c85774b3fd9d18447d76cab0" redirectURL:nil];
+    [shareManager removePlatformProviderWithPlatformType:UMSocialPlatformType_WechatFavorite];
+    //设置新浪微博的
+    [shareManager setPlaform:UMSocialPlatformType_Sina appKey:@"3921700954" appSecret:@"04b48b094faeb16683c32669824ebdad" redirectURL:@"https://sns.whalecloud.com/sina2/callback"];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -60,6 +85,34 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
+    if (!result) {
+        // 其他如支付等SDK的回调
+    }
+    return result;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
+{
+    //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
+    BOOL result = [[UMSocialManager defaultManager]  handleOpenURL:url options:options];
+    if (!result) {
+        // 其他如支付等SDK的回调
+    }
+    return result;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+    if (!result) {
+        // 其他如支付等SDK的回调
+    }
+    return result;
+}
 
 - (UITabBarController *)setTabBar{
     
@@ -96,7 +149,49 @@
         tabBar.viewControllers[i].tabBarItem.title = names[i];
         tabBar.viewControllers[i].tabBarItem.image = images[i];
     }
+    
+    UIApplicationShortcutIcon *mapIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation];
+    UIApplicationShortcutIcon *questIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeTaskCompleted];
+    UIApplicationShortcutIcon *monsterIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLove];
+    UIApplicationShortcutIcon *armouryIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeContact];
+    
+    NSDictionary *mapDic = [NSDictionary dictionaryWithObject:@"map" forKey:@"type"];
+    NSDictionary *questDic = [NSDictionary dictionaryWithObject:@"quest" forKey:@"type"];
+    NSDictionary *monsterDic = [NSDictionary dictionaryWithObject:@"monster" forKey:@"type"];
+    NSDictionary *armouryDic = [NSDictionary dictionaryWithObject:@"armoury" forKey:@"type"];
+    
+    UIApplicationShortcutItem *mapItem = [[UIApplicationShortcutItem alloc]initWithType:@"map" localizedTitle:@"地图" localizedSubtitle:@"查看地图" icon:mapIcon userInfo:mapDic];
+    UIApplicationShortcutItem *questItem = [[UIApplicationShortcutItem alloc]initWithType:@"quest" localizedTitle:@"任务" localizedSubtitle:@"查看任务列表" icon:questIcon userInfo:questDic];
+    UIApplicationShortcutItem *monsterItem = [[UIApplicationShortcutItem alloc]initWithType:@"monster" localizedTitle:@"怪物" localizedSubtitle:@"怪物信息" icon:monsterIcon userInfo:monsterDic];
+    UIApplicationShortcutItem *armouryItem = [[UIApplicationShortcutItem alloc]initWithType:@"armoury" localizedTitle:@"装备" localizedSubtitle:@"装备信息" icon:armouryIcon userInfo:armouryDic];
+    
+    NSArray *shortCuts = @[mapItem,questItem,monsterItem,armouryItem];
+    
+    [UIApplication sharedApplication].shortcutItems = shortCuts;
+    
+    
     return tabBar;
 }
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    NSString *type = (NSString *)[shortcutItem.userInfo objectForKey:@"type"];
+    if([type isEqualToString:@"map"]) {
+        NSLog(@"开启地图");
+        [mainTabBar setSelectedIndex:0];
+    }
+    if([type isEqualToString:@"quest"]){
+        NSLog(@"开启任务");
+        [mainTabBar setSelectedIndex:1];
+    }
+    if([type isEqualToString:@"monster"]){
+        NSLog(@"开启怪物");
+        [mainTabBar setSelectedIndex:2];
+    }
+    if([type isEqualToString:@"armoury"]){
+        NSLog(@"开启装备");
+        [mainTabBar setSelectedIndex:3];
+    }
+}
+
 
 @end

@@ -63,10 +63,10 @@
 }
 
 - (void)configureAdviceView {
-    UITextView *text = [[UITextView alloc]initWithFrame:CGRectMake(0,TOPVIEW + TITLELABELHEIGHT + GAP + IMAGEVIEWHEIGHT + GAP, [UIScreen mainScreen].bounds.size.width, 100)];
+    UITextView *text = [[UITextView alloc]initWithFrame:CGRectMake(0,TOPVIEW + TITLELABELHEIGHT + GAP + IMAGEVIEWHEIGHT + GAP, [UIScreen mainScreen].bounds.size.width, 400)];
     [text setEditable:NO];
+    text.font = [UIFont systemFontOfSize:16];
     text.layer.cornerRadius = 5;
-    text.layer.borderWidth = 3;
     text.textAlignment = NSTextAlignmentCenter;
     text.text = self.questDetail.questBrief;
     [self.view addSubview:text];

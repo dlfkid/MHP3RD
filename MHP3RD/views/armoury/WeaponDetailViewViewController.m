@@ -17,6 +17,7 @@
 
 @property(nonatomic,strong) UIScrollView *scroll;
 @property(nonatomic,strong) UITextView *textView;
+@property(nonatomic,strong) UIScrollView *textScroll;
 
 
 @end
@@ -25,15 +26,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     [self.view setFrame:[UIScreen mainScreen].bounds];
-    [self configureScrollView];
-    [self configureTextView];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self configureTextScroller];
     // Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationItem.title = self.weaponInfo.name;
+    [self.tabBarController.tabBar setHidden:true];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,13 +60,36 @@
 }
 
 #pragma mark - textView setting
-- (void)configureTextView {
-    self.textView = [[UITextView alloc]initWithFrame:CGRectMake(NARROWGAP, GAPSPACE + VIEWHEIGHT, SCREENWIDTH - 2*NARROWGAP, VIEWHEIGHT - 100)];
-    [_textView setSelectable:false];
-    _textView.text = self.weaponInfo.brief;
-    _textView.font = [UIFont systemFontOfSize:18];
-    [self.view addSubview:_textView];
+- (UILabel *)configureTextView {
+    UILabel *weaponText = [[UILabel alloc]init];
+    weaponText.text = self.weaponInfo.brief;
+    weaponText.textAlignment = NSTextAlignmentCenter;
+    weaponText.font = [UIFont systemFontOfSize:16];
+    weaponText.numberOfLines = 0;
+    weaponText.lineBreakMode = NSLineBreakByTruncatingTail;
+    CGSize maxSize = CGSizeMake(SCREENWIDTH - 2*GAPSPACE, MAXFLOAT);
+    CGSize expectSize = [weaponText sizeThatFits:maxSize];
+    weaponText.frame = CGRectMake(GAPSPACE,VIEWHEIGHT, expectSize.width, expectSize.height);
+    return weaponText;
 }
+
+
+#pragma mark - scrollerView setting
+- (void)configureTextScroller {
+    self.textScroll = [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self.view addSubview:_textScroll];
+    _textScroll.delegate = self;
+    _scroll.delegate = self;
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, VIEWHEIGHT)];
+    imageView.image = [UIImage imageNamed:self.weaponInfo.pic];
+    imageView.tag = 101;
+    [_textScroll addSubview:imageView];
+    UILabel *labelText = [self configureTextView];
+    
+    [_textScroll addSubview:labelText];
+    [_textScroll setContentSize:CGSizeMake(SCREENWIDTH, VIEWHEIGHT + labelText.frame.size.height + GAPSPACE)];
+}
+
 /*
 #pragma mark - Navigation
 

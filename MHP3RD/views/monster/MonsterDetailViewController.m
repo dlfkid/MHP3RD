@@ -30,6 +30,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [self.tabBarController.tabBar setHidden:true];
     UIImageView *imageView = [self imageViewWithMonsterPic];
     UILabel *briefLabel = [self labelWithContent];
     briefLabel.tag = 1002;

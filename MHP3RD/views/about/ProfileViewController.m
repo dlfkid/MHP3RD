@@ -9,7 +9,8 @@
 #import "ProfileViewController.h"
 #import "HunterProfile.h"
 #import "ProfileAddViewController.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import <UMSocialCore/UMSocialCore.h>
+#import <UShareUI/UShareUI.h>
 
 #define KEYBOARDHEIGHT 300
 #define LABELHEIGHT 40
@@ -26,6 +27,7 @@
 
 {
     UIScrollView *backGroundScroll;
+    NSMutableArray *labels;
 }
 
 @end
@@ -34,6 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    labels = [NSMutableArray array];
     self.view.backgroundColor = [UIColor blackColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     backGroundScroll = [[UIScrollView alloc]initWithFrame:self.view.frame];
@@ -48,6 +51,15 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadAction:) name:@"profileChange" object:nil];
     [self ConfigureUI];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tabBarController.tabBar setHidden:true];
+    [self.navigationController.navigationBar setTranslucent:false];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController.navigationBar setTranslucent:true];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,16 +86,21 @@
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor whiteColor];
         label.tag = 300 + i;
+        [labels addObject:label];
         [backGroundScroll addSubview:label];
     }
     
     
-    UIImageView *header = [[UIImageView alloc]initWithFrame:CGRectMake((SCREENWIDTH - HEADICON)/2, SCREENWIDTH + HEADICON, HEADICON, HEADICON)];
+    UIImageView *header = [[UIImageView alloc]initWithFrame:CGRectMake((SCREENWIDTH - HEADICON)/2, SCREENWIDTH, HEADICON, HEADICON)];
     header.backgroundColor = [UIColor whiteColor];
     NSLog(@"pic url: %@",_hunterInfo.pic);
     [header setImage:[UIImage imageWithContentsOfFile:_hunterInfo.pic]];
     [backGroundScroll addSubview:header];
     
+    UIButton *shareButton = [[UIButton alloc]initWithFrame:CGRectMake(header.frame.origin.x, header.frame.origin.y + HEADICON + 10, HEADICON, HEADICON/2)];
+    [shareButton setImage:[UIImage imageNamed:@"shareIcon"] forState:UIControlStateNormal];
+    [shareButton addTarget:self action:@selector(sharedInfo:) forControlEvents:UIControlEventTouchDown];
+    [backGroundScroll addSubview:shareButton];
 }
 
 #pragma mark - edit profile
@@ -97,11 +114,35 @@
 
 - (void)reloadAction:(NSNotification *)sender {
     self.hunterInfo = sender.object;
-    for(int i = 0; i < 7; i++){
-        UILabel *label = [backGroundScroll viewWithTag:300 + i];
-        [label setHidden:true];
+    for(UILabel *label in labels) {
+        [label removeFromSuperview];
     }
     [self ConfigureUI];
+    NSLog(@"ALL labels were changed");
+}
+
+#pragma mark - shareInfo
+
+- (void)sharedInfo:(UIButton *)sender {
+    //打开分享面板获取分享平台
+    [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+        //创建分享消息对象
+        UMSocialMessageObject *message = [UMSocialMessageObject messageObject];
+        //设置分享内容
+        NSString *shareText = [NSString stringWithFormat:@"%@(%2f):%@",_hunterInfo.name,_hunterInfo.HunterRank,_hunterInfo.selfIntroduce];
+        message.text = shareText;
+        //调用分享管理器开始分享
+        [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:message currentViewController:self completion:^(id result, NSError *error) {
+            
+            if(error){
+                UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:@"分享失败" message:[NSString stringWithFormat:@"%@",error.localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+                [self presentViewController:alertControl animated:true completion:nil];
+            }else{
+                UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:@"分享成功" message:@"分享成功" preferredStyle:UIAlertControllerStyleAlert];
+                [self presentViewController:alertControl animated:true completion:nil];
+            }
+        }];
+    }];
 }
 
 /*

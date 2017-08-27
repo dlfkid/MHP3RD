@@ -141,7 +141,6 @@
     detail.monsterDetail = monsterInfo;
     
     [self.navigationController pushViewController:detail animated:true];
-    [self.tabBarController.tabBar setHidden:true];
 }
 
 /*

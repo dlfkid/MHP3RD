@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4586EB1E9CC8E65846C2446A /* libPods-MHP3RD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C82214A1252987849C686B /* libPods-MHP3RD.a */; };
+		B42CC2551F3AB1B50023D05F /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2441F3AB1B50023D05F /* libSocialSina.a */; };
+		B42CC2561F3AB1B50023D05F /* libSocialUniqueId.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2471F3AB1B50023D05F /* libSocialUniqueId.a */; };
+		B42CC2571F3AB1B50023D05F /* libSocialWeChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC24A1F3AB1B50023D05F /* libSocialWeChat.a */; };
+		B42CC2581F3AB1B50023D05F /* UMSocialCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC24D1F3AB1B50023D05F /* UMSocialCore.framework */; };
+		B42CC2591F3AB1B50023D05F /* UMSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC24E1F3AB1B50023D05F /* UMSocialNetwork.framework */; };
+		B42CC25A1F3AB1B50023D05F /* UMSocialSDKPromptResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B42CC24F1F3AB1B50023D05F /* UMSocialSDKPromptResources.bundle */; };
+		B42CC25B1F3AB1B50023D05F /* libUMSocialLog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2511F3AB1B50023D05F /* libUMSocialLog.a */; };
+		B42CC25C1F3AB1B50023D05F /* UMSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B42CC2531F3AB1B50023D05F /* UMSocialSDKResources.bundle */; };
+		B42CC25D1F3AB1B50023D05F /* UShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2541F3AB1B50023D05F /* UShareUI.framework */; };
+		B42CC25F1F3AB1E80023D05F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */; };
+		B42CC2611F3AB1FC0023D05F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */; };
 		B43F2C541E8B8D2500E30853 /* LanuchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F2C531E8B8D2500E30853 /* LanuchViewController.m */; };
 		B43F2C561E8B92C500E30853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43F2C551E8B92C500E30853 /* Assets.xcassets */; };
 		B43F2C5B1E8BB11400E30853 /* ProfileAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F2C5A1E8BB11400E30853 /* ProfileAddViewController.m */; };
 		B474AAC31E8A2DF4007CD59A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAC21E8A2DF4007CD59A /* main.m */; };
 		B474AAC61E8A2DF4007CD59A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAC51E8A2DF4007CD59A /* AppDelegate.m */; };
-		B474AACC1E8A2DF4007CD59A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B474AACA1E8A2DF4007CD59A /* Main.storyboard */; };
 		B474AAD11E8A2DF4007CD59A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B474AACF1E8A2DF4007CD59A /* LaunchScreen.storyboard */; };
 		B474AAF01E8A2F3C007CD59A /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAD91E8A2F3C007CD59A /* CoreDataManager.m */; };
 		B474AAF11E8A2F3C007CD59A /* HunterProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AADB1E8A2F3C007CD59A /* HunterProfile.m */; };
@@ -21,8 +32,6 @@
 		B474AAF41E8A2F3C007CD59A /* MonsterInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAE01E8A2F3C007CD59A /* MonsterInfo.m */; };
 		B474AAF51E8A2F3C007CD59A /* PlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAE21E8A2F3C007CD59A /* PlistManager.m */; };
 		B474AAF61E8A2F3C007CD59A /* ProfileDataAssistObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAE41E8A2F3C007CD59A /* ProfileDataAssistObject.m */; };
-		B474AAF71E8A2F3C007CD59A /* HP+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAE71E8A2F3C007CD59A /* HP+CoreDataClass.m */; };
-		B474AAF81E8A2F3C007CD59A /* HP+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAE91E8A2F3C007CD59A /* HP+CoreDataProperties.m */; };
 		B474AAF91E8A2F3C007CD59A /* quest.plist in Resources */ = {isa = PBXBuildFile; fileRef = B474AAEA1E8A2F3C007CD59A /* quest.plist */; };
 		B474AAFA1E8A2F3C007CD59A /* QuestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAEC1E8A2F3C007CD59A /* QuestInfo.m */; };
 		B474AAFB1E8A2F3C007CD59A /* weapon.plist in Resources */ = {isa = PBXBuildFile; fileRef = B474AAED1E8A2F3C007CD59A /* weapon.plist */; };
@@ -42,9 +51,25 @@
 		B4EEE0AD1E94D30F00B63A01 /* guildlow.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EEE0AC1E94D30F00B63A01 /* guildlow.plist */; };
 		B4EEE0AF1E94D32800B63A01 /* guildhigh.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EEE0AE1E94D32800B63A01 /* guildhigh.plist */; };
 		B4EEE0B21E9C739300B63A01 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EEE0B11E9C739300B63A01 /* ProfileViewController.m */; };
+		B4EEE0BA1E9E0DD400B63A01 /* HP+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EEE0B71E9E0DD400B63A01 /* HP+CoreDataClass.m */; };
+		B4EEE0BB1E9E0DD400B63A01 /* HP+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EEE0B91E9E0DD400B63A01 /* HP+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B42CC2441F3AB1B50023D05F /* libSocialSina.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSina.a; sourceTree = "<group>"; };
+		B42CC2451F3AB1B50023D05F /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSinaHandler.h; sourceTree = "<group>"; };
+		B42CC2471F3AB1B50023D05F /* libSocialUniqueId.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialUniqueId.a; sourceTree = "<group>"; };
+		B42CC2481F3AB1B50023D05F /* UMSocialUniqueIdHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialUniqueIdHandler.h; sourceTree = "<group>"; };
+		B42CC24A1F3AB1B50023D05F /* libSocialWeChat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWeChat.a; sourceTree = "<group>"; };
+		B42CC24B1F3AB1B50023D05F /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		B42CC24D1F3AB1B50023D05F /* UMSocialCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMSocialCore.framework; sourceTree = "<group>"; };
+		B42CC24E1F3AB1B50023D05F /* UMSocialNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMSocialNetwork.framework; sourceTree = "<group>"; };
+		B42CC24F1F3AB1B50023D05F /* UMSocialSDKPromptResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKPromptResources.bundle; sourceTree = "<group>"; };
+		B42CC2511F3AB1B50023D05F /* libUMSocialLog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMSocialLog.a; sourceTree = "<group>"; };
+		B42CC2531F3AB1B50023D05F /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResources.bundle; sourceTree = "<group>"; };
+		B42CC2541F3AB1B50023D05F /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UShareUI.framework; sourceTree = "<group>"; };
+		B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B43F2C521E8B8D2500E30853 /* LanuchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanuchViewController.h; sourceTree = "<group>"; };
 		B43F2C531E8B8D2500E30853 /* LanuchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanuchViewController.m; sourceTree = "<group>"; };
 		B43F2C551E8B92C500E30853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,7 +79,6 @@
 		B474AAC21E8A2DF4007CD59A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B474AAC41E8A2DF4007CD59A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B474AAC51E8A2DF4007CD59A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B474AACB1E8A2DF4007CD59A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B474AAD01E8A2DF4007CD59A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B474AAD21E8A2DF4007CD59A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B474AAD81E8A2F3C007CD59A /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = DataBaseDao/CoreDataManager.h; sourceTree = "<group>"; };
@@ -69,10 +93,6 @@
 		B474AAE21E8A2F3C007CD59A /* PlistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlistManager.m; path = DataBaseDao/PlistManager.m; sourceTree = "<group>"; };
 		B474AAE31E8A2F3C007CD59A /* ProfileDataAssistObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileDataAssistObject.h; path = DataBaseDao/ProfileDataAssistObject.h; sourceTree = "<group>"; };
 		B474AAE41E8A2F3C007CD59A /* ProfileDataAssistObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileDataAssistObject.m; path = DataBaseDao/ProfileDataAssistObject.m; sourceTree = "<group>"; };
-		B474AAE61E8A2F3C007CD59A /* HP+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HP+CoreDataClass.h"; sourceTree = "<group>"; };
-		B474AAE71E8A2F3C007CD59A /* HP+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HP+CoreDataClass.m"; sourceTree = "<group>"; };
-		B474AAE81E8A2F3C007CD59A /* HP+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HP+CoreDataProperties.h"; sourceTree = "<group>"; };
-		B474AAE91E8A2F3C007CD59A /* HP+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HP+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B474AAEA1E8A2F3C007CD59A /* quest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = quest.plist; path = DataBaseDao/quest.plist; sourceTree = "<group>"; };
 		B474AAEB1E8A2F3C007CD59A /* QuestInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestInfo.h; path = DataBaseDao/QuestInfo.h; sourceTree = "<group>"; };
 		B474AAEC1E8A2F3C007CD59A /* QuestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestInfo.m; path = DataBaseDao/QuestInfo.m; sourceTree = "<group>"; };
@@ -106,6 +126,13 @@
 		B4EEE0AE1E94D32800B63A01 /* guildhigh.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = guildhigh.plist; path = DataBaseDao/guildhigh.plist; sourceTree = "<group>"; };
 		B4EEE0B01E9C739300B63A01 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		B4EEE0B11E9C739300B63A01 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		B4EEE0B61E9E0DD400B63A01 /* HP+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HP+CoreDataClass.h"; sourceTree = "<group>"; };
+		B4EEE0B71E9E0DD400B63A01 /* HP+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HP+CoreDataClass.m"; sourceTree = "<group>"; };
+		B4EEE0B81E9E0DD400B63A01 /* HP+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HP+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B4EEE0B91E9E0DD400B63A01 /* HP+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HP+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B8C82214A1252987849C686B /* libPods-MHP3RD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MHP3RD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA587FBEAAB92D043F77C0A8 /* Pods-MHP3RD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHP3RD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHP3RD/Pods-MHP3RD.debug.xcconfig"; sourceTree = "<group>"; };
+		F328BEC1D2AC617ADEBAD172 /* Pods-MHP3RD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHP3RD.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHP3RD/Pods-MHP3RD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,19 +140,115 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42CC2611F3AB1FC0023D05F /* libsqlite3.tbd in Frameworks */,
+				B42CC25F1F3AB1E80023D05F /* CoreGraphics.framework in Frameworks */,
+				B42CC2561F3AB1B50023D05F /* libSocialUniqueId.a in Frameworks */,
+				B42CC2571F3AB1B50023D05F /* libSocialWeChat.a in Frameworks */,
 				B4EEE0AB1E8E587A00B63A01 /* MapKit.framework in Frameworks */,
+				4586EB1E9CC8E65846C2446A /* libPods-MHP3RD.a in Frameworks */,
+				B42CC2581F3AB1B50023D05F /* UMSocialCore.framework in Frameworks */,
+				B42CC25B1F3AB1B50023D05F /* libUMSocialLog.a in Frameworks */,
+				B42CC2591F3AB1B50023D05F /* UMSocialNetwork.framework in Frameworks */,
+				B42CC2551F3AB1B50023D05F /* libSocialSina.a in Frameworks */,
+				B42CC25D1F3AB1B50023D05F /* UShareUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EA46CDDDBB4C178916FD148 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA587FBEAAB92D043F77C0A8 /* Pods-MHP3RD.debug.xcconfig */,
+				F328BEC1D2AC617ADEBAD172 /* Pods-MHP3RD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B42CC2411F3AB1B50023D05F /* UMSocial */ = {
+			isa = PBXGroup;
+			children = (
+				B42CC2421F3AB1B50023D05F /* SocialLibraries */,
+				B42CC24C1F3AB1B50023D05F /* UMSocialSDK */,
+				B42CC2501F3AB1B50023D05F /* UMSocialSDKPlugin */,
+				B42CC2521F3AB1B50023D05F /* UMSocialUI */,
+			);
+			path = UMSocial;
+			sourceTree = "<group>";
+		};
+		B42CC2421F3AB1B50023D05F /* SocialLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				B42CC2431F3AB1B50023D05F /* Sina */,
+				B42CC2461F3AB1B50023D05F /* UniqueId */,
+				B42CC2491F3AB1B50023D05F /* WeChat */,
+			);
+			path = SocialLibraries;
+			sourceTree = "<group>";
+		};
+		B42CC2431F3AB1B50023D05F /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				B42CC2441F3AB1B50023D05F /* libSocialSina.a */,
+				B42CC2451F3AB1B50023D05F /* UMSocialSinaHandler.h */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		B42CC2461F3AB1B50023D05F /* UniqueId */ = {
+			isa = PBXGroup;
+			children = (
+				B42CC2471F3AB1B50023D05F /* libSocialUniqueId.a */,
+				B42CC2481F3AB1B50023D05F /* UMSocialUniqueIdHandler.h */,
+			);
+			path = UniqueId;
+			sourceTree = "<group>";
+		};
+		B42CC2491F3AB1B50023D05F /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				B42CC24A1F3AB1B50023D05F /* libSocialWeChat.a */,
+				B42CC24B1F3AB1B50023D05F /* UMSocialWechatHandler.h */,
+			);
+			path = WeChat;
+			sourceTree = "<group>";
+		};
+		B42CC24C1F3AB1B50023D05F /* UMSocialSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B42CC24D1F3AB1B50023D05F /* UMSocialCore.framework */,
+				B42CC24E1F3AB1B50023D05F /* UMSocialNetwork.framework */,
+				B42CC24F1F3AB1B50023D05F /* UMSocialSDKPromptResources.bundle */,
+			);
+			path = UMSocialSDK;
+			sourceTree = "<group>";
+		};
+		B42CC2501F3AB1B50023D05F /* UMSocialSDKPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B42CC2511F3AB1B50023D05F /* libUMSocialLog.a */,
+			);
+			path = UMSocialSDKPlugin;
+			sourceTree = "<group>";
+		};
+		B42CC2521F3AB1B50023D05F /* UMSocialUI */ = {
+			isa = PBXGroup;
+			children = (
+				B42CC2531F3AB1B50023D05F /* UMSocialSDKResources.bundle */,
+				B42CC2541F3AB1B50023D05F /* UShareUI.framework */,
+			);
+			path = UMSocialUI;
+			sourceTree = "<group>";
+		};
 		B474AAB51E8A2DF4007CD59A = {
 			isa = PBXGroup;
 			children = (
+				B42CC2411F3AB1B50023D05F /* UMSocial */,
 				B474AAC01E8A2DF4007CD59A /* MHP3RD */,
 				B474AABF1E8A2DF4007CD59A /* Products */,
 				B4EEE0A91E8E587A00B63A01 /* Frameworks */,
+				3EA46CDDDBB4C178916FD148 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,7 +267,6 @@
 				B474AAC51E8A2DF4007CD59A /* AppDelegate.m */,
 				B43F2C521E8B8D2500E30853 /* LanuchViewController.h */,
 				B43F2C531E8B8D2500E30853 /* LanuchViewController.m */,
-				B474AACA1E8A2DF4007CD59A /* Main.storyboard */,
 				B474AACF1E8A2DF4007CD59A /* LaunchScreen.storyboard */,
 				B474AAD21E8A2DF4007CD59A /* Info.plist */,
 				B43F2C551E8B92C500E30853 /* Assets.xcassets */,
@@ -167,10 +289,10 @@
 		B474AAE51E8A2F3C007CD59A /* propertyDataClass */ = {
 			isa = PBXGroup;
 			children = (
-				B474AAE61E8A2F3C007CD59A /* HP+CoreDataClass.h */,
-				B474AAE71E8A2F3C007CD59A /* HP+CoreDataClass.m */,
-				B474AAE81E8A2F3C007CD59A /* HP+CoreDataProperties.h */,
-				B474AAE91E8A2F3C007CD59A /* HP+CoreDataProperties.m */,
+				B4EEE0B61E9E0DD400B63A01 /* HP+CoreDataClass.h */,
+				B4EEE0B71E9E0DD400B63A01 /* HP+CoreDataClass.m */,
+				B4EEE0B81E9E0DD400B63A01 /* HP+CoreDataProperties.h */,
+				B4EEE0B91E9E0DD400B63A01 /* HP+CoreDataProperties.m */,
 			);
 			name = propertyDataClass;
 			path = DataBaseDao/propertyDataClass;
@@ -351,7 +473,10 @@
 		B4EEE0A91E8E587A00B63A01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */,
+				B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */,
 				B4EEE0AA1E8E587A00B63A01 /* MapKit.framework */,
+				B8C82214A1252987849C686B /* libPods-MHP3RD.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -363,9 +488,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B474AAD51E8A2DF4007CD59A /* Build configuration list for PBXNativeTarget "MHP3RD" */;
 			buildPhases = (
+				FD0011367A1B89107724FC88 /* [CP] Check Pods Manifest.lock */,
 				B474AABA1E8A2DF4007CD59A /* Sources */,
 				B474AABB1E8A2DF4007CD59A /* Frameworks */,
 				B474AABC1E8A2DF4007CD59A /* Resources */,
+				43964DB92758F4CF79FCC08C /* [CP] Embed Pods Frameworks */,
+				968F589DED850BD741254E80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -416,17 +544,66 @@
 			buildActionMask = 2147483647;
 			files = (
 				B474AAD11E8A2DF4007CD59A /* LaunchScreen.storyboard in Resources */,
+				B42CC25A1F3AB1B50023D05F /* UMSocialSDKPromptResources.bundle in Resources */,
 				B474AAFB1E8A2F3C007CD59A /* weapon.plist in Resources */,
-				B474AACC1E8A2DF4007CD59A /* Main.storyboard in Resources */,
 				B474AAF31E8A2F3C007CD59A /* Monster.plist in Resources */,
 				B4EEE0AD1E94D30F00B63A01 /* guildlow.plist in Resources */,
 				B43F2C561E8B92C500E30853 /* Assets.xcassets in Resources */,
 				B4EEE0AF1E94D32800B63A01 /* guildhigh.plist in Resources */,
 				B474AAF91E8A2F3C007CD59A /* quest.plist in Resources */,
+				B42CC25C1F3AB1B50023D05F /* UMSocialSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43964DB92758F4CF79FCC08C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHP3RD/Pods-MHP3RD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		968F589DED850BD741254E80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHP3RD/Pods-MHP3RD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD0011367A1B89107724FC88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B474AABA1E8A2DF4007CD59A /* Sources */ = {
@@ -449,12 +626,12 @@
 				B474AB321E8A3009007CD59A /* MonsterDetailViewController.m in Sources */,
 				B43F2C5B1E8BB11400E30853 /* ProfileAddViewController.m in Sources */,
 				B474AAC31E8A2DF4007CD59A /* main.m in Sources */,
-				B474AAF71E8A2F3C007CD59A /* HP+CoreDataClass.m in Sources */,
 				B474AAF61E8A2F3C007CD59A /* ProfileDataAssistObject.m in Sources */,
 				B474AB2A1E8A3009007CD59A /* AboutViewController.m in Sources */,
+				B4EEE0BA1E9E0DD400B63A01 /* HP+CoreDataClass.m in Sources */,
 				B474AB2F1E8A3009007CD59A /* MapDetailViewController.m in Sources */,
-				B474AAF81E8A2F3C007CD59A /* HP+CoreDataProperties.m in Sources */,
 				B474AB351E8A3009007CD59A /* QuestDetailTableViewController.m in Sources */,
+				B4EEE0BB1E9E0DD400B63A01 /* HP+CoreDataProperties.m in Sources */,
 				B4EEE0B21E9C739300B63A01 /* ProfileViewController.m in Sources */,
 				B474AAF41E8A2F3C007CD59A /* MonsterInfo.m in Sources */,
 				B474AB331E8A3009007CD59A /* MonsterViewController.m in Sources */,
@@ -465,14 +642,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B474AACA1E8A2DF4007CD59A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B474AACB1E8A2DF4007CD59A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B474AACF1E8A2DF4007CD59A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -576,13 +745,28 @@
 		};
 		B474AAD61E8A2DF4007CD59A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA587FBEAAB92D043F77C0A8 /* Pods-MHP3RD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = VSH7W5Y66V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UMSocial/UMSocialSDK",
+					"$(PROJECT_DIR)/UMSocial/UMSocialUI",
+				);
 				INFOPLIST_FILE = MHP3RD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UMSocial/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/UMSocial/SocialLibraries/UniqueId",
+					"$(PROJECT_DIR)/UMSocial/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/UMSocial/UMSocialSDKPlugin",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Misery.MHP3RD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -591,13 +775,27 @@
 		};
 		B474AAD71E8A2DF4007CD59A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F328BEC1D2AC617ADEBAD172 /* Pods-MHP3RD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = VSH7W5Y66V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UMSocial/UMSocialSDK",
+					"$(PROJECT_DIR)/UMSocial/UMSocialUI",
+				);
 				INFOPLIST_FILE = MHP3RD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UMSocial/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/UMSocial/SocialLibraries/UniqueId",
+					"$(PROJECT_DIR)/UMSocial/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/UMSocial/UMSocialSDKPlugin",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Misery.MHP3RD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

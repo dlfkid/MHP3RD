@@ -85,7 +85,6 @@
     WeaponInfo *wep = self.weaponList[indexPath.row];
     weaponDetail.weaponInfo = wep;
     [self.navigationController pushViewController:weaponDetail animated:true];
-    [self.tabBarController.tabBar setHidden:true];
 }
 
 /*
