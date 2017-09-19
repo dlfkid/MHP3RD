@@ -14,6 +14,7 @@
 #import "PlistManager.h"
 #import "HunterProfile.h"
 #import "ProfileDataAssistObject.h"
+#import "DonwnLoadTestViewController.h"
 
 @implementation Communicator
 
@@ -90,6 +91,49 @@
 + (void)clearAllHunterProfile {
     ProfileDataAssistObject *pdao = [ProfileDataAssistObject getInstance];
     [pdao removeAllProfiles];
+}
+
++ (NSData *)postDataTask {
+    NSString *host = @"http://mhp3wiki.duowan.com";
+    NSString *httpBodyStr = @"name=dlfkid&password=123456";
+    NSData *httpBody = [httpBodyStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSURL *hostURL = [NSURL URLWithString:host];
+    
+    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:hostURL];
+    [postRequest setHTTPBody:httpBody];
+    [postRequest setHTTPMethod:@"POST"];
+    __block NSData *dataReceived;
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *postTask = [session dataTaskWithRequest:postRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            dataReceived = data;
+        });
+    }];
+    [postTask resume];
+    if(dataReceived){
+        return dataReceived;
+    }else{
+        return nil;
+    }
+}
+
++ (void)downlodaDataWithDelegateCOntroller:(DonwnLoadTestViewController *)delegater {
+    NSString *host = @"http://www.51work6.com/service/download.php";
+    NSString *httpBodyStr = @"email=dlfkid@gmail.com&FileName=test1.jpg";
+    NSData *httpBody = [httpBodyStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSURL *hostURL = [NSURL URLWithString:host];
+    
+    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:hostURL];
+    [postRequest setHTTPBody:httpBody];
+    [postRequest setHTTPMethod:@"POST"];
+    
+    NSURLSessionConfiguration *downloadconf = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"download"];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:downloadconf delegate:delegater delegateQueue:[NSOperationQueue mainQueue]];
+    
+    NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:postRequest];
+    
+    [task resume];
 }
 
 @end

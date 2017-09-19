@@ -11,6 +11,8 @@
 #import "ProfileViewController.h"
 #import "HunterProfile.h"
 #import "Communicator.h"
+#import "WebViewController.h"
+#import "DonwnLoadTestViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #define TABBARHEIGHT 48
@@ -254,7 +256,8 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     if(_basicScroll.contentOffset.y == self.view.frame.size.height) {
         [self.navigationController.navigationItem.rightBarButtonItem setAccessibilityElementsHidden:false];
-    }
+    }else
+        [self.navigationController.navigationItem.rightBarButtonItem setAccessibilityElementsHidden:true];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -317,7 +320,12 @@
     enter.frame = CGRectMake((VIEWWIDTH - LABELWIDTH)/2, title.frame.origin.y + title.frame.size.height + GAP, LABELWIDTH, LABELHEIGHT);
     [enter setTitle:@"进入" forState:UIControlStateNormal];
     [enter addTarget:self action:@selector(enterButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *download = [UIButton buttonWithType:UIButtonTypeSystem];
+    download.frame = CGRectMake(enter.frame.origin.x, enter.frame.origin.y + LABELHEIGHT + 10, LABELWIDTH, LABELHEIGHT);
+    [download setTitle:@"下载" forState:UIControlStateNormal];
+    [download addTarget:self action:@selector(enterDownLoadPicView:) forControlEvents:UIControlEventTouchUpInside];
     [officialSite addSubview:enter];
+    [officialSite addSubview:download];
     [officialSite addSubview:imageView];
     [officialSite addSubview:title];
     [_basicScroll addSubview:officialSite];
@@ -410,7 +418,13 @@
 }
 
 - (void)enterButtonAction:(UIButton *)sender {
-    
+    WebViewController *webView = [[WebViewController alloc]init];
+    [self.navigationController pushViewController:webView animated:true];
+}
+
+- (void)enterDownLoadPicView:(UIButton *)sender {
+    DonwnLoadTestViewController *download = [[DonwnLoadTestViewController alloc]init];
+    [self.navigationController pushViewController:download animated:true];
 }
 
 @end

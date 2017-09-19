@@ -47,6 +47,8 @@
 		B474AB341E8A3009007CD59A /* MoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB251E8A3009007CD59A /* MoreDetailViewController.m */; };
 		B474AB351E8A3009007CD59A /* QuestDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB271E8A3009007CD59A /* QuestDetailTableViewController.m */; };
 		B474AB361E8A3009007CD59A /* QuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB291E8A3009007CD59A /* QuestViewController.m */; };
+		B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48761D01F6B69EC00174FEA /* WebViewController.m */; };
+		B48761D91F6FBADB00174FEA /* DonwnLoadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48761D81F6FBADB00174FEA /* DonwnLoadTestViewController.m */; };
 		B4EEE0AB1E8E587A00B63A01 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EEE0AA1E8E587A00B63A01 /* MapKit.framework */; };
 		B4EEE0AD1E94D30F00B63A01 /* guildlow.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EEE0AC1E94D30F00B63A01 /* guildlow.plist */; };
 		B4EEE0AF1E94D32800B63A01 /* guildhigh.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EEE0AE1E94D32800B63A01 /* guildhigh.plist */; };
@@ -121,6 +123,10 @@
 		B474AB271E8A3009007CD59A /* QuestDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestDetailTableViewController.m; sourceTree = "<group>"; };
 		B474AB281E8A3009007CD59A /* QuestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestViewController.h; sourceTree = "<group>"; };
 		B474AB291E8A3009007CD59A /* QuestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestViewController.m; sourceTree = "<group>"; };
+		B48761CF1F6B69EC00174FEA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		B48761D01F6B69EC00174FEA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		B48761D71F6FBADB00174FEA /* DonwnLoadTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonwnLoadTestViewController.h; sourceTree = "<group>"; };
+		B48761D81F6FBADB00174FEA /* DonwnLoadTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonwnLoadTestViewController.m; sourceTree = "<group>"; };
 		B4EEE0AA1E8E587A00B63A01 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B4EEE0AC1E94D30F00B63A01 /* guildlow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = guildlow.plist; path = DataBaseDao/guildlow.plist; sourceTree = "<group>"; };
 		B4EEE0AE1E94D32800B63A01 /* guildhigh.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = guildhigh.plist; path = DataBaseDao/guildhigh.plist; sourceTree = "<group>"; };
@@ -416,6 +422,10 @@
 			children = (
 				B474AB0C1E8A3009007CD59A /* AboutViewController.h */,
 				B474AB0D1E8A3009007CD59A /* AboutViewController.m */,
+				B48761D71F6FBADB00174FEA /* DonwnLoadTestViewController.h */,
+				B48761D81F6FBADB00174FEA /* DonwnLoadTestViewController.m */,
+				B48761CF1F6B69EC00174FEA /* WebViewController.h */,
+				B48761D01F6B69EC00174FEA /* WebViewController.m */,
 				B4EEE0B01E9C739300B63A01 /* ProfileViewController.h */,
 				B4EEE0B11E9C739300B63A01 /* ProfileViewController.m */,
 				B43F2C591E8BB11400E30853 /* ProfileAddViewController.h */,
@@ -627,11 +637,13 @@
 				B43F2C5B1E8BB11400E30853 /* ProfileAddViewController.m in Sources */,
 				B474AAC31E8A2DF4007CD59A /* main.m in Sources */,
 				B474AAF61E8A2F3C007CD59A /* ProfileDataAssistObject.m in Sources */,
+				B48761D91F6FBADB00174FEA /* DonwnLoadTestViewController.m in Sources */,
 				B474AB2A1E8A3009007CD59A /* AboutViewController.m in Sources */,
 				B4EEE0BA1E9E0DD400B63A01 /* HP+CoreDataClass.m in Sources */,
 				B474AB2F1E8A3009007CD59A /* MapDetailViewController.m in Sources */,
 				B474AB351E8A3009007CD59A /* QuestDetailTableViewController.m in Sources */,
 				B4EEE0BB1E9E0DD400B63A01 /* HP+CoreDataProperties.m in Sources */,
+				B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */,
 				B4EEE0B21E9C739300B63A01 /* ProfileViewController.m in Sources */,
 				B474AAF41E8A2F3C007CD59A /* MonsterInfo.m in Sources */,
 				B474AB331E8A3009007CD59A /* MonsterViewController.m in Sources */,

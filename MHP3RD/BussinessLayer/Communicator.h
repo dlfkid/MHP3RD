@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef enum{
     VILLAGE,
@@ -25,6 +26,7 @@ typedef enum {
 }MONSTERTYPE;
 
 @class HunterProfile;
+@class DonwnLoadTestViewController;
 @interface Communicator : NSObject
 
 + (NSMutableArray *)getMonsterInfomattionForType:(MONSTERTYPE)monsterType;
@@ -50,5 +52,9 @@ typedef enum {
 + (void)deleteHunterProfile:(HunterProfile *)profile;
 
 + (void)changeHunterProfile:(HunterProfile *)profile;
+
++ (NSData *)postDataTask;
+
++ (void)downlodaDataWithDelegateCOntroller:(DonwnLoadTestViewController *)delegater;
 
 @end
