@@ -16,7 +16,7 @@
  *  @discuss 普通用户可以设置UMSocialLogClosedString，UMSocialLogErrorString，UMSocialLogWarnString，UMSocialLogInfoString，UMSocialLogDebugString的字符串，如果设置UMSocialLogVerboseString的时候，如果不是本库的开发者，是降低其等级到UMSocialLogDebugString
  */
 FOUNDATION_EXPORT void setGlobalLogLevelString(NSString* levelString);
-FOUNDATION_EXPORT NSString* getGlobalLogLevelString();
+FOUNDATION_EXPORT NSString* getGlobalLogLevelString(void);
 
 FOUNDATION_EXPORT NSString* const UMSocialLogClosedLevelString;
 FOUNDATION_EXPORT NSString* const UMSocialLogErrorLevelString;

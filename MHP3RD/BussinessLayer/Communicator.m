@@ -33,7 +33,9 @@
             break;
     }
     PlistManager *dataPass = [PlistManager getInstanceWithPlist:questFileName];
-    return [dataPass findAllQuestInfoForStar:stars];
+    NSMutableArray *resultArr = [dataPass findAllQuestInfoForStar:stars];
+    NSLog(@"QuestNumber: %ld",resultArr.count);
+    return resultArr;
 }
 
 + (NSMutableArray *)getMonsterInfomattionForType:(MONSTERTYPE)monsterType {
