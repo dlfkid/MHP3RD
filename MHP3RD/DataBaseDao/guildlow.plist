@@ -931,7 +931,7 @@
 			<key>pic</key>
 			<string>l5_21</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
 			<string>峯山龙1只讨伐</string>
 		</dict>

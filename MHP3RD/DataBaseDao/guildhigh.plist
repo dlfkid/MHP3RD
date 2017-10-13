@@ -5,233 +5,234 @@
 	<array>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>溪流的采集之旅</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_0</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>猫宅券交纳</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>砂原采集之旅</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_1</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>猫宅券交纳</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>水没林采集之旅</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_2</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>猫宅券交纳</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>孤岛的采集之旅</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_3</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>猫宅券交纳</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>青熊兽不得了×2</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_4</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>青熊兽2头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>猪突猛进</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_5</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>野猪王2头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>溪流的狗龙讨伐作战</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_6</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>小狗龙20头讨伐</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>飞甲虫扫荡作战</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_7</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>飞甲虫50头讨伐</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>喧哗两成败</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_8</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>狗龙王2头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>土砂龙！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_9</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>土砂龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>泥沼的双胞胎</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_10</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>土砂龙2头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>狂突猛进的大猪！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_11</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>野猪王1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>洗澡的牙兽</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_12</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>青熊兽1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>水没林的紫雾</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_13</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>毒狗龙2头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>集结！水没林的紫水兽战</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_14</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>紫水兽1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>以我主之名向水没林进发</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_15</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>水兽
+紫水兽1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>蓝蘑菇+解毒草＝？</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_16</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>小毒狗龙20头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>狩猎凶兽首领！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_17</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>狗龙王1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>强袭孤岛的水流！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_18</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>水兽1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>紫水之毒</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_19</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>紫水兽1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>讨伐水生兽吧！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_20</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>水生兽15头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>狩猎彩鸟！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_21</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>彩鸟1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>盘上的狂舞曲</string>
 			<key>pic</key>
-			<string></string>
+			<string>h6_22</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>草食龙20头讨伐</string>
 		</dict>
 	</array>
 	<array>
