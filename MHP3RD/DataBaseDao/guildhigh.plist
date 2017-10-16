@@ -238,755 +238,770 @@
 	<array>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>冻土的采集之旅</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_0</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>猫宅券交纳</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>火山的采集之旅</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_1</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>猫宅券交纳</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>暗夜的迅龙</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_2</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>迅龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>雌火龙出现</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_3</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>雌火龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>落石注意！？</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_4</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>赤甲兽1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>砂上的餐桌礼仪</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_5</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>潜口龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>盘中餐</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_6</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>潜口龙2头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>沙漠上的风牙龙卷</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_7</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>风牙龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>追杀彩鸟！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_8</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>彩鸟1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>黑暗中的极速战斗</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_9</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>绿迅龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>在水没林绽放</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_10</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>红彩鸟1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>狩猎雌火龙女王</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_11</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>雌火龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>向空中之王宣战吧！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_12</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>雄火龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>疾风一般的绿迅龙</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_13</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>绿迅龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>雌狗龙歼灭作战</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_14</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>雌狗龙25头讨伐</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>蓝与白的挽歌</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_15</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>眠狗龙1头
+白兔兽1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>黑暗中的剧毒！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_16</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>毒怪龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>触电的感觉</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_17</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>电怪龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>医生的剧毒研究</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_18</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>毒怪龙1头
+电怪龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>冰牙龙！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_19</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>冰牙龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>雪地潜行者</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_20</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>冰碎龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>冰块乱舞的冻土战线！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_21</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>冰牙龙1头狩猎
+冰碎龙</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>前进！冻土调查队！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_22</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>小眠狗龙20头讨伐</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>赤之麻痹、赤之毒</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_23</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>	赤甲兽1头狩猎
+毒狗龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>威胁！火山的铁锤！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_24</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>爆锤龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>天空王者雄火龙!</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_25</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>雄火龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>从阴暗的火山口而来</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_26</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>钢锤龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>火山车辙</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_27</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>爆锤龙1头
+钢锤龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>请注意脚下！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_28</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>熔岩兽15头讨伐</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>狗龙族地狱</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_29</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>小狗龙25头讨伐</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>溪流的隐秘部队</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_30</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>迅龙3头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>集合！孤岛连续大作战</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_31</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>恐怖进行时</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_32</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>地狱的大雪战</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_33</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>利爪大联欢！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h7_34</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎</string>
 		</dict>
 	</array>
 	<array>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>在月下溪流轰鸣的双雷</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_0</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>雷狼龙2头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>其动如山！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_1</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>尾槌龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>请求增援</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_2</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>迅龙1头
+尾槌龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>黄金色月轮</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_3</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>金火龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>白银色火轮</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_4</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>银火龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>月下的晚会</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_5</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>金火龙1头狩猎
+银火龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>狩猎砂原的角龙吧！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_6</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>角龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>充斥在夜间的黑色怒气</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_7</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>黑角龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>暴君的时代</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_8</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>角龙1头
+黑角龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>砂原战线！轰鸣不绝！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_9</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>轰龙1头
+黑轰龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>沙尘之牙、地壳之角</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_10</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>风牙龙1头
+黑角龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>雨中朦胧的双子之山</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_11</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>尾槌龙2头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>黑暗中的两道暗影</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_12</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>迅龙1头
+绿迅龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>瞬光洪流</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_13</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>绿迅龙1头
+紫水兽1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>天和地之领域！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_14</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>雄火龙1头
+雌火龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>贪吃的恐王</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_15</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>恐暴龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>势力范围内禁止进入</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_16</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>雷狼龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>响彻冻土的咆哮</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_17</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>轰龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>恐暴龙的地盘</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_18</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>恐暴龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>冰之楔</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_19</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>冻戈龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>来自猎人的委托</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_20</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>电怪龙1头
+冻戈龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>栖息在火海的龙！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_21</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>炎戈龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>炎火缭乱！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_22</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>炎戈龙2头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>黑虎咆哮</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_23</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>黑轰龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>来自火山灼热地带</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_24</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>钢锤龙1头
+黑轰龙1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>呼唤狂风！红彩鸟</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_25</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>红彩鸟1头狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>歌唱！溪流的彩鸟！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_26</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>猫宅券交纳</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>在湍急的溪流中</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_27</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>被放逐到冻土的怪物们</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_28</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎	</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>战栗的进军</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_29</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>集合！水没林的连续大战</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_30</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>火山的决战</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_31</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>猎人舞斗曲</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_32</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>被选中的人是</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_33</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>四面楚歌</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_34</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>全部大型怪物狩猎</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>镇坐狱炎之霸者</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_35</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>霸龙1头讨伐</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>来自极天之崩神</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_36</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>崩龙1头讨伐</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>煌黑龙！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_37</string>
 			<key>key</key>
 			<false/>
 			<key>brief</key>
-			<string></string>
+			<string>煌黑龙1头讨伐</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>大沙漠之宴！！</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_38</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>峯山龙1只讨伐</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>暴风之舞 灾难的旋律</string>
 			<key>pic</key>
-			<string></string>
+			<string>h8_39</string>
 			<key>key</key>
-			<false/>
+			<true/>
 			<key>brief</key>
-			<string></string>
+			<string>岚龙1只讨伐</string>
 		</dict>
 	</array>
 </array>
