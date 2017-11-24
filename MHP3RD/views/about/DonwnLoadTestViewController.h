@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DonwnLoadTestViewController : UIViewController<NSURLSessionDownloadDelegate>
+@interface DonwnLoadTestViewController : UIViewController
+
+@property(nonatomic,strong) UIImageView *downloadImage;
 
 @end

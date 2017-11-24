@@ -8,11 +8,12 @@
 
 #import "DonwnLoadTestViewController.h"
 #import "Communicator.h"
+#import <AFNetworking/AFNetworkReachabilityManager.h>
+#import <SDWebImage/SDWebImageManager.h>
 
 @interface DonwnLoadTestViewController ()
 
-@property(nonatomic,strong) UIImageView *centralPic;
-@property(nonatomic,strong) UIProgressView *progressView;
+@property(nonatomic,strong) UIButton *clearButton;
 
 @end
 
@@ -21,22 +22,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    [self startDownloadWebImage];
+    // Do any additional setup after loading the view.
+}
+
+- (UIImageView *)downloadImage {
     CGFloat topView = 64;
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat PicSize = 100;
-    
-    UIImageView *pic = [[UIImageView alloc]initWithFrame:CGRectMake((screenWidth - PicSize)/2, topView, PicSize, PicSize)];
-    _centralPic = pic;
-    
-    UIProgressView *progress = [[UIProgressView alloc]initWithFrame:CGRectMake(pic.frame.origin.x, pic.frame.origin.y + PicSize + 10, PicSize, 20)];
-    _progressView = progress;
-    
-    [self.view addSubview:pic];
-    [self.view addSubview:progress];
-    
-    [Communicator downlodaDataWithDelegateCOntroller:self];
-    // Do any additional setup after loading the view.
+    CGFloat PicSizeWidth = 200;
+    CGFloat PicSizeHeight = 150;
+    if(_downloadImage == nil) {
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake((screenWidth - PicSizeWidth)/2, topView, PicSizeWidth, PicSizeHeight)];
+        imageView.backgroundColor = [UIColor yellowColor];
+        _downloadImage = imageView;
+        return _downloadImage;
+    }else {
+        return _downloadImage;
+    }
+}
+
+- (UIButton *)clearButton {
+    if(_clearButton == nil) {
+        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+        CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+        CGFloat buttonWidth = 120;
+        CGFloat buttonHeight = 40;
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        button.frame = CGRectMake((screenWidth - buttonWidth)/2, screenHeight - 200, buttonWidth, buttonHeight);
+        button.titleLabel.text = @"清空图片缓存";
+        _clearButton = button;
+        
+        [button addTarget:self action:@selector(clearWebImageCacheInSandBox) forControlEvents:UIControlEventTouchUpInside];
+        return _clearButton;
+    }
+    else return _clearButton;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,37 +73,34 @@
 }
 */
 
-#pragma mark - URLsession Download Task delegate
-
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location {
-    NSLog(@"下载位置:%@",location);
-    NSString *downLoadDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true) objectAtIndex:0];
-    
-    NSString *downLoadPath = [downLoadDir stringByAppendingPathComponent:@"/test1.jpg"];
-    NSURL *pathURL = [NSURL fileURLWithPath:downLoadPath];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSError *error = nil;
-    if([fileManager fileExistsAtPath:downLoadPath]){
-        [fileManager removeItemAtPath:downLoadPath error:&error];
-        if(error){
-            NSLog(@"删除文件失败: %@",error.localizedDescription);
-        }
-    }
-    error = nil;
-    if([fileManager moveItemAtURL:location toURL:pathURL error:&error]){
-        NSLog(@"缓存到沙盒路径: %@",pathURL);
-        UIImage *img = [UIImage imageWithContentsOfFile:downLoadPath];
-        self.centralPic.image = img;
-    }else{
-        NSLog(@"复制文件到沙盒失败：%@",error.localizedDescription);
+- (void)startDownloadWebImage {
+    AFNetworkReachabilityManager *aFManager = [AFNetworkReachabilityManager sharedManager];
+    if(aFManager.isReachableViaWiFi) {
+        NSLog(@"Current network condition: WiFi");
+        SDWebImageManager * sdManager = [SDWebImageManager sharedManager];
+        [sdManager loadImageWithURL:[Communicator getWebImageURL] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+            NSLog(@"图片下载中");
+            if(receivedSize == expectedSize) {
+                NSLog(@"图片下载完毕");
+            }
+        } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+            if(image) {
+                self.downloadImage.image = image;
+                [self.view addSubview:self.downloadImage];
+            }else {
+                NSLog(@"Download image failed.");
+            }
+        }];
+        
+    }else if(aFManager.isReachableViaWWAN) {
+        NSLog(@"Current network condition: WWAN");
+    }else {
+        NSLog(@"Current network condition: Unreachable");
     }
 }
 
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
-    float progressFloat = totalBytesWritten * 1.0 / totalBytesExpectedToWrite;
-    [self.progressView setProgress:progressFloat animated:true];
-    NSLog(@"接收：%lld 字节 总共:%lld 字节",totalBytesWritten,totalBytesExpectedToWrite);
+- (void)clearWebImageCacheInSandBox {
+    NSLog(@"清空缓存图片");
 }
 
 @end

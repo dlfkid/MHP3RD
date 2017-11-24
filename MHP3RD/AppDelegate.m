@@ -16,6 +16,7 @@
 #import "ArmouryViewController.h"
 #import "MapScrollerViewController.h"
 #import <UMSocialCore/UMSocialCore.h>
+#import <AFNetworkReachabilityManager.h>
 
 @interface AppDelegate ()
 
@@ -40,7 +41,8 @@
     [shareManager setUmSocialAppkey:APP_KEY];
     [self setConfigUshareSetting];
     [self setConfigUsharePlatform];
-    
+    //检测当前网络状态：
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     return YES;
 }
 

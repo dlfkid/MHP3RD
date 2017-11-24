@@ -116,7 +116,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     QuestDetailTableViewController *detail = [[QuestDetailTableViewController alloc]init];
-    NSLog(@"Getting %ldst level %ld star mission",indexPath.section,indexPath.row);
+    NSLog(@"Getting %ldst level %ld star mission",(long)indexPath.section,indexPath.row);
     int starNum = (int)indexPath.row;
     int missionType = (int)indexPath.section;
     NSMutableArray *arr = [Communicator getQuestInfoMationForType:missionType andStars:starNum];

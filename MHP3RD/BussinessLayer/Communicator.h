@@ -55,6 +55,8 @@ typedef enum {
 
 + (NSData *)postDataTask;
 
-+ (void)downlodaDataWithDelegateCOntroller:(DonwnLoadTestViewController *)delegater;
++ (NSURL *)getWebImageURL;
+
+//+ (void)downlodaDataWithDelegateController:(DonwnLoadTestViewController *)delegater;
 
 @end
