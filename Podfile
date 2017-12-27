@@ -7,4 +7,5 @@ target 'MHP3RD' do
   # Pods for MHP3RD
   pod 'SDWebImage', '~> 4.1.2'
   pod 'AFNetworking', '~> 3.1.0'
+  pod 'Masonry', '~> 1.1.0'
 end

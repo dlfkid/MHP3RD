@@ -5,8 +5,9 @@
 //  Created by Ivan_deng on 2017/3/24.
 //  Copyright © 2017年 Ivan_deng. All rights reserved.
 //
-
+#import <Masonry/Masonry.h>
 #import "MonsterDetailViewController.h"
+
 #define SCREENWIDTH self.view.frame.size.width
 #define GAPSPACE 30
 #define ImageViewHeight 200
@@ -40,6 +41,19 @@
     scrollerButton.delegate = self;
     [scrollerButton addSubview:imageView];
     [scrollerButton addSubview:briefLabel];
+//    UILabel *new = [[UILabel alloc]initWithFrame:CGRectZero];
+//    new.backgroundColor = [UIColor yellowColor];
+//    [self.view addSubview:new];
+//
+//    [new mas_makeConstraints:^(MASConstraintMaker *make) {
+//        if (@available(iOS 11.0, *)) {
+//            make.edges.equalTo(self.view.mas_safeAreaLayoutGuide).inset(10);
+//        } else {
+//            // Fallback on earlier versions
+//        }
+//    }];
+    
+    
     [scrollerButton setContentSize:CGSizeMake(SCREENWIDTH, imageView.frame.size.height + briefLabel.frame.size.height + TOPVIEW)];
     imageView.tag = 1001;
     self.navigationItem.title = self.monsterDetail.name;

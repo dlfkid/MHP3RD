@@ -13,6 +13,7 @@
 #import "Communicator.h"
 #import "WebViewController.h"
 #import "DonwnLoadTestViewController.h"
+#import "VideoPlayerViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
@@ -326,8 +327,13 @@
     download.frame = CGRectMake(enter.frame.origin.x, enter.frame.origin.y + LABELHEIGHT + 10, LABELWIDTH, LABELHEIGHT);
     [download setTitle:@"下载" forState:UIControlStateNormal];
     [download addTarget:self action:@selector(enterDownLoadPicView:) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *play = [UIButton buttonWithType:UIButtonTypeSystem];
+    [play setFrame:CGRectMake(enter.frame.origin.x, download.frame.origin.y + LABELHEIGHT + 10, LABELWIDTH, LABELHEIGHT)];
+    [play setTitle:@"播放" forState:UIControlStateNormal];
+    [play addTarget:self action:@selector(enterPlayVideoView:) forControlEvents:UIControlEventTouchUpInside];
     [officialSite addSubview:enter];
     [officialSite addSubview:download];
+    [officialSite addSubview:play];
     [officialSite addSubview:imageView];
     [officialSite addSubview:title];
     [_basicScroll addSubview:officialSite];
@@ -427,6 +433,11 @@
 - (void)enterDownLoadPicView:(UIButton *)sender {
     DonwnLoadTestViewController *download = [[DonwnLoadTestViewController alloc]init];
     [self.navigationController pushViewController:download animated:true];
+}
+
+- (void)enterPlayVideoView:(UIButton *)sender {
+    VideoPlayerViewController *video = [[VideoPlayerViewController alloc]initWithAVPlayer:[UIImage imageNamed:@"card2"]];
+    [self.navigationController pushViewController:video animated:nil];
 }
 
 @end
