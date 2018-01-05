@@ -453,9 +453,9 @@
 			isa = PBXGroup;
 			children = (
 				B474AB181E8A3009007CD59A /* MapDetailViewController.h */,
-				B474AB1B1E8A3009007CD59A /* MapScrollerViewController.m */,
 				B474AB191E8A3009007CD59A /* MapDetailViewController.m */,
 				B474AB1A1E8A3009007CD59A /* MapScrollerViewController.h */,
+				B474AB1B1E8A3009007CD59A /* MapScrollerViewController.m */,
 			);
 			path = map;
 			sourceTree = "<group>";

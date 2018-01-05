@@ -6,12 +6,11 @@
 //  Copyright © 2017年 Ivan_deng. All rights reserved.
 //
 
-#define GAPSPACE 40
 #define PAGECONTROLWIDTH  30
 #define PAGECONTROLHEIGHT 50
-#define TOPGAP 64
-#define BOTTOMGAP 48
 #import "MapScrollerViewController.h"
+
+#import <Masonry/Masonry.h>
 #import "MapDetailViewController.h"
 
 
@@ -52,11 +51,9 @@
 #pragma mark - configure UI
 
 - (void)configureScroller {
-    CGSize screensize = [UIScreen mainScreen].bounds.size;
     //scroller frame
-    self.scroller = [[UIScrollView alloc]initWithFrame:CGRectMake(0, TOPGAP, screensize.width, screensize.height - BOTTOMGAP - TOPGAP)];
-    //content size
-     _scroller.contentSize = CGSizeMake(screensize.width * mapNames.count, screensize.height - TOPGAP - BOTTOMGAP);
+    self.scroller = [[UIScrollView alloc]initWithFrame:CGRectZero];
+    self.scroller.contentSize = CGSizeMake(MHPscreenWidth() * mapNames.count, MHPscreenHeight());
     //NSLog(@"scrollview size: %f,%f \n content size %f,%f",_scroller.frame.size.width,_scroller.frame.size.height,_scroller.contentSize.width,_scroller.contentSize.height);
     _scroller.delegate = self;
     _scroller.pagingEnabled = true;
@@ -67,16 +64,27 @@
     self.automaticallyAdjustsScrollViewInsets = false;
     self.navigationItem.title = mapTitle[0];
     [self.view addSubview:_scroller];
+    [self.scroller mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
     for(int i = 0; i < mapNames.count; i++) {
-        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(i * screensize.width, 0, screensize.width, screensize.height - TOPGAP - BOTTOMGAP)];
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectZero];
+        imageView.backgroundColor = [UIColor yellowColor];
+//        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(i * MHPscreenWidth(), 0, MHPscreenWidth(), MHPscreenHeight())];
+        [self.scroller addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(@(i * MHPscreenWidth()));
+            make.width.mas_equalTo(MHPscreenWidth());
+            make.height.mas_equalTo(MHPscreenHeight());
+        }];
         imageView.image = [UIImage imageNamed:mapNames[i]];
-        [_scroller addSubview:imageView];
+        imageView.contentMode = UIViewContentModeScaleToFill;
     }
-    _scroller.contentOffset = CGPointMake(screensize.width, 0);
+    _scroller.contentOffset = CGPointMake(MHPscreenWidth(), 0);
 }
 
 - (void)configurePageControl {
-    _pageController = [[UIPageControl alloc]initWithFrame:CGRectMake((self.view.frame.size.width - PAGECONTROLWIDTH)/2, self.view.frame.size.height - GAPSPACE, PAGECONTROLWIDTH, PAGECONTROLHEIGHT)];
+    _pageController = [[UIPageControl alloc]initWithFrame:CGRectMake((self.view.frame.size.width - PAGECONTROLWIDTH)/2, self.view.frame.size.height - MHPgap, PAGECONTROLWIDTH, PAGECONTROLHEIGHT)];
     [_pageController setBackgroundColor:[UIColor clearColor]];
     _pageController.alpha = 0.75f;
     _pageController.numberOfPages = mapNames.count;

@@ -7,14 +7,14 @@
 //
 
 #import "MonsterViewController.h"
+
+#import <Masonry/Masonry.h>
 #import "MonsterDetailViewController.h"
 
 #define CELLIDENTITY @"monsterCell"
 #define HEADERIDENTY @"monsterHeader"
-#define TABBARHEIGHT 48
-#define GAPSPACE 20
+
 #define ITEMSIZE 90
-#define SCREENWIDTH self.view.frame.size.width
 
 @interface MonsterViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -32,6 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self setupBackgroundImage];
     [self configureReloadButton];
     [self configureCollectionView];
     // Do any additional setup after loading the view.
@@ -49,25 +50,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIImageView *)setupBackgroundImage {
+    UIImageView *background = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"card"] highlightedImage:nil];
+    return background;
+}
+
 - (void)configureCollectionView {
-    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - TABBARHEIGHT) collectionViewLayout:[self configureLayout]];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:[self configureLayout]];
     self.collectionView.delegate = self;
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CELLIDENTITY];
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HEADERIDENTY];
     self.collectionView.dataSource = self;
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    [self.collectionView setBackgroundView:[self setupBackgroundImage]];
     [self.view addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 - (UICollectionViewFlowLayout *)configureLayout {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     layout.minimumLineSpacing = 10;
-    layout.minimumInteritemSpacing = 10;
-    layout.sectionInset = UIEdgeInsetsMake(GAPSPACE, GAPSPACE, GAPSPACE, GAPSPACE);
+    layout.minimumInteritemSpacing = 40;
+//    layout.sectionInset = UIEdgeInsetsMake(GAPSPACE, GAPSPACE, GAPSPACE, GAPSPACE);
     layout.itemSize = CGSizeMake(ITEMSIZE, ITEMSIZE);
     //设置item水平排列
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    layout.headerReferenceSize = CGSizeMake(SCREENWIDTH, GAPSPACE*2);
+    layout.headerReferenceSize = CGSizeMake(MHPscreenWidth(), MHPtabbar);
     return layout;
 }
 
@@ -95,16 +105,19 @@
     UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:CELLIDENTITY forIndexPath:indexPath];
     cell.backgroundColor = [UIColor yellowColor];
     UIImage *image = [UIImage imageNamed:monsterInfo.pic];
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, ITEMSIZE, ITEMSIZE)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectZero];
     imageView.image = image;
     [cell.contentView addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(imageView.superview);
+    }];
     
     return cell;
     
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, GAPSPACE*2)];
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectZero];
     titleLabel.backgroundColor = [UIColor whiteColor];
     titleLabel.tintColor = [UIColor blackColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -112,8 +125,12 @@
     MONSTERTYPE monsterType = (int)indexPath.section;
     titleLabel.text = monsterTypeName[monsterType];
     UICollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HEADERIDENTY forIndexPath:indexPath];
-    header.backgroundColor = [UIColor blackColor];
+    header.backgroundColor = [UIColor whiteColor];
+    header.alpha = 0.7;
     [header addSubview:titleLabel];
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(titleLabel.superview);
+    }];
     return header;
 }
 
