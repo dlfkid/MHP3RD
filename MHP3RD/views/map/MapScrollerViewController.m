@@ -13,7 +13,6 @@
 #define BOTTOMGAP 48
 #import "MapScrollerViewController.h"
 #import "MapDetailViewController.h"
-#import "LanuchViewController.h"
 
 
 

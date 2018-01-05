@@ -20,7 +20,6 @@
 		B42CC25D1F3AB1B50023D05F /* UShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2541F3AB1B50023D05F /* UShareUI.framework */; };
 		B42CC25F1F3AB1E80023D05F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */; };
 		B42CC2611F3AB1FC0023D05F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */; };
-		B43F2C541E8B8D2500E30853 /* LanuchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F2C531E8B8D2500E30853 /* LanuchViewController.m */; };
 		B43F2C561E8B92C500E30853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43F2C551E8B92C500E30853 /* Assets.xcassets */; };
 		B43F2C5B1E8BB11400E30853 /* ProfileAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F2C5A1E8BB11400E30853 /* ProfileAddViewController.m */; };
 		B474AAC31E8A2DF4007CD59A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAC21E8A2DF4007CD59A /* main.m */; };
@@ -63,6 +62,8 @@
 		B40BB5001FD4E9A700EBF57D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		B40BB5041FD4EA1C00EBF57D /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
 		B40BB5051FD4EA1C00EBF57D /* VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
+		B40F9F221FFF74CB00604D98 /* MHPDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPDefinition.h; sourceTree = "<group>"; };
+		B40F9F251FFF763100604D98 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B42CC2441F3AB1B50023D05F /* libSocialSina.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSina.a; sourceTree = "<group>"; };
 		B42CC2451F3AB1B50023D05F /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSinaHandler.h; sourceTree = "<group>"; };
 		B42CC2471F3AB1B50023D05F /* libSocialUniqueId.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialUniqueId.a; sourceTree = "<group>"; };
@@ -77,8 +78,6 @@
 		B42CC2541F3AB1B50023D05F /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UShareUI.framework; sourceTree = "<group>"; };
 		B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		B43F2C521E8B8D2500E30853 /* LanuchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanuchViewController.h; sourceTree = "<group>"; };
-		B43F2C531E8B8D2500E30853 /* LanuchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanuchViewController.m; sourceTree = "<group>"; };
 		B43F2C551E8B92C500E30853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B43F2C591E8BB11400E30853 /* ProfileAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileAddViewController.h; sourceTree = "<group>"; };
 		B43F2C5A1E8BB11400E30853 /* ProfileAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileAddViewController.m; sourceTree = "<group>"; };
@@ -276,8 +275,8 @@
 			children = (
 				B474AAC41E8A2DF4007CD59A /* AppDelegate.h */,
 				B474AAC51E8A2DF4007CD59A /* AppDelegate.m */,
-				B43F2C521E8B8D2500E30853 /* LanuchViewController.h */,
-				B43F2C531E8B8D2500E30853 /* LanuchViewController.m */,
+				B40F9F221FFF74CB00604D98 /* MHPDefinition.h */,
+				B40F9F251FFF763100604D98 /* PrefixHeader.pch */,
 				B474AACF1E8A2DF4007CD59A /* LaunchScreen.storyboard */,
 				B474AAD21E8A2DF4007CD59A /* Info.plist */,
 				B43F2C551E8B92C500E30853 /* Assets.xcassets */,
@@ -632,7 +631,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43F2C541E8B8D2500E30853 /* LanuchViewController.m in Sources */,
 				B474AB301E8A3009007CD59A /* MapScrollerViewController.m in Sources */,
 				B474AB2D1E8A3009007CD59A /* ArmouryViewController.m in Sources */,
 				B474AAF51E8A2F3C007CD59A /* PlistManager.m in Sources */,
@@ -794,6 +792,8 @@
 					"$(PROJECT_DIR)/UMSocial/UMSocialSDK",
 					"$(PROJECT_DIR)/UMSocial/UMSocialUI",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/Ivan_deng/Desktop/project/MHP3RD/MHP3RD/PrefixHeader.pch;
 				INFOPLIST_FILE = MHP3RD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -823,6 +823,8 @@
 					"$(PROJECT_DIR)/UMSocial/UMSocialSDK",
 					"$(PROJECT_DIR)/UMSocial/UMSocialUI",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/Ivan_deng/Desktop/project/MHP3RD/MHP3RD/PrefixHeader.pch;
 				INFOPLIST_FILE = MHP3RD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
