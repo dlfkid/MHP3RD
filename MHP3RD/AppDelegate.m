@@ -6,11 +6,9 @@
 //  Copyright © 2017年 Ivan_deng. All rights reserved.
 //
 
-#define APP_KEY @"598a813a734be43251000ab2"
-
 #import "AppDelegate.h"
 
-#import <UMSocialCore/UMSocialCore.h>
+
 #import <AFNetworkReachabilityManager.h>
 
 #import "AboutViewController.h"
@@ -38,29 +36,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     mainTabBar = [self setTabBar];
     [self.window setRootViewController:mainTabBar];
-    UMSocialManager *shareManager = [UMSocialManager defaultManager];
-    [shareManager openLog:true];
-    [shareManager setUmSocialAppkey:APP_KEY];
-    [self setConfigUshareSetting];
-    [self setConfigUsharePlatform];
     //检测当前网络状态：
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     return YES;
-}
-
-- (void)setConfigUshareSetting {
-    //打开图片水印
-    [[UMSocialGlobal shareInstance] setIsUsingWaterMark:true];
-    [[UMSocialGlobal shareInstance] setIsUsingHttpsWhenShareContent:false];
-}
-
-- (void)setConfigUsharePlatform {
-    //设置微信的APPKEY和APPSecret
-    UMSocialManager *shareManager = [UMSocialManager defaultManager];
-    [shareManager setPlaform:UMSocialPlatformType_WechatSession appKey:@"wxdc1e388c3822c80b" appSecret:@"3baf1193c85774b3fd9d18447d76cab0" redirectURL:nil];
-    [shareManager removePlatformProviderWithPlatformType:UMSocialPlatformType_WechatFavorite];
-    //设置新浪微博的
-    [shareManager setPlaform:UMSocialPlatformType_Sina appKey:@"3921700954" appSecret:@"04b48b094faeb16683c32669824ebdad" redirectURL:@"https://sns.whalecloud.com/sina2/callback"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -87,35 +65,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
-    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
-    if (!result) {
-        // 其他如支付等SDK的回调
-    }
-    return result;
-}
-
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
-{
-    //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
-    BOOL result = [[UMSocialManager defaultManager]  handleOpenURL:url options:options];
-    if (!result) {
-        // 其他如支付等SDK的回调
-    }
-    return result;
-}
-
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-{
-    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
-    if (!result) {
-        // 其他如支付等SDK的回调
-    }
-    return result;
 }
 
 - (UITabBarController *)setTabBar{

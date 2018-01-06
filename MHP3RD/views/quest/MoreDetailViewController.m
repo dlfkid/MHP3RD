@@ -6,10 +6,7 @@
 //  Copyright © 2017年 Ivan_deng. All rights reserved.
 //
 
-#define IMAGEVIEWHEIGHT 160
-#define TITLELABELHEIGHT 80
-#define TOPVIEW 64
-#define GAP 10
+
 
 #import "MoreDetailViewController.h"
 

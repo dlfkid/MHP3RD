@@ -8,10 +8,9 @@
 
 #import "WeaponDetailViewViewController.h"
 
+#import <Masonry/Masonry.h>
+
 #define SCREENWIDTH self.view.frame.size.width
-#define GAPSPACE 10
-#define NARROWGAP 20
-#define VIEWHEIGHT 300
 
 @interface WeaponDetailViewViewController ()<UIScrollViewDelegate,UITextViewDelegate>
 
@@ -26,7 +25,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setFrame:[UIScreen mainScreen].bounds];
     self.view.backgroundColor = [UIColor whiteColor];
     [self configureTextScroller];
     // Do any additional setup after loading the view.
@@ -42,52 +40,42 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - scroll setting
-- (void)configureScrollView {
-    self.scroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, VIEWHEIGHT)];
-    [self.view addSubview:_scroll];
-    _scroll.maximumZoomScale = 2;
-    _scroll.minimumZoomScale = 1;
-    _scroll.delegate = self;
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:_scroll.frame];
-    imageView.image = [UIImage imageNamed:self.weaponInfo.pic];
-    imageView.tag = 101;
-    [_scroll addSubview:imageView];
-}
-
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-    return [self.scroll viewWithTag:101];
-}
 
 #pragma mark - textView setting
 - (UILabel *)configureTextView {
     UILabel *weaponText = [[UILabel alloc]init];
     weaponText.text = self.weaponInfo.brief;
-    weaponText.textAlignment = NSTextAlignmentCenter;
+    weaponText.textAlignment = NSTextAlignmentLeft;
     weaponText.font = [UIFont systemFontOfSize:16];
     weaponText.numberOfLines = 0;
     weaponText.lineBreakMode = NSLineBreakByTruncatingTail;
-    CGSize maxSize = CGSizeMake(SCREENWIDTH - 2*GAPSPACE, MAXFLOAT);
-    CGSize expectSize = [weaponText sizeThatFits:maxSize];
-    weaponText.frame = CGRectMake(GAPSPACE,VIEWHEIGHT, expectSize.width, expectSize.height);
     return weaponText;
 }
 
 
 #pragma mark - scrollerView setting
 - (void)configureTextScroller {
-    self.textScroll = [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.textScroll = [[UIScrollView alloc]initWithFrame:CGRectZero];
     [self.view addSubview:_textScroll];
+    [_textScroll mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
     _textScroll.delegate = self;
-    _scroll.delegate = self;
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, VIEWHEIGHT)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectZero];
     imageView.image = [UIImage imageNamed:self.weaponInfo.pic];
     imageView.tag = 101;
     [_textScroll addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.left.right.equalTo(@0);
+        make.height.mas_equalTo(300);
+    }];
     UILabel *labelText = [self configureTextView];
-    
     [_textScroll addSubview:labelText];
-    [_textScroll setContentSize:CGSizeMake(SCREENWIDTH, VIEWHEIGHT + labelText.frame.size.height + GAPSPACE)];
+    [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.centerX.equalTo(@0);
+        make.top.equalTo(imageView.mas_bottom).inset(MHPstatusbar);
+    }];
+    [_textScroll setContentSize:CGSizeMake(MHPscreenWidth(), MHPscreenHeight())];
 }
 
 /*

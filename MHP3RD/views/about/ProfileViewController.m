@@ -9,8 +9,7 @@
 #import "ProfileViewController.h"
 #import "HunterProfile.h"
 #import "ProfileAddViewController.h"
-#import <UMSocialCore/UMSocialCore.h>
-#import <UShareUI/UShareUI.h>
+
 
 #define KEYBOARDHEIGHT 300
 #define LABELHEIGHT 40
@@ -119,30 +118,6 @@
     }
     [self ConfigureUI];
     NSLog(@"ALL labels were changed");
-}
-
-#pragma mark - shareInfo
-
-- (void)sharedInfo:(UIButton *)sender {
-    //打开分享面板获取分享平台
-    [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
-        //创建分享消息对象
-        UMSocialMessageObject *message = [UMSocialMessageObject messageObject];
-        //设置分享内容
-        NSString *shareText = [NSString stringWithFormat:@"%@(%2f):%@",_hunterInfo.name,_hunterInfo.HunterRank,_hunterInfo.selfIntroduce];
-        message.text = shareText;
-        //调用分享管理器开始分享
-        [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:message currentViewController:self completion:^(id result, NSError *error) {
-            
-            if(error){
-                UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:@"分享失败" message:[NSString stringWithFormat:@"%@",error.localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
-                [self presentViewController:alertControl animated:true completion:nil];
-            }else{
-                UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:@"分享成功" message:@"分享成功" preferredStyle:UIAlertControllerStyleAlert];
-                [self presentViewController:alertControl animated:true completion:nil];
-            }
-        }];
-    }];
 }
 
 /*
