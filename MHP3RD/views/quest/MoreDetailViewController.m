@@ -13,6 +13,8 @@
 
 #import "MoreDetailViewController.h"
 
+#import <Masonry/Masonry.h>
+
 @interface MoreDetailViewController ()<UIScrollViewDelegate>
 
 @end
@@ -41,35 +43,57 @@
 }
 
 - (void)configurePicImageView {
-    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, TOPVIEW, self.view.frame.size.width,TITLELABELHEIGHT)];
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectZero];
     titleLabel.backgroundColor = [UIColor whiteColor];
     titleLabel.text = self.questDetail.questName;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.font = [UIFont systemFontOfSize:18];
-    
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, IMAGEVIEWHEIGHT)];
+    [self.view addSubview:titleLabel];
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(MHPtopEdgeInset);
+        make.centerX.equalTo(@0);
+        make.width.mas_equalTo(MHPscreenWidth());
+    }];;
+
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectZero];
     UIImage *questPic = [UIImage imageNamed:self.questDetail.questPic];
     imageView.image = questPic;
     imageView.tag = 100;
     
-    UIScrollView *scroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, TOPVIEW +TITLELABELHEIGHT + GAP, self.view.frame.size.width, IMAGEVIEWHEIGHT)];
+    UIScrollView *scroll = [[UIScrollView alloc]initWithFrame:CGRectZero];
     [scroll setContentSize:questPic.size];
     scroll.delegate = self;
-    scroll.maximumZoomScale = 2;
+    scroll.maximumZoomScale = 1;
     scroll.minimumZoomScale = 1;
-    [self.view addSubview:titleLabel];
+    
     [scroll addSubview:imageView];
     [self.view addSubview:scroll];
+    
+    [scroll mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(MHPtopEdgeInset + MHPlabelHeight);
+        make.left.right.centerX.equalTo(@0);
+        make.height.equalTo(@180);
+    }];
+    
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(scroll);
+        make.centerX.equalTo(@0);
+        make.height.equalTo(scroll);
+    }];
 }
 
 - (void)configureAdviceView {
-    UITextView *text = [[UITextView alloc]initWithFrame:CGRectMake(0,TOPVIEW + TITLELABELHEIGHT + GAP + IMAGEVIEWHEIGHT + GAP, [UIScreen mainScreen].bounds.size.width, 400)];
-    [text setEditable:NO];
+    UILabel *text = [[UILabel alloc]initWithFrame:CGRectZero];
+    text.numberOfLines = 0;
     text.font = [UIFont systemFontOfSize:16];
     text.layer.cornerRadius = 5;
     text.textAlignment = NSTextAlignmentCenter;
     text.text = self.questDetail.questBrief;
     [self.view addSubview:text];
+    [text mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view).inset(MHPtabbar);
+        make.centerX.left.right.equalTo(@0);
+    }];
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{

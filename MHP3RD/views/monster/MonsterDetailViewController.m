@@ -8,12 +8,6 @@
 #import <Masonry/Masonry.h>
 #import "MonsterDetailViewController.h"
 
-#define SCREENWIDTH self.view.frame.size.width
-#define GAPSPACE 30
-#define ImageViewHeight 200
-#define TOPVIEW 64
-#define TABBARHEIGHT 48
-
 
 @interface MonsterDetailViewController ()<UIScrollViewDelegate>
 
