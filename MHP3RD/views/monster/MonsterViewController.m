@@ -52,6 +52,10 @@
 
 - (UIImageView *)setupBackgroundImage {
     UIImageView *background = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"card"] highlightedImage:nil];
+    [self.view addSubview:background];
+    [background mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
     return background;
 }
 
@@ -62,7 +66,7 @@
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HEADERIDENTY];
     self.collectionView.dataSource = self;
     self.collectionView.backgroundColor = [UIColor whiteColor];
-    [self.collectionView setBackgroundView:[self setupBackgroundImage]];
+    self.collectionView.alpha = 0.8;
     [self.view addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
@@ -126,7 +130,6 @@
     titleLabel.text = monsterTypeName[monsterType];
     UICollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HEADERIDENTY forIndexPath:indexPath];
     header.backgroundColor = [UIColor whiteColor];
-    header.alpha = 0.7;
     [header addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(titleLabel.superview);

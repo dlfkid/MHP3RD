@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4586EB1E9CC8E65846C2446A /* libPods-MHP3RD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C82214A1252987849C686B /* libPods-MHP3RD.a */; };
-		B40BB5061FD4EA1C00EBF57D /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40BB5041FD4EA1C00EBF57D /* VideoPlayerViewController.m */; };
 		B42CC2551F3AB1B50023D05F /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2441F3AB1B50023D05F /* libSocialSina.a */; };
 		B42CC2561F3AB1B50023D05F /* libSocialUniqueId.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2471F3AB1B50023D05F /* libSocialUniqueId.a */; };
 		B42CC2571F3AB1B50023D05F /* libSocialWeChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC24A1F3AB1B50023D05F /* libSocialWeChat.a */; };
@@ -60,8 +59,6 @@
 /* Begin PBXFileReference section */
 		B40BB4FF1FD4E95C00EBF57D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B40BB5001FD4E9A700EBF57D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		B40BB5041FD4EA1C00EBF57D /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
-		B40BB5051FD4EA1C00EBF57D /* VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
 		B40F9F221FFF74CB00604D98 /* MHPDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPDefinition.h; sourceTree = "<group>"; };
 		B40F9F251FFF763100604D98 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B42CC2441F3AB1B50023D05F /* libSocialSina.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSina.a; sourceTree = "<group>"; };
@@ -463,8 +460,6 @@
 		B474AB1E1E8A3009007CD59A /* monster */ = {
 			isa = PBXGroup;
 			children = (
-				B40BB5051FD4EA1C00EBF57D /* VideoPlayerViewController.h */,
-				B40BB5041FD4EA1C00EBF57D /* VideoPlayerViewController.m */,
 				B474AB1F1E8A3009007CD59A /* MonsterDetailViewController.h */,
 				B474AB201E8A3009007CD59A /* MonsterDetailViewController.m */,
 				B474AB211E8A3009007CD59A /* MonsterViewController.h */,
@@ -653,7 +648,6 @@
 				B474AB2F1E8A3009007CD59A /* MapDetailViewController.m in Sources */,
 				B474AB351E8A3009007CD59A /* QuestDetailTableViewController.m in Sources */,
 				B4EEE0BB1E9E0DD400B63A01 /* HP+CoreDataProperties.m in Sources */,
-				B40BB5061FD4EA1C00EBF57D /* VideoPlayerViewController.m in Sources */,
 				B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */,
 				B4EEE0B21E9C739300B63A01 /* ProfileViewController.m in Sources */,
 				B474AAF41E8A2F3C007CD59A /* MonsterInfo.m in Sources */,

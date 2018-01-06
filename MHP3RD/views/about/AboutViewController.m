@@ -13,7 +13,6 @@
 #import "Communicator.h"
 #import "WebViewController.h"
 #import "DonwnLoadTestViewController.h"
-#import "VideoPlayerViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
@@ -330,7 +329,6 @@
     UIButton *play = [UIButton buttonWithType:UIButtonTypeSystem];
     [play setFrame:CGRectMake(enter.frame.origin.x, download.frame.origin.y + LABELHEIGHT + 10, LABELWIDTH, LABELHEIGHT)];
     [play setTitle:@"播放" forState:UIControlStateNormal];
-    [play addTarget:self action:@selector(enterPlayVideoView:) forControlEvents:UIControlEventTouchUpInside];
     [officialSite addSubview:enter];
     [officialSite addSubview:download];
     [officialSite addSubview:play];
@@ -435,9 +433,6 @@
     [self.navigationController pushViewController:download animated:true];
 }
 
-- (void)enterPlayVideoView:(UIButton *)sender {
-    VideoPlayerViewController *video = [[VideoPlayerViewController alloc]initWithAVPlayer:[UIImage imageNamed:@"card2"]];
-    [self.navigationController pushViewController:video animated:nil];
-}
+
 
 @end
