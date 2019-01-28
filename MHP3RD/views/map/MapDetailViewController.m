@@ -8,6 +8,10 @@
 
 #import "MapDetailViewController.h"
 
+// Helpers
+#import <Masonry/Masonry.h>
+#import <iOSDeviceScreenAdapter/DeviceScreenAdaptor.h>
+
 @interface MapDetailViewController ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
 
 @end
@@ -16,20 +20,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.scrollerView = [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.scrollerView = [[UIScrollView alloc]initWithFrame:CGRectZero];
+    self.scrollerView.backgroundColor = [UIColor whiteColor];
     self.scrollerView.delegate = self;
     UIImage *map = [UIImage imageNamed:_detailMapName];
-    UIImageView *image = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectZero];
+    image.contentMode = UIViewContentModeScaleToFill;
     image.image = map;
     [image setTag:100];
-    [_scrollerView addSubview:image];
     _scrollerView.contentSize = map.size;
-    [_scrollerView setMaximumZoomScale:2];
-    [_scrollerView setMinimumZoomScale:1];
+    [_scrollerView setMaximumZoomScale:3];
+    [_scrollerView setMinimumZoomScale:1.5];
     [self addSwipeDownGesture];
     [self.view addSubview:self.scrollerView];
+    [self.scrollerView addSubview:image];
+    CGFloat bottomIndicator = 0;
+    CGFloat statusBarHeight = 20;
+    switch ([DeviceScreenAdaptor screenType]) {
+        case DeviceScreenType5_8:
+        case DeviceScreenType6_1:
+        case DeviceScreenType6_5:
+            bottomIndicator = 34;
+            statusBarHeight = 44;
+            break;
+            
+        default:
+            break;
+    }
     
+    [self.scrollerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(bottomIndicator);
+        make.top.mas_equalTo(statusBarHeight);
+        make.left.right.equalTo(@0);
+
+    }];
+    
+    [image mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(@0);
+    }];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.scrollerView.zoomScale = 2;
 }
 
 - (void)didReceiveMemoryWarning {

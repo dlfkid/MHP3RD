@@ -1,0 +1,1 @@
+../../../iOSDeviceScreenAdapter/ScreenAdapterDemo/ScreenAdapterDemo/ScreenAdapter/DeviceScreenAdaptor.h

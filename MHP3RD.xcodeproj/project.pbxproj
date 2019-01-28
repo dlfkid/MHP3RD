@@ -401,8 +401,6 @@
 				B474AABA1E8A2DF4007CD59A /* Sources */,
 				B474AABB1E8A2DF4007CD59A /* Frameworks */,
 				B474AABC1E8A2DF4007CD59A /* Resources */,
-				43964DB92758F4CF79FCC08C /* [CP] Embed Pods Frameworks */,
-				968F589DED850BD741254E80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -465,36 +463,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		43964DB92758F4CF79FCC08C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHP3RD/Pods-MHP3RD-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		968F589DED850BD741254E80 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHP3RD/Pods-MHP3RD-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FD0011367A1B89107724FC88 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -677,9 +645,9 @@
 				DEVELOPMENT_TEAM = VSH7W5Y66V;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Ivan_deng/Desktop/project/MHP3RD/MHP3RD/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MHP3RD/PrefixHeader.pch";
 				INFOPLIST_FILE = MHP3RD/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = Misery.MHP3RD;
@@ -698,9 +666,9 @@
 				DEVELOPMENT_TEAM = VSH7W5Y66V;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Ivan_deng/Desktop/project/MHP3RD/MHP3RD/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MHP3RD/PrefixHeader.pch";
 				INFOPLIST_FILE = MHP3RD/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = Misery.MHP3RD;
