@@ -285,6 +285,35 @@
     return height;
 }
 
+- (CGFloat)statusBarMagin {
+    switch (self.deviceType) {
+        case IPhone_X:
+        case IPhone_XS:
+        case IPhone_XR:
+        case IPhone_XSMax:
+            return 44;
+            break;
+            
+        default:
+            return 20;
+            break;
+    }
+}
+
+- (CGFloat)bottomIndicatorMargin {
+    switch (self.deviceType) {
+        case IPhone_X:
+        case IPhone_XS:
+        case IPhone_XR:
+        case IPhone_XSMax:
+            return 34;
+            break;
+            
+        default:
+            return 0;
+            break;
+    }
+}
 
 #pragma mark - Public
 
@@ -317,6 +346,14 @@
 
 + (NSString *)deviceTypeString {
     return [DeviceScreenAdaptor sharedAdaptor].deviceTypeString;
+}
+
++ (CGFloat)statusBarMargin {
+    return [DeviceScreenAdaptor sharedAdaptor].statusBarMagin;
+}
+
++ (CGFloat)bottomIndicatorMargin {
+    return [DeviceScreenAdaptor sharedAdaptor].bottomIndicatorMargin;
 }
 
 /*+ (DeviceScreenType)currentScreenType {

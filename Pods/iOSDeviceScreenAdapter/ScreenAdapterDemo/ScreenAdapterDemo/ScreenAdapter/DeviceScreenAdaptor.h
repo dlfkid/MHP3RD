@@ -86,7 +86,8 @@ typedef NS_ENUM(NSInteger,DeviceType) {
 @property (nonatomic, copy, readonly) NSString *deviceTypeString;
 @property (nonatomic, assign, readonly) DeviceScreenType screenType;
 @property (nonatomic, assign, readonly) BOOL isLandscape;
-
+@property (nonatomic, assign, readonly) CGFloat statusBarMagin;
+@property (nonatomic, assign, readonly) CGFloat bottomIndicatorMargin;
 
 /**
  get singleton instance
@@ -135,6 +136,22 @@ typedef NS_ENUM(NSInteger,DeviceType) {
  @return device type string
  */
 + (NSString *)deviceTypeString;
+
+
+/**
+ return the height of statusBar, NAVIGATIONBAR HEIGHT NOT INCLUDED
+
+ @return status bar height
+ */
++ (CGFloat)statusBarMargin;
+
+
+/**
+ return the height of bottom indicator
+
+ @return bottom indocator
+ */
++ (CGFloat)bottomIndicatorMargin;
 
 @end
 

@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - iOSDeviceScreenAdapter (1.0.1)
+  - iOSDeviceScreenAdapter (1.0.2)
   - Masonry (1.1.0)
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
@@ -35,7 +35,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  iOSDeviceScreenAdapter: a355faf3972ff55f3fb94925db4db9711f028cb4
+  iOSDeviceScreenAdapter: 359c45fa7398a736978d6432e2686c76f763b9a5
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
 

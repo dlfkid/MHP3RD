@@ -132,7 +132,6 @@
     [UIView commitAnimations];
     //隐藏边栏要在最后调用否则会露出白底
     //不需要这句
-    //[[_slideController view] setHidden:true];
 }
 /*
 #pragma mark - Navigation
@@ -181,7 +180,7 @@
 - (void)configureBasicScroll {
     _basicScroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     _basicScroll.contentSize = CGSizeMake(_basicScroll.frame.size.width, _basicScroll.frame.size.height * 5);
-    _basicScroll.pagingEnabled = true;
+    _basicScroll.pagingEnabled = YES;
     _basicScroll.delegate = self;
     [_basicScroll setBounces:false];
     [_mainView addSubview:_basicScroll];
@@ -239,7 +238,7 @@
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
-    [friendsTableView setEditing:editing animated:true];
+    [friendsTableView setEditing:editing animated:YES];
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -257,9 +256,9 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     if(_basicScroll.contentOffset.y == self.view.frame.size.height) {
-        [self.navigationController.navigationItem.rightBarButtonItem setAccessibilityElementsHidden:false];
+        [self.navigationController.navigationItem.rightBarButtonItem setAccessibilityElementsHidden:NO];
     }else
-        [self.navigationController.navigationItem.rightBarButtonItem setAccessibilityElementsHidden:true];
+        [self.navigationController.navigationItem.rightBarButtonItem setAccessibilityElementsHidden:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -285,7 +284,7 @@
     HunterProfile *hunter = allHunters[indexPath.row];
     ProfileViewController *profile = [[ProfileViewController alloc]init];
     profile.hunterInfo = hunter;
-    [self.navigationController pushViewController:profile animated:true];
+    [self.navigationController pushViewController:profile animated:YES];
 }
 
 - (void)configureGPSLocation {
@@ -384,7 +383,7 @@
     CLLocation *location = self.locationManager.location;
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 3000, 3000);
     map.region = viewRegion;
-    [map setShowsUserLocation:true];
+    [map setShowsUserLocation:YES];
     map.delegate = self;
     return map;
 }
@@ -420,17 +419,17 @@
     addProfile = [[ProfileAddViewController alloc]init];
     addProfile.ID = currentID + 1;
     UINavigationController *navProfile = [[UINavigationController alloc]initWithRootViewController:addProfile];
-    [self presentViewController:navProfile animated:true completion:nil];
+    [self presentViewController:navProfile animated:YES completion:nil];
 }
 
 - (void)enterButtonAction:(UIButton *)sender {
     WebViewController *webView = [[WebViewController alloc]init];
-    [self.navigationController pushViewController:webView animated:true];
+    [self.navigationController pushViewController:webView animated:YES];
 }
 
 - (void)enterDownLoadPicView:(UIButton *)sender {
     DonwnLoadTestViewController *download = [[DonwnLoadTestViewController alloc]init];
-    [self.navigationController pushViewController:download animated:true];
+    [self.navigationController pushViewController:download animated:YES];
 }
 
 

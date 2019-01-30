@@ -41,7 +41,7 @@
     [self.view addSubview:imageView];
     [self.view addSubview:briefLabel];
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(MHPstatusbar * 2);
+        make.top.mas_equalTo([DeviceScreenAdaptor statusBarMargin] + 44);
         make.width.mas_equalTo([UIScreen mainScreen].bounds.size.width - 20);
         make.height.equalTo(@200);
     }];
@@ -80,7 +80,7 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    CGFloat height = self.briefLabel.frame.size.height + self.monsterAvatar.frame.size.height + self.weaknessLabel.frame.size.height + MHPstatusbar * 5;
+    CGFloat height = self.briefLabel.frame.size.height + self.monsterAvatar.frame.size.height + self.weaknessLabel.frame.size.height + MHPstatusbar * 3 + [DeviceScreenAdaptor statusBarMargin] + [DeviceScreenAdaptor bottomIndicatorMargin] + 44;
     self.scrollView.contentSize = CGSizeMake(width, height);
 }
 
