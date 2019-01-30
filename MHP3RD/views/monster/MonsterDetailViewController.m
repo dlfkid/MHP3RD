@@ -18,10 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)viewWillAppear:(BOOL)animated{
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.tabBarController.tabBar setHidden:true];
     UIImageView *imageView = [self imageViewWithMonsterPic];
     UILabel *briefLabel = [self labelWithContent];
@@ -56,6 +53,10 @@
         make.centerX.equalTo(@0);
         make.bottom.equalTo(@0);
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
