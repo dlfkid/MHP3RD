@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35BCA6272201829B00721CC9 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCA6262201829B00721CC9 /* AboutViewController.m */; };
 		4586EB1E9CC8E65846C2446A /* libPods-MHP3RD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C82214A1252987849C686B /* libPods-MHP3RD.a */; };
 		B40F9F272000FB6700604D98 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40F9F262000FB6700604D98 /* ProfileViewController.m */; };
 		B42CC25F1F3AB1E80023D05F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */; };
@@ -28,7 +29,7 @@
 		B474AAFB1E8A2F3C007CD59A /* weapon.plist in Resources */ = {isa = PBXBuildFile; fileRef = B474AAED1E8A2F3C007CD59A /* weapon.plist */; };
 		B474AAFC1E8A2F3C007CD59A /* WeaponInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAEF1E8A2F3C007CD59A /* WeaponInfo.m */; };
 		B474AB081E8A2FE0007CD59A /* Communicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB071E8A2FE0007CD59A /* Communicator.m */; };
-		B474AB2A1E8A3009007CD59A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB0D1E8A3009007CD59A /* AboutViewController.m */; };
+		B474AB2A1E8A3009007CD59A /* OLDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB0D1E8A3009007CD59A /* OLDAboutViewController.m */; };
 		B474AB2D1E8A3009007CD59A /* ArmouryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB141E8A3009007CD59A /* ArmouryViewController.m */; };
 		B474AB2E1E8A3009007CD59A /* WeaponDetailViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB161E8A3009007CD59A /* WeaponDetailViewViewController.m */; };
 		B474AB2F1E8A3009007CD59A /* MapDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB191E8A3009007CD59A /* MapDetailViewController.m */; };
@@ -48,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35BCA6252201829B00721CC9 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		35BCA6262201829B00721CC9 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		B40BB4FF1FD4E95C00EBF57D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B40BB5001FD4E9A700EBF57D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		B40F9F221FFF74CB00604D98 /* MHPDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPDefinition.h; sourceTree = "<group>"; };
@@ -84,8 +87,8 @@
 		B474AAEF1E8A2F3C007CD59A /* WeaponInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeaponInfo.m; path = DataBaseDao/WeaponInfo.m; sourceTree = "<group>"; };
 		B474AB061E8A2FE0007CD59A /* Communicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Communicator.h; path = BussinessLayer/Communicator.h; sourceTree = "<group>"; };
 		B474AB071E8A2FE0007CD59A /* Communicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Communicator.m; path = BussinessLayer/Communicator.m; sourceTree = "<group>"; };
-		B474AB0C1E8A3009007CD59A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
-		B474AB0D1E8A3009007CD59A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		B474AB0C1E8A3009007CD59A /* OLDAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLDAboutViewController.h; sourceTree = "<group>"; };
+		B474AB0D1E8A3009007CD59A /* OLDAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLDAboutViewController.m; sourceTree = "<group>"; };
 		B474AB131E8A3009007CD59A /* ArmouryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArmouryViewController.h; sourceTree = "<group>"; };
 		B474AB141E8A3009007CD59A /* ArmouryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArmouryViewController.m; sourceTree = "<group>"; };
 		B474AB151E8A3009007CD59A /* WeaponDetailViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponDetailViewViewController.h; sourceTree = "<group>"; };
@@ -317,8 +320,10 @@
 		B474AB0B1E8A3009007CD59A /* about */ = {
 			isa = PBXGroup;
 			children = (
-				B474AB0C1E8A3009007CD59A /* AboutViewController.h */,
-				B474AB0D1E8A3009007CD59A /* AboutViewController.m */,
+				B474AB0C1E8A3009007CD59A /* OLDAboutViewController.h */,
+				B474AB0D1E8A3009007CD59A /* OLDAboutViewController.m */,
+				35BCA6252201829B00721CC9 /* AboutViewController.h */,
+				35BCA6262201829B00721CC9 /* AboutViewController.m */,
 				B48761D71F6FBADB00174FEA /* DonwnLoadTestViewController.h */,
 				B48761D81F6FBADB00174FEA /* DonwnLoadTestViewController.m */,
 				B48761CF1F6B69EC00174FEA /* WebViewController.h */,
@@ -498,6 +503,7 @@
 				B474AAF11E8A2F3C007CD59A /* HunterProfile.m in Sources */,
 				B474AAFA1E8A2F3C007CD59A /* QuestInfo.m in Sources */,
 				B474AB341E8A3009007CD59A /* MoreDetailViewController.m in Sources */,
+				35BCA6272201829B00721CC9 /* AboutViewController.m in Sources */,
 				B474AAC61E8A2DF4007CD59A /* AppDelegate.m in Sources */,
 				B474AAFC1E8A2F3C007CD59A /* WeaponInfo.m in Sources */,
 				B474AB321E8A3009007CD59A /* MonsterDetailViewController.m in Sources */,
@@ -505,7 +511,7 @@
 				B474AAC31E8A2DF4007CD59A /* main.m in Sources */,
 				B474AAF61E8A2F3C007CD59A /* ProfileDataAssistObject.m in Sources */,
 				B48761D91F6FBADB00174FEA /* DonwnLoadTestViewController.m in Sources */,
-				B474AB2A1E8A3009007CD59A /* AboutViewController.m in Sources */,
+				B474AB2A1E8A3009007CD59A /* OLDAboutViewController.m in Sources */,
 				B4EEE0BA1E9E0DD400B63A01 /* HP+CoreDataClass.m in Sources */,
 				B40F9F272000FB6700604D98 /* ProfileViewController.m in Sources */,
 				B474AB2F1E8A3009007CD59A /* MapDetailViewController.m in Sources */,

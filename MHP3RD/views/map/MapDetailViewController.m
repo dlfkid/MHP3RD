@@ -14,6 +14,8 @@
 
 @interface MapDetailViewController ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
 
+@property (nonatomic, strong) UIButton *closeButton;
+
 @end
 
 @implementation MapDetailViewController
@@ -48,6 +50,12 @@
             break;
     }
     
+    _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _closeButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 60) / 2, [UIScreen mainScreen].bounds.size.height - 130, 60, 60);
+    [_closeButton setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+    [_closeButton addTarget:self action:@selector(closeButtonDidTappedAction) forControlEvents:UIControlEventTouchUpInside];
+    [[UIApplication sharedApplication].keyWindow addSubview:_closeButton];
+    
     [self.scrollerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(bottomIndicator);
         make.top.mas_equalTo(statusBarHeight);
@@ -58,7 +66,6 @@
     [image mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(@0);
     }];
-    // Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -85,17 +92,15 @@
 
 - (void)swipeDownAction:(id)sender {
     NSLog(@"double tapped");
+    [self.closeButton removeFromSuperview];
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Actions
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)closeButtonDidTappedAction {
+    [self.closeButton removeFromSuperview];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
-*/
 
 @end

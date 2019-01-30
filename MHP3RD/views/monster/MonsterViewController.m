@@ -29,10 +29,15 @@
 
 @implementation MonsterViewController
 
+- (void)loadView {
+    UIImageView *backGround = [self setupBackgroundImage];
+    backGround.userInteractionEnabled = YES;
+    self.view = backGround;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self setupBackgroundImage];
     [self configureReloadButton];
     [self configureCollectionView];
     // Do any additional setup after loading the view.
@@ -52,10 +57,6 @@
 
 - (UIImageView *)setupBackgroundImage {
     UIImageView *background = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"card"] highlightedImage:nil];
-    [self.view addSubview:background];
-    [background mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
     return background;
 }
 
@@ -65,6 +66,7 @@
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CELLIDENTITY];
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HEADERIDENTY];
     self.collectionView.dataSource = self;
+    // self.collectionView.backgroundView = [self setupBackgroundImage];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.alpha = 0.8;
     [self.view addSubview:self.collectionView];
