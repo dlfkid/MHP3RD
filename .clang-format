@@ -1,0 +1,84 @@
+# 
+# Created by eddiecmchen on 2020/02/07
+#
+
+Language: ObjC
+
+BasedOnStyle: WebKit
+
+
+AccessModifierOffset: -4
+
+AlignAfterOpenBracket: Align
+
+AlignConsecutiveAssignments: false
+
+AlignConsecutiveDeclarations: false
+
+AlignEscapedNewlinesLeft: true
+
+AlignOperands: true
+
+AlignTrailingComments: true
+
+AllowAllParametersOfDeclarationOnNextLine: true
+
+AllowShortBlocksOnASingleLine : false
+
+AllowShortCaseLabelsOnASingleLine: false
+
+AllowShortFunctionsOnASingleLine: Empty
+
+AllowShortIfStatementsOnASingleLine: false
+
+AllowShortLoopsOnASingleLine: false 
+
+AlwaysBreakAfterDefinitionReturnType: None
+
+ColumnLimit: 150
+
+CommentPragmas: '^ IWYU pragma:'
+
+PointerAlignment: Right
+
+IndentWidth: 4
+
+MaxEmptyLinesToKeep: 1
+
+ObjCSpaceAfterProperty: true
+
+ObjCBlockIndentWidth: 4
+
+AllowShortFunctionsOnASingleLine: false
+
+#AlignOperands: true
+
+SpacesInSquareBrackets: false
+
+SpacesInParentheses : false
+
+SpaceBeforeAssignmentOperators: true
+
+SpacesInContainerLiterals: true
+
+IndentWrappedFunctionNames: true
+
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+SpaceAfterCStyleCast: false
+
+SortIncludes: false
+
+IndentCaseLabels: true 
+
+BreakBeforeBraces: Attach
+
+TabWidth: 4
+UseTab: Never
+
+---
+
+Language: Cpp
+
+BasedOnStyle: Google
+ColumnLimit: 100

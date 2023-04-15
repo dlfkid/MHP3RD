@@ -22,12 +22,12 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
-  - iOSDeviceScreenAdapter (~> 1.0.1)
+  - iOSDeviceScreenAdapter (~> 1.0.2)
   - Masonry (~> 1.1.0)
   - SDWebImage (~> 4.1.2)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - iOSDeviceScreenAdapter
     - Masonry
@@ -39,6 +39,6 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
 
-PODFILE CHECKSUM: fd0bf15647fc8c074db6dc006124eab8e0f887a5
+PODFILE CHECKSUM: 71d7f021465eefadfc73700eb4b638b9ed350e5f
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.11.2
