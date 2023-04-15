@@ -19,6 +19,6 @@ post_install do |installer|
   end
   
   # 绑定主仓库git hooks
-  system ("sh ./format_bootstrap.sh")
+  system ("sh format_bootstrap.sh")
 
 end
