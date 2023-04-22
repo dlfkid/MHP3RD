@@ -422,6 +422,7 @@
 		B474AAB61E8A2DF4007CD59A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Ivan_deng;
 				TargetAttributes = {
@@ -437,6 +438,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

@@ -26,12 +26,14 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     self.title = @"MHP3DataBase";
     [self.tabBarController.tabBar setTranslucent:false];
     [self.navigationController.navigationBar setTranslucent:false];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     [self.tabBarController.tabBar setTranslucent:true];
     [self.navigationController.navigationBar setTranslucent:true];
 }

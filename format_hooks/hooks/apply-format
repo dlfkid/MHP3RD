@@ -260,15 +260,10 @@ if [ "$whole_file" = false ]; then
         error_exit \
             $'You need to install clang-format. \n' \
             $'\n' \
-            $'1 Switch to \'Tencent-WiFi\' or \'Tencent-StaffWiFi\' \n' \
+            $'1 Install Homebrew. If having installed Homebrew, make sure the version is lateset. \n' \
             $'\n' \
-            $'2 Install Homebrew. If having installed Homebrew, make sure the version is lateset. \n' \
-            $'\n' \
-            $'3 Paste \'brew install clang-format\' in a terminal. \n' \
-            $'\n' \
-            $'If having trouble with installing clang-format, visit the website. \n' \
-            $'\n' \
-            $'http://km.oa.com/articles/view/452150'
+            $'2 Paste \'brew install clang-format\' in a terminal. \n' \
+            $'\n'
     fi
 
     readonly format_diff
