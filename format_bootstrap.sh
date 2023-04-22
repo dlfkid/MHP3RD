@@ -3,7 +3,7 @@
 
 set -eu
 
-ROOT="$(dirname "$PWD")"
+ROOT="$("pwd")"
 HOOKS_FOLDER="$ROOT/.git/hooks"
 if [[ -d "$HOOKS_FOLDER" ]] && [[ ! -L "$HOOKS_FOLDER" ]] ; then
 echo ">>> remove default hooks directory."
