@@ -141,19 +141,19 @@
                completionHandler:(void (^)(BOOL))completionHandler {
     NSString *type = (NSString *)[shortcutItem.userInfo objectForKey:@"type"];
     if ([type isEqualToString:@"map"]) {
-        NSLog(@"开启地图");
+        MHPLog(@"开启地图");
         [mainTabBar setSelectedIndex:0];
     }
     if ([type isEqualToString:@"quest"]) {
-        NSLog(@"开启任务");
+        MHPLog(@"开启任务");
         [mainTabBar setSelectedIndex:1];
     }
     if ([type isEqualToString:@"monster"]) {
-        NSLog(@"开启怪物");
+        MHPLog(@"开启怪物");
         [mainTabBar setSelectedIndex:2];
     }
     if ([type isEqualToString:@"armoury"]) {
-        NSLog(@"开启装备");
+        MHPLog(@"开启装备");
         [mainTabBar setSelectedIndex:3];
     }
 }

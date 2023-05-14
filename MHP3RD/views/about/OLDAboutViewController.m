@@ -194,7 +194,7 @@
 }
 
 - (void)changeMainViewContentWithType:(viewType)type {
-    NSLog(@"Selected view number :%d",type);
+    MHPLog(@"Selected view number :%d", type);
     CGFloat Y_axis = type * VIEWHEIGHT;
     CGPoint point = CGPointMake(0, Y_axis);
     [_basicScroll setContentOffset:point];
@@ -357,7 +357,7 @@
 }
 
 - (void)reciveProfileNotice:(NSNotification *)notice {
-    NSLog(@"Notic recived");
+    MHPLog(@"Notic recived");
     allHunters = [Communicator getAllHunterProfile];
     [friendsTableView reloadData];
     [self configureHunterProfile];
@@ -366,7 +366,7 @@
 
 #pragma mark - Gps configure 
 - (void)configureGpsLocationManager {
-    NSLog(@"Requesting location");
+    MHPLog(@"Requesting location");
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -413,7 +413,7 @@
  */
 #pragma mark - Button Action
 - (void)addProfileAction:(UIButton *)sender {
-    NSLog(@"Adding hunter Profile.");
+    MHPLog(@"Adding hunter Profile.");
     HunterProfile *lastHunter = [allHunters lastObject];
     int16_t currentID = lastHunter.ID;
     addProfile = [[ProfileAddViewController alloc]init];

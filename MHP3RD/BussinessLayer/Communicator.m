@@ -23,7 +23,7 @@
     switch (questType) {
         case VILLAGE:
             questFileName = @"quest.plist";
-            NSLog(@"Plist name is %@",questFileName);
+            MHPLog(@"Plist name is %@", questFileName);
             break;
         case GUILD_LOW:
             questFileName = @"guildlow.plist";
@@ -34,7 +34,7 @@
     }
     PlistManager *dataPass = [PlistManager getInstanceWithPlist:questFileName];
     NSMutableArray *resultArr = [dataPass findAllQuestInfoForStar:stars];
-    NSLog(@"QuestNumber: %ld",(unsigned long)resultArr.count);
+    MHPLog(@"QuestNumber: %ld", (unsigned long)resultArr.count);
     return resultArr;
 }
 

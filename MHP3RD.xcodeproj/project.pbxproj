@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35BCA6272201829B00721CC9 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCA6262201829B00721CC9 /* AboutViewController.m */; };
+		35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */; };
 		4586EB1E9CC8E65846C2446A /* libPods-MHP3RD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C82214A1252987849C686B /* libPods-MHP3RD.a */; };
 		B40F9F272000FB6700604D98 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40F9F262000FB6700604D98 /* ProfileViewController.m */; };
 		B42CC25F1F3AB1E80023D05F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */; };
@@ -51,6 +52,9 @@
 /* Begin PBXFileReference section */
 		35BCA6252201829B00721CC9 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		35BCA6262201829B00721CC9 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		35C2C5BE2A1107AC0029C1B3 /* MHP3RD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHP3RD-Bridging-Header.h"; sourceTree = "<group>"; };
+		35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyBeaverBridge.swift; path = addon/SwiftyBeaverBridge.swift; sourceTree = "<group>"; };
+		35C2C5C12A110DAB0029C1B3 /* MHPLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPLogger.h; sourceTree = "<group>"; };
 		B40BB4FF1FD4E95C00EBF57D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B40BB5001FD4E9A700EBF57D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		B40F9F221FFF74CB00604D98 /* MHPDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPDefinition.h; sourceTree = "<group>"; };
@@ -173,13 +177,16 @@
 				B474AAC51E8A2DF4007CD59A /* AppDelegate.m */,
 				B40F9F221FFF74CB00604D98 /* MHPDefinition.h */,
 				B40F9F251FFF763100604D98 /* PrefixHeader.pch */,
+				35C2C5C12A110DAB0029C1B3 /* MHPLogger.h */,
 				B474AACF1E8A2DF4007CD59A /* LaunchScreen.storyboard */,
 				B474AAD21E8A2DF4007CD59A /* Info.plist */,
 				B43F2C551E8B92C500E30853 /* Assets.xcassets */,
+				35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */,
 				B474AB0A1E8A3009007CD59A /* views */,
 				B474AB091E8A2FE5007CD59A /* Communicator */,
 				B474AAFD1E8A2F52007CD59A /* DataBaseDao */,
 				B474AAC11E8A2DF4007CD59A /* Supporting Files */,
+				35C2C5BE2A1107AC0029C1B3 /* MHP3RD-Bridging-Header.h */,
 			);
 			path = MHP3RD;
 			sourceTree = "<group>";
@@ -429,6 +436,7 @@
 					B474AABD1E8A2DF4007CD59A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = VSH7W5Y66V;
+						LastSwiftMigration = 1430;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -496,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B474AB301E8A3009007CD59A /* MapScrollerViewController.m in Sources */,
+				35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */,
 				B474AB2D1E8A3009007CD59A /* ArmouryViewController.m in Sources */,
 				B474AAF51E8A2F3C007CD59A /* PlistManager.m in Sources */,
 				B474AB081E8A2FE0007CD59A /* Communicator.m in Sources */,
@@ -648,6 +657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = VSH7W5Y66V;
@@ -660,6 +670,9 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = Misery.MHP3RD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MHP3RD/MHP3RD-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -670,6 +683,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = VSH7W5Y66V;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -681,6 +695,8 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = Misery.MHP3RD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MHP3RD/MHP3RD-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

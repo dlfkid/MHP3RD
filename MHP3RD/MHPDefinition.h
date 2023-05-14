@@ -21,12 +21,12 @@ static const CGFloat MHPlabelHeight = 40;
 static const CGFloat MHPlabelWidth = 60;
 static const CGFloat MHPgap = 10;
 
-inline static CGFloat MHPscreenHeight() {
+inline static CGFloat MHPscreenHeight(void) {
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     return height;
 }
 
-inline static CGFloat MHPscreenWidth() {
+inline static CGFloat MHPscreenWidth(void) {
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     return width;
 }

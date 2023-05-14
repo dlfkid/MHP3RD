@@ -9,6 +9,7 @@ target 'MHP3RD' do
   pod 'AFNetworking', '~> 3.1.0', :inhibit_warnings => true
   pod 'Masonry', '~> 1.1.0', :inhibit_warnings => true
   pod 'iOSDeviceScreenAdapter', '~> 1.0.2', :inhibit_warnings => true
+  pod 'SwiftyBeaver'
 end
 
 post_install do |installer|

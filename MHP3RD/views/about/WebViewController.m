@@ -74,7 +74,7 @@
 }
 
 - (void)swipeBackAction:(id)sender {
-    NSLog(@"back to upper view");
+    MHPLog(@"back to upper view");
     [self.navigationController popViewControllerAnimated:true];
 }
 

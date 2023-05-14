@@ -78,7 +78,7 @@
 
 - (void)refreshing:(id)refreshController{
     if(self.refreshControl.refreshing == true){
-        NSLog(@"载入中……………………………………");
+        MHPLog(@"载入中……………………………………");
         self.refreshControl.attributedTitle = [[NSAttributedString alloc]initWithString:@"载入中……"];
         [Communicator refreshPlistData];
         self.QuestArray = [Communicator getQuestInfoMationForType:self.missionType andStars:self.starNum];

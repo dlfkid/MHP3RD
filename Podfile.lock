@@ -19,12 +19,14 @@ PODS:
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
+  - SwiftyBeaver (1.9.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - iOSDeviceScreenAdapter (~> 1.0.2)
   - Masonry (~> 1.1.0)
   - SDWebImage (~> 4.1.2)
+  - SwiftyBeaver
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -32,13 +34,16 @@ SPEC REPOS:
     - iOSDeviceScreenAdapter
     - Masonry
     - SDWebImage
+  trunk:
+    - SwiftyBeaver
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   iOSDeviceScreenAdapter: 359c45fa7398a736978d6432e2686c76f763b9a5
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
+  SwiftyBeaver: 84069991dd5dca07d7069100985badaca7f0ce82
 
-PODFILE CHECKSUM: 8b7302a6d10a8eb57fcdf20ddda4e1bd1badda94
+PODFILE CHECKSUM: 1814eaf2080e27be679c625f3dfc82d7a9b18bfe
 
 COCOAPODS: 1.11.2

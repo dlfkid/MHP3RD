@@ -94,7 +94,7 @@
     
     UIImageView *header = [[UIImageView alloc]initWithFrame:CGRectMake((SCREENWIDTH - HEADICON)/2, SCREENWIDTH, HEADICON, HEADICON)];
     header.backgroundColor = [UIColor whiteColor];
-    NSLog(@"pic url: %@",_hunterInfo.pic);
+    MHPLog(@"pic url: %@", _hunterInfo.pic);
     [header setImage:[UIImage imageWithContentsOfFile:_hunterInfo.pic]];
     [backGroundScroll addSubview:header];
     
@@ -119,7 +119,7 @@
         [label removeFromSuperview];
     }
     [self ConfigureUI];
-    NSLog(@"ALL labels were changed");
+    MHPLog(@"ALL labels were changed");
 }
 
 /*

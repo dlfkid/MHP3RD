@@ -137,23 +137,30 @@
 
 - (void)presentActionSheet:(UIButton *)sender {
     UIAlertController *addAction = [[UIAlertController alloc]init];
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"取消选择");
-    }];
-    UIAlertAction *camera = [UIAlertAction actionWithTitle:@"拍摄" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"拍摄头像");
-        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-                imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-            [self presentViewController:imagePicker animated:true completion:nil];
-        }
-    }];
-    UIAlertAction *library = [UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"从相册选择头像");
-        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]){
-            imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-            [self presentViewController:imagePicker animated:true completion:nil];
-        }
-    }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消"
+                                                     style:UIAlertActionStyleCancel
+                                                   handler:^(UIAlertAction *_Nonnull action) {
+                                                       MHPLog(@"取消选择");
+                                                   }];
+    UIAlertAction *camera = [UIAlertAction actionWithTitle:@"拍摄"
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction *_Nonnull action) {
+                                                       MHPLog(@"拍摄头像");
+                                                       if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+                                                           imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                                                           [self presentViewController:imagePicker animated:true completion:nil];
+                                                       }
+                                                   }];
+    UIAlertAction *library =
+        [UIAlertAction actionWithTitle:@"从相册选择"
+                                 style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *_Nonnull action) {
+                                   MHPLog(@"从相册选择头像");
+                                   if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+                                       imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                                       [self presentViewController:imagePicker animated:true completion:nil];
+                                   }
+                               }];
     [addAction addAction:library];
     [addAction addAction:camera];
     [addAction addAction:cancel];
@@ -260,9 +267,11 @@
 //configure alert view
 -(UIAlertController *)configureAlertView {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"警告" message:@"输入内容为空" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"没有输入内容");
-    }];
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleCancel
+                                                     handler:^(UIAlertAction *_Nonnull action) {
+                                                         MHPLog(@"没有输入内容");
+                                                     }];
     [alert addAction:noAction];
     return alert;
 }

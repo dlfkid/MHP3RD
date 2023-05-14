@@ -90,7 +90,7 @@ static ProfileDataAssistObject *instance = nil;
     NSError *error = nil;
     NSArray *listData = [context executeFetchRequest:fetchRequest error:&error];
     if(error != nil) {
-        NSLog(@"error: %@",error.localizedDescription);
+        MHPLog(@"error: %@", error.localizedDescription);
     }else {
         HP *sample = [listData lastObject];
         [context deleteObject:sample];
@@ -127,7 +127,7 @@ static ProfileDataAssistObject *instance = nil;
     NSError *error = nil;
     NSArray *listData = [context executeFetchRequest:fetchRequest error:&error];
     if(error != nil) {
-        NSLog(@"error: %@",error.localizedDescription);
+        MHPLog(@"error: %@", error.localizedDescription);
     }else {
         HP *sample = [listData lastObject];
         [context deleteObject:sample];
@@ -154,13 +154,13 @@ static ProfileDataAssistObject *instance = nil;
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"HP" inManagedObjectContext:context];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
     fetchRequest.entity = entity;
-    NSLog(@"%d",profile.ID);
+    MHPLog(@"%d", profile.ID);
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id = %d",profile.ID];
     fetchRequest.predicate = predicate;
     NSError *error = nil;
     NSArray *listData = [context executeFetchRequest:fetchRequest error:&error];
     if(error != nil) {
-        NSLog(@"error: %@",error.localizedDescription);
+        MHPLog(@"error: %@", error.localizedDescription);
     }else {
         HP *sample = [listData lastObject];
         sample.name = profile.name;

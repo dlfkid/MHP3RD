@@ -10,8 +10,6 @@
 
 #import <Masonry/Masonry.h>
 
-#define SCREENWIDTH self.view.frame.size.width
-
 @interface WeaponDetailViewViewController ()<UIScrollViewDelegate,UITextViewDelegate>
 
 @property(nonatomic,strong) UIScrollView *scroll;
@@ -26,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = NO;
     [self configureTextScroller];
     // Do any additional setup after loading the view.
 }
@@ -56,25 +55,34 @@
 
 #pragma mark - scrollerView setting
 - (void)configureTextScroller {
-    self.textScroll = [[UIScrollView alloc]initWithFrame:CGRectZero];
-    [self.view addSubview:_textScroll];
-    [_textScroll mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
-    _textScroll.delegate = self;
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectZero];
     imageView.image = [UIImage imageNamed:self.weaponInfo.pic];
     imageView.tag = 101;
-    [_textScroll addSubview:imageView];
+    [self.view addSubview:imageView];
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.left.right.equalTo(@0);
-        make.height.mas_equalTo(300);
+        make.left.right.mas_equalTo(0);
+        make.width.mas_equalTo(MHPscreenWidth());
+        make.height.mas_equalTo(250);
+        make.top.mas_equalTo(0);
+    }];
+    self.textScroll = [[UIScrollView alloc] initWithFrame:CGRectZero];
+    _textScroll.delegate = self;
+    [self.view addSubview:_textScroll];
+    [self.textScroll mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(0);
+        make.top.mas_equalTo(imageView.mas_bottom);
     }];
     UILabel *labelText = [self configureTextView];
     [_textScroll addSubview:labelText];
     [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.centerX.equalTo(@0);
-        make.top.equalTo(imageView.mas_bottom).inset(MHPstatusbar);
+        make.centerX.mas_equalTo(0);
+        make.width.mas_equalTo(MHPscreenWidth() - 2 * MHPgap);
+        make.top.equalTo(imageView.mas_bottom).mas_offset(MHPgap);
+        if (@available(iOS 11.0, *)) {
+            make.bottom.mas_equalTo(-MHPgap).mas_offset(self.view.safeAreaInsets.bottom);
+        } else {
+            make.bottom.mas_equalTo(-MHPgap);
+        }
     }];
     [_textScroll setContentSize:CGSizeMake(MHPscreenWidth(), MHPscreenHeight())];
 }

@@ -91,7 +91,7 @@
 }
 
 - (void)swipeDownAction:(id)sender {
-    NSLog(@"double tapped");
+    MHPLog(@"double tapped");
     [self.closeButton removeFromSuperview];
     [self dismissViewControllerAnimated:true completion:nil];
 }

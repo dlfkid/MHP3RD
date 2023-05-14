@@ -21,37 +21,36 @@
 
 @implementation MonsterDetailViewController
 
-- (void)loadView {
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.tabBarController.tabBar setHidden:true];
+
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     self.scrollView.delegate = self;
     self.scrollView.contentSize = CGSizeMake(width, height + 100);
-    self.view = self.scrollView;
-}
+    [self.view addSubview:self.scrollView];
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self.tabBarController.tabBar setHidden:true];
     UIImageView *imageView = [self imageViewWithMonsterPic];
     UILabel *briefLabel = [self labelWithContent];
     briefLabel.tag = 1002;
-    
-    [self.view addSubview:imageView];
-    [self.view addSubview:briefLabel];
+
+    [self.scrollView addSubview:imageView];
+    [self.scrollView addSubview:briefLabel];
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo([DeviceScreenAdaptor statusBarMargin] + 44);
         make.width.mas_equalTo([UIScreen mainScreen].bounds.size.width - 20);
         make.height.equalTo(@200);
     }];
-    
+
     [briefLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(imageView.mas_bottom).inset(MHPstatusbar);
+        make.top.equalTo(imageView.mas_bottom);
         make.width.mas_equalTo([UIScreen mainScreen].bounds.size.width - 20);
         make.centerX.equalTo(@0);
     }];
-    
+
     imageView.tag = 1001;
     self.navigationItem.title = self.monsterDetail.name;
     NSString *weakness = self.monsterDetail.weak;
@@ -63,11 +62,11 @@
     label.numberOfLines = 0;
     [self.view addSubview:label];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(briefLabel.mas_bottom).inset(MHPstatusbar);
+        make.top.equalTo(briefLabel.mas_bottom);
         make.centerX.equalTo(@0);
         make.bottom.equalTo(@(-20));
     }];
-    
+
     self.briefLabel = briefLabel;
     self.weaknessLabel = label;
     self.monsterAvatar = imageView;
@@ -75,13 +74,6 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-}
-
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    CGFloat height = self.briefLabel.frame.size.height + self.monsterAvatar.frame.size.height + self.weaknessLabel.frame.size.height + MHPstatusbar * 3 + [DeviceScreenAdaptor statusBarMargin] + [DeviceScreenAdaptor bottomIndicatorMargin] + 44;
-    self.scrollView.contentSize = CGSizeMake(width, height);
 }
 
 - (void)didReceiveMemoryWarning {

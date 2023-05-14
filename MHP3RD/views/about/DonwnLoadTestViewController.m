@@ -76,31 +76,35 @@
 - (void)startDownloadWebImage {
     AFNetworkReachabilityManager *aFManager = [AFNetworkReachabilityManager sharedManager];
     if(aFManager.isReachableViaWiFi) {
-        NSLog(@"Current network condition: WiFi");
+        MHPLog(@"Current network condition: WiFi");
         SDWebImageManager * sdManager = [SDWebImageManager sharedManager];
-        [sdManager loadImageWithURL:[Communicator getWebImageURL] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-            NSLog(@"图片下载中");
-            if(receivedSize == expectedSize) {
-                NSLog(@"图片下载完毕");
+        [sdManager loadImageWithURL:[Communicator getWebImageURL]
+            options:0
+            progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL *_Nullable targetURL) {
+                MHPLog(@"图片下载中");
+                if (receivedSize == expectedSize) {
+                    MHPLog(@"图片下载完毕");
+                }
             }
-        } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
-            if(image) {
-                self.downloadImage.image = image;
-                [self.view addSubview:self.downloadImage];
-            }else {
-                NSLog(@"Download image failed.");
-            }
-        }];
-        
+            completed:^(UIImage *_Nullable image, NSData *_Nullable data, NSError *_Nullable error, SDImageCacheType cacheType, BOOL finished,
+                        NSURL *_Nullable imageURL) {
+                if (image) {
+                    self.downloadImage.image = image;
+                    [self.view addSubview:self.downloadImage];
+                } else {
+                    MHPLog(@"Download image failed.");
+                }
+            }];
+
     }else if(aFManager.isReachableViaWWAN) {
-        NSLog(@"Current network condition: WWAN");
+        MHPLog(@"Current network condition: WWAN");
     }else {
-        NSLog(@"Current network condition: Unreachable");
+        MHPLog(@"Current network condition: Unreachable");
     }
 }
 
 - (void)clearWebImageCacheInSandBox {
-    NSLog(@"清空缓存图片");
+    MHPLog(@"清空缓存图片");
 }
 
 @end

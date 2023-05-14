@@ -36,7 +36,7 @@
         _managedObjectModel = [[NSManagedObjectModel alloc]initWithContentsOfURL:modelURL];
         return _managedObjectModel;
     }else{
-        NSLog(@"获取modelURL失败！程序崩溃");
+        MHPLog(@"获取modelURL失败！程序崩溃");
         return nil;
     }
 }
@@ -51,7 +51,7 @@
     _persistenceStoreCoordinator = [[NSPersistentStoreCoordinator alloc]initWithManagedObjectModel:[self managedObjectModel]];
     NSError *error = nil;
     if(![_persistenceStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]){
-        NSLog(@"数据加载失败！");
+        MHPLog(@"数据加载失败！");
         abort();
     }
     return _persistenceStoreCoordinator;
@@ -76,7 +76,7 @@
     if(context != nil){
         NSError *error = nil;
         if([context hasChanges] && ![context save:&error]){
-            NSLog(@"数据保存出错！%@",error.localizedDescription);
+            MHPLog(@"数据保存出错！%@", error.localizedDescription);
             abort();
         }
     }

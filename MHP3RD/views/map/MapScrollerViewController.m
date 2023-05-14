@@ -54,7 +54,8 @@
     //scroller frame
     self.scroller = [[UIScrollView alloc]initWithFrame:CGRectZero];
     self.scroller.contentSize = CGSizeMake(MHPscreenWidth() * mapNames.count, MHPscreenHeight());
-    //NSLog(@"scrollview size: %f,%f \n content size %f,%f",_scroller.frame.size.width,_scroller.frame.size.height,_scroller.contentSize.width,_scroller.contentSize.height);
+    // MHPLog(@"scrollview size: %f,%f \n content size
+    // %f,%f",_scroller.frame.size.width,_scroller.frame.size.height,_scroller.contentSize.width,_scroller.contentSize.height);
     _scroller.delegate = self;
     _scroller.pagingEnabled = true;
     [_scroller setAlwaysBounceHorizontal:true];
@@ -154,7 +155,7 @@
     
     MapDetailViewController *detail = [[MapDetailViewController alloc]init];
     detail.detailMapName = tempMapName;
-    NSLog(@"%@",tempMapName);
+    MHPLog(@"%@", tempMapName);
     [self presentViewController:detail animated:true completion:nil];
 }
 
