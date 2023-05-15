@@ -53,7 +53,7 @@
 - (void)configureScroller {
     //scroller frame
     self.scroller = [[UIScrollView alloc]initWithFrame:CGRectZero];
-    self.scroller.contentSize = CGSizeMake(MHPscreenWidth() * mapNames.count, MHPscreenHeight());
+    self.scroller.contentSize = CGSizeMake(MHPscreenWidth() * mapNames.count, 0);
     // MHPLog(@"scrollview size: %f,%f \n content size
     // %f,%f",_scroller.frame.size.width,_scroller.frame.size.height,_scroller.contentSize.width,_scroller.contentSize.height);
     _scroller.delegate = self;
@@ -62,7 +62,7 @@
     [_scroller setMaximumZoomScale:1];
     [_scroller setShowsVerticalScrollIndicator:false];
     [_scroller setShowsHorizontalScrollIndicator:false];
-    self.automaticallyAdjustsScrollViewInsets = false;
+    self.scroller.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
     self.navigationItem.title = mapTitle[0];
     [self.view addSubview:_scroller];
     [self.scroller mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -71,7 +71,6 @@
     for(int i = 0; i < mapNames.count; i++) {
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectZero];
         imageView.backgroundColor = [UIColor yellowColor];
-//        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(i * MHPscreenWidth(), 0, MHPscreenWidth(), MHPscreenHeight())];
         [self.scroller addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(@(i * MHPscreenWidth()));
@@ -158,15 +157,5 @@
     MHPLog(@"%@", tempMapName);
     [self presentViewController:detail animated:true completion:nil];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

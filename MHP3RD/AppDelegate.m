@@ -65,7 +65,7 @@
 }
 
 - (UITabBarController *)setTabBar {
-    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
 
     NSMutableArray *views = [NSMutableArray array];
 
@@ -91,11 +91,11 @@
         [images addObject:image];
     }
 
-    tabBar.viewControllers = navs;
+    tabBarController.viewControllers = navs;
 
     for (int i = 0; i < views.count; i++) {
-        tabBar.viewControllers[i].tabBarItem.title = names[i];
-        tabBar.viewControllers[i].tabBarItem.image = images[i];
+        tabBarController.viewControllers[i].tabBarItem.title = names[i];
+        tabBarController.viewControllers[i].tabBarItem.image = images[i];
     }
 
     UIApplicationShortcutIcon *mapIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation];
@@ -133,7 +133,9 @@
 
     [UIApplication sharedApplication].shortcutItems = shortCuts;
 
-    return tabBar;
+    tabBarController.tabBar.backgroundColor = [UIColor whiteColor];
+
+    return tabBarController;
 }
 
 - (void)application:(UIApplication *)application

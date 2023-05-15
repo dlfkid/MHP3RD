@@ -25,51 +25,38 @@
     self.scrollerView = [[UIScrollView alloc]initWithFrame:CGRectZero];
     self.scrollerView.backgroundColor = [UIColor whiteColor];
     self.scrollerView.delegate = self;
-    UIImage *map = [UIImage imageNamed:_detailMapName];
-    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectZero];
-    image.contentMode = UIViewContentModeScaleToFill;
-    image.image = map;
-    [image setTag:100];
-    _scrollerView.contentSize = map.size;
-    [_scrollerView setMaximumZoomScale:3];
-    [_scrollerView setMinimumZoomScale:1.5];
+    UIImage *mapImage = [UIImage imageNamed:_detailMapName];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    imageView.contentMode = UIViewContentModeScaleToFill;
+    imageView.image = mapImage;
+    [imageView setTag:100];
+    self.scrollerView.contentSize = mapImage.size;
+    [self.scrollerView setMaximumZoomScale:2];
+    [self.scrollerView setMinimumZoomScale:1.5];
     [self addSwipeDownGesture];
     [self.view addSubview:self.scrollerView];
-    [self.scrollerView addSubview:image];
-    CGFloat bottomIndicator = 0;
-    CGFloat statusBarHeight = 20;
-    switch ([DeviceScreenAdaptor screenType]) {
-        case DeviceScreenType5_8:
-        case DeviceScreenType6_1:
-        case DeviceScreenType6_5:
-            bottomIndicator = 34;
-            statusBarHeight = 44;
-            break;
-            
-        default:
-            break;
-    }
-    
-    _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _closeButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 60) / 2, [UIScreen mainScreen].bounds.size.height - 130, 60, 60);
-    [_closeButton setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
-    [_closeButton addTarget:self action:@selector(closeButtonDidTappedAction) forControlEvents:UIControlEventTouchUpInside];
-    [[UIApplication sharedApplication].keyWindow addSubview:_closeButton];
-    
-    [self.scrollerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(bottomIndicator);
-        make.top.mas_equalTo(statusBarHeight);
-        make.left.right.equalTo(@0);
+    [self.scrollerView addSubview:imageView];
 
+    self.closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.closeButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 60) / 2, [UIScreen mainScreen].bounds.size.height - 130, 60, 60);
+    [self.closeButton setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+    [self.closeButton addTarget:self action:@selector(closeButtonDidTappedAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.closeButton];
+
+    [self.closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(16);
+        make.right.mas_equalTo(-16);
     }];
-    
-    [image mas_makeConstraints:^(MASConstraintMaker *make) {
+
+    [self.scrollerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(0);
+        make.top.mas_equalTo(self.closeButton.mas_bottom);
+    }];
+
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(@0);
     }];
-}
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     self.scrollerView.zoomScale = 2;
 }
 
