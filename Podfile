@@ -10,13 +10,15 @@ target 'MHP3RD' do
   pod 'Masonry', '~> 1.1.0', :inhibit_warnings => true
   pod 'iOSDeviceScreenAdapter', '~> 1.0.2', :inhibit_warnings => true
   pod 'SwiftyBeaver'
+  pod 'WCDB.objc'
+  pod 'LookinServer', :configurations => ['Debug']
 end
 
 post_install do |installer|
 
   installer.pods_project.build_configurations.each do |config|
     # warning 切 error 的开关
-    config.build_settings['GCC_TREAT_WARNINGS_AS_ERRORS'] = 'YES'
+    config.build_settings['GCC_TREAT_WARNINGS_AS_ERRORS'] = 'NO'
   end
   
   # 绑定主仓库git hooks

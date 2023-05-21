@@ -73,6 +73,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELLIDENTITY forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     WeaponInfo *weaponName = _weaponList[indexPath.row];
     cell.textLabel.text = weaponName.name;
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];

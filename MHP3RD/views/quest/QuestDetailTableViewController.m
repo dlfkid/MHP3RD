@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.view setFrame:[UIScreen mainScreen].bounds];
     [self settingUpRefreshControl];

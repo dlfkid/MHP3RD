@@ -16,11 +16,13 @@ import SwiftyBeaver
     override init() {
         // add log destinations. at least one is needed!
         let console = ConsoleDestination()  // log to Xcode Console
-
         // use custom format and set console output to short time, log level & message
-        console.format = "$DHH:mm:ss$d $L $M $X"
+        console.format = "$DHH:mm:ss$d $L $C$M$c $X"
         // or use this for JSON output: console.format = "$J"
-
+#if DEBUG
+        // print log synchronously to help debug
+        log.asynchronously = false
+#endif
         // add the destinations to SwiftyBeaver
         log.addDestination(console)
     }
