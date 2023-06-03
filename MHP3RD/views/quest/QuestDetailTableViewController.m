@@ -10,6 +10,7 @@
 #import "MoreDetailViewController.h"
 #import "Communicator.h"
 #import "QuestInfo.h"
+#import "MHPLogger.h"
 
 @interface QuestDetailTableViewController ()
 

@@ -7,6 +7,7 @@
 //
 
 #import "WeaponInfo.h"
+#import "MHPLogger.h"
 
 @implementation WeaponInfo
 

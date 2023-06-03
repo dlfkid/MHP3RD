@@ -11,6 +11,7 @@
 #import "MapViewController.h"
 #import "MapDetailViewController.h"
 #import "CustomCollectionViewLayout.h"
+#import "MHPLogger.h"
 
 @interface MapViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,CustomCollectionViewLayoutDelegate>
 

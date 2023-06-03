@@ -7,6 +7,7 @@
 //
 
 #import "CoreDataManager.h"
+#import "MHPLogger.h"
 
 #define MODELNAME @"HunterProfile"
 #define ENEITYNAME @"HP"

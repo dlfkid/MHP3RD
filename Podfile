@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '12.4'
 
 target 'MHP3RD' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -10,7 +10,6 @@ target 'MHP3RD' do
   pod 'Masonry', '~> 1.1.0', :inhibit_warnings => true
   pod 'iOSDeviceScreenAdapter', '~> 1.0.2', :inhibit_warnings => true
   pod 'SwiftyBeaver'
-  pod 'WCDB.objc'
   pod 'LookinServer', :configurations => ['Debug']
 end
 

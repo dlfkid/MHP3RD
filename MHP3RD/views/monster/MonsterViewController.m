@@ -10,6 +10,7 @@
 
 #import <Masonry/Masonry.h>
 #import "MonsterDetailViewController.h"
+#import "MHPLogger.h"
 
 #define CELLIDENTITY @"monsterCell"
 #define HEADERIDENTY @"monsterHeader"

@@ -7,6 +7,7 @@
 //
 
 #import "QuestInfo.h"
+#import "MHPLogger.h"
 
 @implementation QuestInfo
 

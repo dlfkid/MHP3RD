@@ -8,6 +8,7 @@
 
 #import "VideoPlayerViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "MHPLogger.h"
 
 #define VIDEO_NAME @"composer.mp4"
 

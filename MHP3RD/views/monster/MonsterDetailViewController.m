@@ -8,7 +8,7 @@
 #import <Masonry/Masonry.h>
 #import "MonsterDetailViewController.h"
 #import <iOSDeviceScreenAdapter/DeviceScreenAdaptor.h>
-
+#import "MHPLogger.h"
 
 @interface MonsterDetailViewController ()<UIScrollViewDelegate>
 

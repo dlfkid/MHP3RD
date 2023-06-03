@@ -14,6 +14,7 @@
 #import "Communicator.h"
 #import "HunterProfile.h"
 #import "ProfileAddViewController.h"
+#import "MHPLogger.h"
 
 @interface MainViewController ()<UIScrollViewDelegate>
 

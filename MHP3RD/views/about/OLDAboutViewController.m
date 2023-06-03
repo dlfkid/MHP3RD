@@ -15,7 +15,7 @@
 #import "DonwnLoadTestViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-
+#import "MHPLogger.h"
 
 #define TABBARHEIGHT 48
 #define SLIDEDISTANCE 130

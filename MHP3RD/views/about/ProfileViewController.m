@@ -9,7 +9,7 @@
 #import "ProfileViewController.h"
 #import "HunterProfile.h"
 #import "ProfileAddViewController.h"
-
+#import "MHPLogger.h"
 
 #define KEYBOARDHEIGHT 300
 #define LABELHEIGHT 40

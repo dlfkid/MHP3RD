@@ -7,6 +7,7 @@
 //
 
 #import "MonsterInfo.h"
+#import "MHPLogger.h"
 
 @implementation MonsterInfo
 

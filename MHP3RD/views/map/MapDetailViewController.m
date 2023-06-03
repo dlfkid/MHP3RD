@@ -11,6 +11,7 @@
 // Helpers
 #import <Masonry/Masonry.h>
 #import <iOSDeviceScreenAdapter/DeviceScreenAdaptor.h>
+#import "MHPLogger.h"
 
 @interface MapDetailViewController ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
 

@@ -15,6 +15,7 @@
 #import "MonsterViewController.h"
 #import "ArmouryViewController.h"
 #import "MapScrollerViewController.h"
+#import "MHPLogger.h"
 
 @interface AppDelegate ()
 

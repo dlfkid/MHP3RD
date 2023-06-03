@@ -15,6 +15,7 @@
 #import "HunterProfile.h"
 #import "ProfileDataAssistObject.h"
 #import "DonwnLoadTestViewController.h"
+#import "MHPLogger.h"
 
 @implementation Communicator
 

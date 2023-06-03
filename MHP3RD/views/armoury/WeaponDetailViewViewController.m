@@ -9,6 +9,7 @@
 #import "WeaponDetailViewViewController.h"
 
 #import <Masonry/Masonry.h>
+#import "MHPLogger.h"
 
 @interface WeaponDetailViewViewController ()<UIScrollViewDelegate,UITextViewDelegate>
 

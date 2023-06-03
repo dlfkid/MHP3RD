@@ -7,6 +7,7 @@
 //
 
 #import "HP+CoreDataClass.h"
+#import "MHPLogger.h"
 
 @implementation HP
 

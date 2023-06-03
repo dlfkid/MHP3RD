@@ -10,6 +10,7 @@
 #import "QuestInfo.h"
 #import "MonsterInfo.h"
 #import "WeaponInfo.h"
+#import "MHPLogger.h"
 
 @implementation PlistManager
 

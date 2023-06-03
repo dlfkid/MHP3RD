@@ -11,6 +11,7 @@
 #import "MoreDetailViewController.h"
 
 #import <Masonry/Masonry.h>
+#import "MHPLogger.h"
 
 @interface MoreDetailViewController ()<UIScrollViewDelegate>
 

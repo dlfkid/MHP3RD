@@ -10,6 +10,7 @@
 #import "WeaponDetailViewViewController.h"
 #import "Communicator.h"
 #import "WeaponInfo.h"
+#import "MHPLogger.h"
 
 #define CELLIDENTITY @"cell"
 #define HEADERIDENTITY @"header"

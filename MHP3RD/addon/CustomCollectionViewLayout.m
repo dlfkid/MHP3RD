@@ -9,6 +9,7 @@
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
 
 #import "CustomCollectionViewLayout.h"
+#import "MHPLogger.h"
 
 @implementation CustomCollectionViewLayout
 

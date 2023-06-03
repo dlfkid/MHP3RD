@@ -7,6 +7,7 @@
 //
 
 #import "HunterProfile.h"
+#import "MHPLogger.h"
 
 @implementation HunterProfile
 

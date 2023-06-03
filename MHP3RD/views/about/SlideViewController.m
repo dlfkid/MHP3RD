@@ -7,7 +7,7 @@
 //
 
 #import "SlideViewController.h"
-
+#import "MHPLogger.h"
 
 @interface SlideViewController ()
 

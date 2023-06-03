@@ -10,6 +10,7 @@
 #import "Communicator.h"
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 #import <SDWebImage/SDWebImageManager.h>
+#import "MHPLogger.h"
 
 @interface DonwnLoadTestViewController ()
 

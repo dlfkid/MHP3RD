@@ -9,6 +9,7 @@
 #import "ProfileDataAssistObject.h"
 #import "HunterProfile.h"
 #import "HP+CoreDataClass.h"
+#import "MHPLogger.h"
 
 @implementation ProfileDataAssistObject
 

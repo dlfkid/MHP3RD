@@ -10,6 +10,7 @@
 
 // Helpers
 #import <Masonry/Masonry.h>
+#import "MHPLogger.h"
 
 @interface AboutViewController ()
 
