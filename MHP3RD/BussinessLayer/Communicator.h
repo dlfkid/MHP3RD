@@ -26,7 +26,6 @@ typedef enum {
 }MONSTERTYPE;
 
 @class HunterProfile;
-@class DonwnLoadTestViewController;
 @interface Communicator : NSObject
 
 + (NSMutableArray *)getMonsterInfomattionForType:(MONSTERTYPE)monsterType;
@@ -56,7 +55,5 @@ typedef enum {
 + (NSData *)postDataTask;
 
 + (NSURL *)getWebImageURL;
-
-//+ (void)downlodaDataWithDelegateController:(DonwnLoadTestViewController *)delegater;
 
 @end

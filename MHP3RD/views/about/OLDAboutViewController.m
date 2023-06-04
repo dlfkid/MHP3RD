@@ -12,19 +12,17 @@
 #import "HunterProfile.h"
 #import "Communicator.h"
 #import "WebViewController.h"
-#import "DonwnLoadTestViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "MHPLogger.h"
+#import "MHPDefinition.h"
 
-#define TABBARHEIGHT 48
-#define SLIDEDISTANCE 130
-#define NAVBARHEIGHT 64
-#define LABELHEIGHT 40
-#define LABELWIDTH 60
-#define GAP 10
-#define VIEWHEIGHT self.view.frame.size.height
-#define VIEWWIDTH self.view.frame.size.width
+static NSUInteger const TABBARHEIGHT = 48;
+static NSUInteger const SLIDEDISTANCE = 130;
+static NSUInteger const NAVBARHEIGHT = 64;
+static NSUInteger const LABELHEIGHT = 40;
+static NSUInteger const LABELWIDTH = 60;
+static NSUInteger const GAP = 10;
 
 @interface OLDAboutViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate,MKMapViewDelegate>
 
@@ -425,11 +423,6 @@
 - (void)enterButtonAction:(UIButton *)sender {
     WebViewController *webView = [[WebViewController alloc]init];
     [self.navigationController pushViewController:webView animated:YES];
-}
-
-- (void)enterDownLoadPicView:(UIButton *)sender {
-    DonwnLoadTestViewController *download = [[DonwnLoadTestViewController alloc]init];
-    [self.navigationController pushViewController:download animated:YES];
 }
 
 

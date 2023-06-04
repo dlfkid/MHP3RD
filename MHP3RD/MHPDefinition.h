@@ -21,6 +21,11 @@ static const CGFloat MHPlabelHeight = 40;
 static const CGFloat MHPlabelWidth = 60;
 static const CGFloat MHPgap = 10;
 
+#define VIEWHEIGHT self.view.frame.size.height
+#define VIEWWIDTH self.view.frame.size.width
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
+
 inline static CGFloat MHPscreenHeight(void) {
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     return height;

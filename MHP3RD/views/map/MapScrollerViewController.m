@@ -13,6 +13,7 @@
 #import <Masonry/Masonry.h>
 #import "MapDetailViewController.h"
 #import "MHPLogger.h"
+#import "MHPDefinition.h"
 
 @interface MapScrollerViewController ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
 

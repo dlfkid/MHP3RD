@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */; };
 		35BCA6272201829B00721CC9 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCA6262201829B00721CC9 /* AboutViewController.m */; };
 		35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */; };
-		4586EB1E9CC8E65846C2446A /* libPods-MHP3RD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C82214A1252987849C686B /* libPods-MHP3RD.a */; };
 		B40F9F272000FB6700604D98 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40F9F262000FB6700604D98 /* ProfileViewController.m */; };
 		B42CC25F1F3AB1E80023D05F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */; };
 		B42CC2611F3AB1FC0023D05F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */; };
@@ -41,7 +41,6 @@
 		B474AB351E8A3009007CD59A /* QuestDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB271E8A3009007CD59A /* QuestDetailTableViewController.m */; };
 		B474AB361E8A3009007CD59A /* QuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB291E8A3009007CD59A /* QuestViewController.m */; };
 		B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48761D01F6B69EC00174FEA /* WebViewController.m */; };
-		B48761D91F6FBADB00174FEA /* DonwnLoadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48761D81F6FBADB00174FEA /* DonwnLoadTestViewController.m */; };
 		B4EEE0AB1E8E587A00B63A01 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EEE0AA1E8E587A00B63A01 /* MapKit.framework */; };
 		B4EEE0AD1E94D30F00B63A01 /* guildlow.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EEE0AC1E94D30F00B63A01 /* guildlow.plist */; };
 		B4EEE0AF1E94D32800B63A01 /* guildhigh.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EEE0AE1E94D32800B63A01 /* guildhigh.plist */; };
@@ -50,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHPTabBarController.swift; sourceTree = "<group>"; };
 		35BCA6252201829B00721CC9 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		35BCA6262201829B00721CC9 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		35C2C5BE2A1107AC0029C1B3 /* MHP3RD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHP3RD-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -113,8 +113,6 @@
 		B474AB291E8A3009007CD59A /* QuestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestViewController.m; sourceTree = "<group>"; };
 		B48761CF1F6B69EC00174FEA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		B48761D01F6B69EC00174FEA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		B48761D71F6FBADB00174FEA /* DonwnLoadTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonwnLoadTestViewController.h; sourceTree = "<group>"; };
-		B48761D81F6FBADB00174FEA /* DonwnLoadTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonwnLoadTestViewController.m; sourceTree = "<group>"; };
 		B4EEE0AA1E8E587A00B63A01 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B4EEE0AC1E94D30F00B63A01 /* guildlow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = guildlow.plist; path = DataBaseDao/guildlow.plist; sourceTree = "<group>"; };
 		B4EEE0AE1E94D32800B63A01 /* guildhigh.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = guildhigh.plist; path = DataBaseDao/guildhigh.plist; sourceTree = "<group>"; };
@@ -123,9 +121,6 @@
 		B4EEE0B71E9E0DD400B63A01 /* HP+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HP+CoreDataClass.m"; sourceTree = "<group>"; };
 		B4EEE0B81E9E0DD400B63A01 /* HP+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HP+CoreDataProperties.h"; sourceTree = "<group>"; };
 		B4EEE0B91E9E0DD400B63A01 /* HP+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HP+CoreDataProperties.m"; sourceTree = "<group>"; };
-		B8C82214A1252987849C686B /* libPods-MHP3RD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MHP3RD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA587FBEAAB92D043F77C0A8 /* Pods-MHP3RD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHP3RD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHP3RD/Pods-MHP3RD.debug.xcconfig"; sourceTree = "<group>"; };
-		F328BEC1D2AC617ADEBAD172 /* Pods-MHP3RD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHP3RD.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHP3RD/Pods-MHP3RD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,20 +131,18 @@
 				B42CC2611F3AB1FC0023D05F /* libsqlite3.tbd in Frameworks */,
 				B42CC25F1F3AB1E80023D05F /* CoreGraphics.framework in Frameworks */,
 				B4EEE0AB1E8E587A00B63A01 /* MapKit.framework in Frameworks */,
-				4586EB1E9CC8E65846C2446A /* libPods-MHP3RD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3EA46CDDDBB4C178916FD148 /* Pods */ = {
+		35978B9D2A2C84E200327CFC /* tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				BA587FBEAAB92D043F77C0A8 /* Pods-MHP3RD.debug.xcconfig */,
-				F328BEC1D2AC617ADEBAD172 /* Pods-MHP3RD.release.xcconfig */,
+				35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */,
 			);
-			name = Pods;
+			path = tabbar;
 			sourceTree = "<group>";
 		};
 		B474AAB51E8A2DF4007CD59A = {
@@ -158,7 +151,6 @@
 				B474AAC01E8A2DF4007CD59A /* MHP3RD */,
 				B474AABF1E8A2DF4007CD59A /* Products */,
 				B4EEE0A91E8E587A00B63A01 /* Frameworks */,
-				3EA46CDDDBB4C178916FD148 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -320,6 +312,7 @@
 				B474AB171E8A3009007CD59A /* map */,
 				B474AB1E1E8A3009007CD59A /* monster */,
 				B474AB231E8A3009007CD59A /* quest */,
+				35978B9D2A2C84E200327CFC /* tabbar */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -331,8 +324,6 @@
 				B474AB0D1E8A3009007CD59A /* OLDAboutViewController.m */,
 				35BCA6252201829B00721CC9 /* AboutViewController.h */,
 				35BCA6262201829B00721CC9 /* AboutViewController.m */,
-				B48761D71F6FBADB00174FEA /* DonwnLoadTestViewController.h */,
-				B48761D81F6FBADB00174FEA /* DonwnLoadTestViewController.m */,
 				B48761CF1F6B69EC00174FEA /* WebViewController.h */,
 				B48761D01F6B69EC00174FEA /* WebViewController.m */,
 				B4EEE0B01E9C739300B63A01 /* ProfileViewController.h */,
@@ -397,7 +388,6 @@
 				B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */,
 				B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */,
 				B4EEE0AA1E8E587A00B63A01 /* MapKit.framework */,
-				B8C82214A1252987849C686B /* libPods-MHP3RD.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -409,7 +399,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B474AAD51E8A2DF4007CD59A /* Build configuration list for PBXNativeTarget "MHP3RD" */;
 			buildPhases = (
-				FD0011367A1B89107724FC88 /* [CP] Check Pods Manifest.lock */,
 				B474AABA1E8A2DF4007CD59A /* Sources */,
 				B474AABB1E8A2DF4007CD59A /* Frameworks */,
 				B474AABC1E8A2DF4007CD59A /* Resources */,
@@ -477,27 +466,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		FD0011367A1B89107724FC88 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MHP3RD-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		B474AABA1E8A2DF4007CD59A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -521,7 +489,6 @@
 				B43F2C5B1E8BB11400E30853 /* ProfileAddViewController.m in Sources */,
 				B474AAC31E8A2DF4007CD59A /* main.m in Sources */,
 				B474AAF61E8A2F3C007CD59A /* ProfileDataAssistObject.m in Sources */,
-				B48761D91F6FBADB00174FEA /* DonwnLoadTestViewController.m in Sources */,
 				B474AB2A1E8A3009007CD59A /* OLDAboutViewController.m in Sources */,
 				B4EEE0BA1E9E0DD400B63A01 /* HP+CoreDataClass.m in Sources */,
 				B40F9F272000FB6700604D98 /* ProfileViewController.m in Sources */,
@@ -529,6 +496,7 @@
 				B474AB351E8A3009007CD59A /* QuestDetailTableViewController.m in Sources */,
 				B4EEE0BB1E9E0DD400B63A01 /* HP+CoreDataProperties.m in Sources */,
 				B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */,
+				35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */,
 				B474AAF41E8A2F3C007CD59A /* MonsterInfo.m in Sources */,
 				B474AB331E8A3009007CD59A /* MonsterViewController.m in Sources */,
 				B474AAF21E8A2F3C007CD59A /* HunterProfile.xcdatamodeld in Sources */,
@@ -653,7 +621,6 @@
 		};
 		B474AAD61E8A2DF4007CD59A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA587FBEAAB92D043F77C0A8 /* Pods-MHP3RD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
@@ -681,7 +648,6 @@
 		};
 		B474AAD71E8A2DF4007CD59A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F328BEC1D2AC617ADEBAD172 /* Pods-MHP3RD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";

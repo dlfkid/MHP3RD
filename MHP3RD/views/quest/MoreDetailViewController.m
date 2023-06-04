@@ -12,6 +12,7 @@
 
 #import <Masonry/Masonry.h>
 #import "MHPLogger.h"
+#import "MHPDefinition.h"
 
 @interface MoreDetailViewController ()<UIScrollViewDelegate>
 

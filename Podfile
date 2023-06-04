@@ -5,8 +5,6 @@ target 'MHP3RD' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
   # Pods for MHP3RD
-  pod 'SDWebImage', '~> 4.1.2', :inhibit_warnings => true
-  pod 'AFNetworking', '~> 3.1.0', :inhibit_warnings => true
   pod 'Masonry', '~> 1.1.0', :inhibit_warnings => true
   pod 'iOSDeviceScreenAdapter', '~> 1.0.2', :inhibit_warnings => true
   pod 'SwiftyBeaver'

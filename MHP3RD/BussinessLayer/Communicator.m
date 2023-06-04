@@ -14,7 +14,6 @@
 #import "PlistManager.h"
 #import "HunterProfile.h"
 #import "ProfileDataAssistObject.h"
-#import "DonwnLoadTestViewController.h"
 #import "MHPLogger.h"
 
 @implementation Communicator
@@ -127,24 +126,5 @@
     NSURL *webImageURL = [NSURL URLWithString:stringURL];
     return webImageURL;
 }
-
-//+ (void)downlodaDataWithDelegateController:(DonwnLoadTestViewController *)delegater {
-//    NSString *host = @"http://www.51work6.com/service/download.php";
-//    NSString *httpBodyStr = @"email=dlfkid@gmail.com&FileName=test1.jpg";
-//    NSData *httpBody = [httpBodyStr dataUsingEncoding:NSUTF8StringEncoding];
-//    NSURL *hostURL = [NSURL URLWithString:host];
-//
-//    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:hostURL];
-//    [postRequest setHTTPBody:httpBody];
-//    [postRequest setHTTPMethod:@"POST"];
-//
-//    NSURLSessionConfiguration *downloadconf = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"download"];
-//
-//    NSURLSession *session = [NSURLSession sessionWithConfiguration:downloadconf delegate:delegater delegateQueue:[NSOperationQueue mainQueue]];
-//
-//    NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:postRequest];
-//
-//    [task resume];
-//}
 
 @end

@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import <AFNetworkReachabilityManager.h>
-
+#import <MHP3RD-Swift.h>
 #import "AboutViewController.h"
 #import "QuestViewController.h"
 #import "MonsterViewController.h"
@@ -32,10 +31,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     self.window.backgroundColor = [UIColor whiteColor];
-    mainTabBar = [self setTabBar];
+    mainTabBar = [[MHPTabBarController alloc] init];
     [self.window setRootViewController:mainTabBar];
-    //检测当前网络状态：
-    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     return YES;
 }
 
@@ -63,80 +60,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-- (UITabBarController *)setTabBar {
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-
-    NSMutableArray *views = [NSMutableArray array];
-
-    MapScrollerViewController *map = [[MapScrollerViewController alloc] init];
-    QuestViewController *quest = [[QuestViewController alloc] init];
-    MonsterViewController *monster = [[MonsterViewController alloc] init];
-    ArmouryViewController *armoury = [[ArmouryViewController alloc] init];
-    AboutViewController *about = [[AboutViewController alloc] init];
-
-    [views setArray:@[ map, quest, monster, armoury, about ]];
-
-    NSArray *names = @[ @"图", @"任", @"兽", @"兵", @"我" ];
-
-    NSArray *imageNames = @[ @"map", @"quest", @"monster", @"armoury", @"about" ];
-
-    NSMutableArray *navs = [NSMutableArray array];
-    NSMutableArray *images = [NSMutableArray array];
-
-    for (int i = 0; i < views.count; i++) {
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:views[i]];
-        [navs addObject:nav];
-        UIImage *image = [UIImage imageNamed:imageNames[i]];
-        [images addObject:image];
-    }
-
-    tabBarController.viewControllers = navs;
-
-    for (int i = 0; i < views.count; i++) {
-        tabBarController.viewControllers[i].tabBarItem.title = names[i];
-        tabBarController.viewControllers[i].tabBarItem.image = images[i];
-    }
-
-    UIApplicationShortcutIcon *mapIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation];
-    UIApplicationShortcutIcon *questIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeTaskCompleted];
-    UIApplicationShortcutIcon *monsterIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLove];
-    UIApplicationShortcutIcon *armouryIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeContact];
-
-    NSDictionary *mapDic = [NSDictionary dictionaryWithObject:@"map" forKey:@"type"];
-    NSDictionary *questDic = [NSDictionary dictionaryWithObject:@"quest" forKey:@"type"];
-    NSDictionary *monsterDic = [NSDictionary dictionaryWithObject:@"monster" forKey:@"type"];
-    NSDictionary *armouryDic = [NSDictionary dictionaryWithObject:@"armoury" forKey:@"type"];
-
-    UIApplicationShortcutItem *mapItem = [[UIApplicationShortcutItem alloc] initWithType:@"map"
-                                                                          localizedTitle:@"地图"
-                                                                       localizedSubtitle:@"查看地图"
-                                                                                    icon:mapIcon
-                                                                                userInfo:mapDic];
-    UIApplicationShortcutItem *questItem = [[UIApplicationShortcutItem alloc] initWithType:@"quest"
-                                                                            localizedTitle:@"任务"
-                                                                         localizedSubtitle:@"查看任务列表"
-                                                                                      icon:questIcon
-                                                                                  userInfo:questDic];
-    UIApplicationShortcutItem *monsterItem = [[UIApplicationShortcutItem alloc] initWithType:@"monster"
-                                                                              localizedTitle:@"怪物"
-                                                                           localizedSubtitle:@"怪物信息"
-                                                                                        icon:monsterIcon
-                                                                                    userInfo:monsterDic];
-    UIApplicationShortcutItem *armouryItem = [[UIApplicationShortcutItem alloc] initWithType:@"armoury"
-                                                                              localizedTitle:@"装备"
-                                                                           localizedSubtitle:@"装备信息"
-                                                                                        icon:armouryIcon
-                                                                                    userInfo:armouryDic];
-
-    NSArray *shortCuts = @[ mapItem, questItem, monsterItem, armouryItem ];
-
-    [UIApplication sharedApplication].shortcutItems = shortCuts;
-
-    tabBarController.tabBar.backgroundColor = [UIColor whiteColor];
-
-    return tabBarController;
 }
 
 - (void)application:(UIApplication *)application

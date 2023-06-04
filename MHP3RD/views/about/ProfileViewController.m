@@ -10,17 +10,16 @@
 #import "HunterProfile.h"
 #import "ProfileAddViewController.h"
 #import "MHPLogger.h"
+#import "MHPDefinition.h"
 
-#define KEYBOARDHEIGHT 300
-#define LABELHEIGHT 40
-#define LABELWIDTH 60
-#define GAP 10
-#define TEXTFIELDWIDTH 150
-#define HEADICON 120
-#define NAVBAR 64
-#define TABBAR 48
-#define SCREENWIDTH self.view.frame.size.width
-#define SCREENHEIGHT self.view.frame.size.height
+static NSUInteger const KEYBOARDHEIGHT = 300;
+static NSUInteger const LABELHEIGHT = 40;
+static NSUInteger const LABELWIDTH = 60;
+static NSUInteger const GAP = 10;
+static NSUInteger const TEXTFIELDWIDTH = 150;
+static NSUInteger const HEADICON = 120;
+static NSUInteger const NAVBAR = 64;
+static NSUInteger const TABBAR = 48;
 
 @interface ProfileViewController ()
 
