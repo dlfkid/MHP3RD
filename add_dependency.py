@@ -1,6 +1,13 @@
 import os
 import argparse
 
+def check_keyword_in_file(file_path, keyword):
+    with open(file_path, 'r') as f:
+        content = f.read()
+        if keyword in content:
+            return True
+    return False
+
 def insert_text_into_file(directory, keyword, text, blacklist):
     for root, dirs, files in os.walk(directory):
         for file in files:
@@ -8,8 +15,16 @@ def insert_text_into_file(directory, keyword, text, blacklist):
                 continue
             if file in blacklist:
                 continue
-            print(f'checking file : {file}')
             file_path = os.path.join(root, file)
+            # no keyword appear in file content, continue
+            if not check_keyword_in_file(file_path, keyword):
+                continue
+            # already instered dependency, continue
+            if check_keyword_in_file(file_path, text):
+                continue
+
+            print(f'checking file : {file}')
+            
             with open(file_path, 'r+') as f:
                 lines = f.readlines()
                 f.seek(0, 0)
