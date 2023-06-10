@@ -10,6 +10,9 @@
 		35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */; };
 		35BCA6272201829B00721CC9 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCA6262201829B00721CC9 /* AboutViewController.m */; };
 		35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */; };
+		35C5543D2A346BA10028D11E /* CustomPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5543C2A346BA10028D11E /* CustomPlistReader.swift */; };
+		35C554442A34755B0028D11E /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C554432A34755B0028D11E /* Monster.swift */; };
+		74D5DB8C765CB8F74D0C5B39 /* libPods-MHP3RD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADD17C9FAC4004BBC1536AF /* libPods-MHP3RD.a */; };
 		B40F9F272000FB6700604D98 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40F9F262000FB6700604D98 /* ProfileViewController.m */; };
 		B42CC25F1F3AB1E80023D05F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */; };
 		B42CC2611F3AB1FC0023D05F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */; };
@@ -49,12 +52,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ADD17C9FAC4004BBC1536AF /* libPods-MHP3RD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MHP3RD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CE3095C400AD09B73B0B646 /* Pods-MHP3RD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHP3RD.release.xcconfig"; path = "Target Support Files/Pods-MHP3RD/Pods-MHP3RD.release.xcconfig"; sourceTree = "<group>"; };
 		35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHPTabBarController.swift; sourceTree = "<group>"; };
 		35BCA6252201829B00721CC9 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		35BCA6262201829B00721CC9 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		35C2C5BE2A1107AC0029C1B3 /* MHP3RD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHP3RD-Bridging-Header.h"; sourceTree = "<group>"; };
 		35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyBeaverBridge.swift; path = addon/SwiftyBeaverBridge.swift; sourceTree = "<group>"; };
 		35C2C5C12A110DAB0029C1B3 /* MHPLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPLogger.h; sourceTree = "<group>"; };
+		35C5543A2A346ABA0028D11E /* MonsterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterInfoViewController.swift; sourceTree = "<group>"; };
+		35C5543C2A346BA10028D11E /* CustomPlistReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlistReader.swift; sourceTree = "<group>"; };
+		35C5543E2A346FD20028D11E /* MonsterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterListViewController.swift; sourceTree = "<group>"; };
+		35C554432A34755B0028D11E /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		5EA6B0E79FCCDD49F63A9D77 /* Pods-MHP3RD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHP3RD.debug.xcconfig"; path = "Target Support Files/Pods-MHP3RD/Pods-MHP3RD.debug.xcconfig"; sourceTree = "<group>"; };
 		B40BB4FF1FD4E95C00EBF57D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B40BB5001FD4E9A700EBF57D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		B40F9F221FFF74CB00604D98 /* MHPDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPDefinition.h; sourceTree = "<group>"; };
@@ -131,6 +141,7 @@
 				B42CC2611F3AB1FC0023D05F /* libsqlite3.tbd in Frameworks */,
 				B42CC25F1F3AB1E80023D05F /* CoreGraphics.framework in Frameworks */,
 				B4EEE0AB1E8E587A00B63A01 /* MapKit.framework in Frameworks */,
+				74D5DB8C765CB8F74D0C5B39 /* libPods-MHP3RD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,12 +156,30 @@
 			path = tabbar;
 			sourceTree = "<group>";
 		};
+		35C554422A3475170028D11E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		7A2F0F109CB8CE6E34DEE537 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EA6B0E79FCCDD49F63A9D77 /* Pods-MHP3RD.debug.xcconfig */,
+				2CE3095C400AD09B73B0B646 /* Pods-MHP3RD.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B474AAB51E8A2DF4007CD59A = {
 			isa = PBXGroup;
 			children = (
 				B474AAC01E8A2DF4007CD59A /* MHP3RD */,
 				B474AABF1E8A2DF4007CD59A /* Products */,
 				B4EEE0A91E8E587A00B63A01 /* Frameworks */,
+				7A2F0F109CB8CE6E34DEE537 /* Pods */,
+				35C554422A3475170028D11E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,6 +278,7 @@
 			children = (
 				B474AAE11E8A2F3C007CD59A /* PlistManager.h */,
 				B474AAE21E8A2F3C007CD59A /* PlistManager.m */,
+				35C5543C2A346BA10028D11E /* CustomPlistReader.swift */,
 			);
 			name = PlistManager;
 			sourceTree = "<group>";
@@ -278,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				B474AAED1E8A2F3C007CD59A /* weapon.plist */,
+				35C554432A34755B0028D11E /* Monster.swift */,
 				B474AAEE1E8A2F3C007CD59A /* WeaponInfo.h */,
 				B474AAEF1E8A2F3C007CD59A /* WeaponInfo.m */,
 			);
@@ -361,6 +392,8 @@
 			children = (
 				B474AB1F1E8A3009007CD59A /* MonsterDetailViewController.h */,
 				B474AB201E8A3009007CD59A /* MonsterDetailViewController.m */,
+				35C5543A2A346ABA0028D11E /* MonsterInfoViewController.swift */,
+				35C5543E2A346FD20028D11E /* MonsterListViewController.swift */,
 				B474AB211E8A3009007CD59A /* MonsterViewController.h */,
 				B474AB221E8A3009007CD59A /* MonsterViewController.m */,
 			);
@@ -388,6 +421,7 @@
 				B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */,
 				B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */,
 				B4EEE0AA1E8E587A00B63A01 /* MapKit.framework */,
+				0ADD17C9FAC4004BBC1536AF /* libPods-MHP3RD.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -399,6 +433,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B474AAD51E8A2DF4007CD59A /* Build configuration list for PBXNativeTarget "MHP3RD" */;
 			buildPhases = (
+				478E8770E06A55255F9030B2 /* [CP] Check Pods Manifest.lock */,
 				B474AABA1E8A2DF4007CD59A /* Sources */,
 				B474AABB1E8A2DF4007CD59A /* Frameworks */,
 				B474AABC1E8A2DF4007CD59A /* Resources */,
@@ -466,11 +501,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		478E8770E06A55255F9030B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MHP3RD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B474AABA1E8A2DF4007CD59A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C5543D2A346BA10028D11E /* CustomPlistReader.swift in Sources */,
 				B474AB301E8A3009007CD59A /* MapScrollerViewController.m in Sources */,
 				35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */,
 				B474AB2D1E8A3009007CD59A /* ArmouryViewController.m in Sources */,
@@ -485,6 +546,7 @@
 				35BCA6272201829B00721CC9 /* AboutViewController.m in Sources */,
 				B474AAC61E8A2DF4007CD59A /* AppDelegate.m in Sources */,
 				B474AAFC1E8A2F3C007CD59A /* WeaponInfo.m in Sources */,
+				35C554442A34755B0028D11E /* Monster.swift in Sources */,
 				B474AB321E8A3009007CD59A /* MonsterDetailViewController.m in Sources */,
 				B43F2C5B1E8BB11400E30853 /* ProfileAddViewController.m in Sources */,
 				B474AAC31E8A2DF4007CD59A /* main.m in Sources */,
@@ -621,6 +683,7 @@
 		};
 		B474AAD61E8A2DF4007CD59A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA6B0E79FCCDD49F63A9D77 /* Pods-MHP3RD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
@@ -648,6 +711,7 @@
 		};
 		B474AAD71E8A2DF4007CD59A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CE3095C400AD09B73B0B646 /* Pods-MHP3RD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";

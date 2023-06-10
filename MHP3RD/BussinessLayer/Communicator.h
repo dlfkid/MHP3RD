@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef enum{
+typedef NS_ENUM(NSUInteger, MISSIONTYPE) {
     VILLAGE,
     GUILD_LOW,
     GUILD_HIGH,
-}MISSIONTYPE;
+};
 
-typedef enum {
+typedef NS_ENUM(NSUInteger, MONSTERTYPE) {
     BirdDragon,
     Beast,
     TeethDragon,
@@ -23,7 +23,7 @@ typedef enum {
     BeastDragon,
     Dragon,
     AcientDragon,
-}MONSTERTYPE;
+};
 
 @class HunterProfile;
 @interface Communicator : NSObject
