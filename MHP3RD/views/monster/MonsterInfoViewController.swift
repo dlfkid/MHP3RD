@@ -7,67 +7,95 @@
 //
 
 import UIKit
+import SnapKit
 
 class MonsterInfoViewController: UIViewController {
     
-    let monsterInfo: Monster
+    init(monster: Monster) {
+        monsterInfo = monster
+        nameLabel = commonLabel(monsterInfo.name)
+        weakNessLabel = commonLabel(monsterInfo.weakness)
+        atkStyleLabel = commonLabel(monsterInfo.atkStyle)
+        super.init(nibName: nil, bundle: nil)
+    }
     
-    let scrollView = UIScrollView(frame: .zero)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    let commonLabel: (text: String) -> UILabel = {
+    var monsterInfo: Monster
+    
+    let scrollView: UIScrollView = {
+        let result = UIScrollView(frame: .zero)
+        result.alwaysBounceVertical = true;
+        result.zoomScale = 1
+        result.maximumZoomScale = 1
+        result.minimumZoomScale = 1
+        return result
+    }()
+    
+    var commonLabel: (_ text: String) -> UILabel = {text in
         let label = UILabel()
         label.text = text
         label.numberOfLines = 0;
-        label.lineBreakMode = NSLineBreakByWordWrapping;
-        label.textAlignment = NSTextAlignmentLeft;
+        label.lineBreakMode = .byWordWrapping;
+        label.textAlignment = .center;
         label.textColor = .black;
-        label.font = .systemFont(ofSize: .labelFontSize)
         label.lineBreakMode = .byTruncatingTail;
         return label
     }
     
-    let nameLabel = {
-        return commonLabel(text: monsterInfo.name)
-    }()
+    var nameLabel: UILabel
     
-    let weakNessLabel = {
-        return commonLabel(text: monsterInfo.weakness)
-    }()
+    var weakNessLabel: UILabel
     
-    let atkStyleLabel = {
-        return commonLabel(text: monsterInfo.atkStyle)
-    }()
+    var atkStyleLabel: UILabel
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         view.addSubview(scrollView)
-        scrollView.mas_makeConstraints { make in
-            edge.equalTo()(self.view)
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(self.view.safeAreaInsets.top)
+            make.bottom.equalTo(-self.view.safeAreaInsets.bottom)
+            make.left.right.equalTo(0)
         }
-        
         let portraitView = UIImageView(frame: .zero)
         let portrait = UIImage(named: monsterInfo.picPath)
         portraitView.image = portrait
+        portraitView.contentMode = .scaleAspectFit
         scrollView.addSubview(portraitView)
+        portraitView.snp.makeConstraints { make in
+            make.left.equalTo(10)
+            make.right.equalTo(-10)
+            make.height.lessThanOrEqualTo(200)
+            make.width.lessThanOrEqualTo(view.bounds.size.width - 20)
+            make.top.equalTo(10)
+        }
         
-        portraitView.lks_involvedRawConstraints.mas_makeConstraints { make in
-            make.left.right()(0)
-            make.mas_equalTo()(0)
+        scrollView.addSubview(nameLabel)
+        nameLabel.snp.makeConstraints { make in
+            make.left.equalTo(10)
+            make.right.equalTo(-10)
+            make.width.lessThanOrEqualTo(view.bounds.size.width - 20)
+            make.top.equalTo(portraitView.snp_bottomMargin).offset(10)
+            
+        }
+        
+        scrollView.addSubview(atkStyleLabel)
+        atkStyleLabel.snp.makeConstraints { make in
+            make.top.equalTo(nameLabel.snp_bottomMargin).offset(10)
+            make.width.lessThanOrEqualTo(view.bounds.size.width - 20)
+            make.left.equalTo(10)
+            make.right.equalTo(-10)
+        }
+        
+        scrollView.addSubview(weakNessLabel)
+        weakNessLabel.snp.makeConstraints { make in
+            make.top.equalTo(atkStyleLabel.snp_bottomMargin).offset(10)
+            make.width.lessThanOrEqualTo(view.bounds.size.width - 20)
+            make.left.equalTo(10)
+            make.right.equalTo(-10)
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-extension MonsterViewController {
 }

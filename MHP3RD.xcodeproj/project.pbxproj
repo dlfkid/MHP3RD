@@ -12,6 +12,8 @@
 		35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */; };
 		35C5543D2A346BA10028D11E /* CustomPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5543C2A346BA10028D11E /* CustomPlistReader.swift */; };
 		35C554442A34755B0028D11E /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C554432A34755B0028D11E /* Monster.swift */; };
+		35C554452A349AB40028D11E /* MonsterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5543E2A346FD20028D11E /* MonsterListViewController.swift */; };
+		35C554462A349AB90028D11E /* MonsterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5543A2A346ABA0028D11E /* MonsterInfoViewController.swift */; };
 		74D5DB8C765CB8F74D0C5B39 /* libPods-MHP3RD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADD17C9FAC4004BBC1536AF /* libPods-MHP3RD.a */; };
 		B40F9F272000FB6700604D98 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40F9F262000FB6700604D98 /* ProfileViewController.m */; };
 		B42CC25F1F3AB1E80023D05F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */; };
@@ -25,7 +27,6 @@
 		B474AAF11E8A2F3C007CD59A /* HunterProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AADB1E8A2F3C007CD59A /* HunterProfile.m */; };
 		B474AAF21E8A2F3C007CD59A /* HunterProfile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B474AADC1E8A2F3C007CD59A /* HunterProfile.xcdatamodeld */; };
 		B474AAF31E8A2F3C007CD59A /* Monster.plist in Resources */ = {isa = PBXBuildFile; fileRef = B474AADE1E8A2F3C007CD59A /* Monster.plist */; };
-		B474AAF41E8A2F3C007CD59A /* MonsterInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAE01E8A2F3C007CD59A /* MonsterInfo.m */; };
 		B474AAF51E8A2F3C007CD59A /* PlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAE21E8A2F3C007CD59A /* PlistManager.m */; };
 		B474AAF61E8A2F3C007CD59A /* ProfileDataAssistObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAE41E8A2F3C007CD59A /* ProfileDataAssistObject.m */; };
 		B474AAF91E8A2F3C007CD59A /* quest.plist in Resources */ = {isa = PBXBuildFile; fileRef = B474AAEA1E8A2F3C007CD59A /* quest.plist */; };
@@ -38,8 +39,6 @@
 		B474AB2E1E8A3009007CD59A /* WeaponDetailViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB161E8A3009007CD59A /* WeaponDetailViewViewController.m */; };
 		B474AB2F1E8A3009007CD59A /* MapDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB191E8A3009007CD59A /* MapDetailViewController.m */; };
 		B474AB301E8A3009007CD59A /* MapScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB1B1E8A3009007CD59A /* MapScrollerViewController.m */; };
-		B474AB321E8A3009007CD59A /* MonsterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB201E8A3009007CD59A /* MonsterDetailViewController.m */; };
-		B474AB331E8A3009007CD59A /* MonsterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB221E8A3009007CD59A /* MonsterViewController.m */; };
 		B474AB341E8A3009007CD59A /* MoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB251E8A3009007CD59A /* MoreDetailViewController.m */; };
 		B474AB351E8A3009007CD59A /* QuestDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB271E8A3009007CD59A /* QuestDetailTableViewController.m */; };
 		B474AB361E8A3009007CD59A /* QuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB291E8A3009007CD59A /* QuestViewController.m */; };
@@ -87,8 +86,6 @@
 		B474AADB1E8A2F3C007CD59A /* HunterProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HunterProfile.m; path = DataBaseDao/HunterProfile.m; sourceTree = "<group>"; };
 		B474AADD1E8A2F3C007CD59A /* HunterProfile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HunterProfile.xcdatamodel; sourceTree = "<group>"; };
 		B474AADE1E8A2F3C007CD59A /* Monster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Monster.plist; path = DataBaseDao/Monster.plist; sourceTree = "<group>"; };
-		B474AADF1E8A2F3C007CD59A /* MonsterInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MonsterInfo.h; path = DataBaseDao/MonsterInfo.h; sourceTree = "<group>"; };
-		B474AAE01E8A2F3C007CD59A /* MonsterInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MonsterInfo.m; path = DataBaseDao/MonsterInfo.m; sourceTree = "<group>"; };
 		B474AAE11E8A2F3C007CD59A /* PlistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlistManager.h; path = DataBaseDao/PlistManager.h; sourceTree = "<group>"; };
 		B474AAE21E8A2F3C007CD59A /* PlistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlistManager.m; path = DataBaseDao/PlistManager.m; sourceTree = "<group>"; };
 		B474AAE31E8A2F3C007CD59A /* ProfileDataAssistObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileDataAssistObject.h; path = DataBaseDao/ProfileDataAssistObject.h; sourceTree = "<group>"; };
@@ -111,10 +108,6 @@
 		B474AB191E8A3009007CD59A /* MapDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDetailViewController.m; sourceTree = "<group>"; };
 		B474AB1A1E8A3009007CD59A /* MapScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapScrollerViewController.h; sourceTree = "<group>"; };
 		B474AB1B1E8A3009007CD59A /* MapScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapScrollerViewController.m; sourceTree = "<group>"; };
-		B474AB1F1E8A3009007CD59A /* MonsterDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterDetailViewController.h; sourceTree = "<group>"; };
-		B474AB201E8A3009007CD59A /* MonsterDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterDetailViewController.m; sourceTree = "<group>"; };
-		B474AB211E8A3009007CD59A /* MonsterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterViewController.h; sourceTree = "<group>"; };
-		B474AB221E8A3009007CD59A /* MonsterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterViewController.m; sourceTree = "<group>"; };
 		B474AB241E8A3009007CD59A /* MoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreDetailViewController.h; sourceTree = "<group>"; };
 		B474AB251E8A3009007CD59A /* MoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreDetailViewController.m; sourceTree = "<group>"; };
 		B474AB261E8A3009007CD59A /* QuestDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestDetailTableViewController.h; sourceTree = "<group>"; };
@@ -267,8 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				B474AADE1E8A2F3C007CD59A /* Monster.plist */,
-				B474AADF1E8A2F3C007CD59A /* MonsterInfo.h */,
-				B474AAE01E8A2F3C007CD59A /* MonsterInfo.m */,
 			);
 			name = MonsterInfo;
 			sourceTree = "<group>";
@@ -390,12 +381,8 @@
 		B474AB1E1E8A3009007CD59A /* monster */ = {
 			isa = PBXGroup;
 			children = (
-				B474AB1F1E8A3009007CD59A /* MonsterDetailViewController.h */,
-				B474AB201E8A3009007CD59A /* MonsterDetailViewController.m */,
 				35C5543A2A346ABA0028D11E /* MonsterInfoViewController.swift */,
 				35C5543E2A346FD20028D11E /* MonsterListViewController.swift */,
-				B474AB211E8A3009007CD59A /* MonsterViewController.h */,
-				B474AB221E8A3009007CD59A /* MonsterViewController.m */,
 			);
 			path = monster;
 			sourceTree = "<group>";
@@ -547,7 +534,6 @@
 				B474AAC61E8A2DF4007CD59A /* AppDelegate.m in Sources */,
 				B474AAFC1E8A2F3C007CD59A /* WeaponInfo.m in Sources */,
 				35C554442A34755B0028D11E /* Monster.swift in Sources */,
-				B474AB321E8A3009007CD59A /* MonsterDetailViewController.m in Sources */,
 				B43F2C5B1E8BB11400E30853 /* ProfileAddViewController.m in Sources */,
 				B474AAC31E8A2DF4007CD59A /* main.m in Sources */,
 				B474AAF61E8A2F3C007CD59A /* ProfileDataAssistObject.m in Sources */,
@@ -558,9 +544,9 @@
 				B474AB351E8A3009007CD59A /* QuestDetailTableViewController.m in Sources */,
 				B4EEE0BB1E9E0DD400B63A01 /* HP+CoreDataProperties.m in Sources */,
 				B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */,
+				35C554462A349AB90028D11E /* MonsterInfoViewController.swift in Sources */,
 				35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */,
-				B474AAF41E8A2F3C007CD59A /* MonsterInfo.m in Sources */,
-				B474AB331E8A3009007CD59A /* MonsterViewController.m in Sources */,
+				35C554452A349AB40028D11E /* MonsterListViewController.swift in Sources */,
 				B474AAF21E8A2F3C007CD59A /* HunterProfile.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

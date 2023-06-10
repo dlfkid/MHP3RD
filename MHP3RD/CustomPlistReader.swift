@@ -20,17 +20,16 @@ struct CustomPlistReader {
     let plistName: String;
     
     var plistPath: String {
-        var documentDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last
-        let result = documentDir?.appending(self.plistName) ?? ""
-        return result
+        let result = Bundle.main.path(forResource: plistName, ofType: "plist")
+        return result ?? ""
     }
     
     init(type: CustomPlistType) {
-        plistName = String("\(type).plist")
+        plistName = type.rawValue
     }
     
     func monstersForType(type: MONSTERTYPE) -> [Monster] {
-        let allMonster = NSArray(contentsOfFile: self.plistPath)
+        let allMonster = NSArray(contentsOfFile: plistPath)
         let monsterArray = allMonster![Int(type.rawValue)] as! NSArray
         var result = [Monster]()
         for monster in monsterArray {

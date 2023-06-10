@@ -8,7 +8,6 @@
 
 #import "PlistManager.h"
 #import "QuestInfo.h"
-#import "MonsterInfo.h"
 #import "WeaponInfo.h"
 #import "MHPLogger.h"
 
@@ -86,21 +85,6 @@ static PlistManager *sharedSingleton = nil;
         BOOL key = [(NSNumber *)[info objectForKey:@"key"] boolValue];
         QuestInfo *newQuestInfo = [[QuestInfo alloc] initWithName:name andBrief:brief andPic:pic andKey:key];
         [result addObject:newQuestInfo];
-    }
-    return result;
-}
-
-- (NSMutableArray *)findAllMonsterInfoForType:(int)monsterType {
-    NSArray *Arr = [[NSMutableArray alloc] initWithContentsOfFile:self.plistPath];
-    NSArray *monsterArr = Arr[monsterType];
-    NSMutableArray *result = [NSMutableArray array];
-    for (NSDictionary *monster in monsterArr) {
-        NSString *name = [monster objectForKey:@"name"];
-        NSString *pic = [monster objectForKey:@"pic"];
-        NSString *weak = [monster objectForKey:@"weak"];
-        NSString *atk = [monster objectForKey:@"atk"];
-        MonsterInfo *newMonster = [[MonsterInfo alloc] initWithName:name andPic:pic andWeak:weak andAtk:atk];
-        [result addObject:newMonster];
     }
     return result;
 }

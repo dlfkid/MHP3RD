@@ -13,7 +13,7 @@ class MHPTabBarController: UITabBarController {
     var subContriollers: [UIViewController] {
         let map = MapScrollerViewController()
         let quest = QuestViewController()
-        let monster = MonsterViewController()
+        let monster = MonsterListViewController()
         let armoury = ArmouryViewController()
         let about = AboutViewController()
         return [map, quest, monster, armoury, about]

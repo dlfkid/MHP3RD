@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import SnapKit
 
 class MonsterListViewController: UIViewController {
+    
+    let portraitTag = 10001
+    let nameTag = 10002
+    let headerTag = 10003
     
     typealias MonsterRaceInfo = (race: MONSTERTYPE, clan: [Monster])
     
@@ -18,19 +23,18 @@ class MonsterListViewController: UIViewController {
     
     let typeForSection: [MONSTERTYPE] = [.BirdDragon, .Beast, .TeethDragon, .SeaDragon, .BeastDragon, .Dragon, .AcientDragon]
     
+    let typeToStringMapping: [MONSTERTYPE: String] = [.BirdDragon: "鸟龙种", .Beast: "牙兽种", .BeastDragon: "兽龙种", .SeaDragon: "海龙种", .Dragon: "飞龙种", .AcientDragon: "古龙种", .TeethDragon: "牙龙种"]
+    
     var dataSource: [MonsterRaceInfo]? = nil;
     
-    let collectionViewFlowLayout: UICollectionViewFlowLayout = {
+    let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 90, height: 90)
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
         layout.scrollDirection = .vertical
-        return layout
-    }()
-    
-    let collectionView: UICollectionView = {
-        let view = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
+        layout.headerReferenceSize = CGSize(width: UIScreen.main.bounds.width, height: 50)
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .white
         return view
     }()
@@ -38,13 +42,14 @@ class MonsterListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(UICollectionViewCell, forCellWithReuseIdentifier: monsterIdentifier)
-        collectionView.register(UICollectionReusableView, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: monsterHeaderIdentifier)
+        readAllMonsterInfo()
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: monsterIdentifier)
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: monsterHeaderIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         view.addSubview(collectionView)
-        collectionView.mas_makeConstraints { make in
-            make?.edges.equalTo()(self.view)
+        collectionView.snp.makeConstraints { make in
+            make.edges.equalTo(0)
         }
     }
 }
@@ -62,7 +67,8 @@ extension MonsterListViewController {
 
 extension MonsterListViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return dataSource?.count ?? 0
+        let num = dataSource?.count ?? 0
+        return num
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -78,12 +84,37 @@ extension MonsterListViewController: UICollectionViewDataSource {
             return cell
         }
         let monsterInfo = monsterOfRace.clan[indexPath.row]
-        let monsterPortrait = UIImage(contentsOfFile: monsterInfo.picPath)
-        let icon = UIImageView(image: monsterPortrait)
-        cell.contentView.addSubview(icon)
-        icon.mas_makeConstraints { make in
-            make?.top.equalTo()(0)
+        
+        var nameLabel: UILabel? = cell.contentView.viewWithTag(nameTag) as? UILabel
+        if nameLabel == nil {
+            nameLabel = UILabel(frame: .zero)
+            nameLabel!.text = monsterInfo.name
+            nameLabel!.textAlignment = .center
+            nameLabel!.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
+            cell.contentView.addSubview(nameLabel!)
+            nameLabel!.snp.makeConstraints { make in
+                make.left.equalTo(10)
+                make.right.equalTo(-10)
+                make.bottom.equalTo(0)
+            }
+            nameLabel!.tag = nameTag
         }
+        nameLabel!.text = monsterInfo.name
+        
+        let monsterPortrait = UIImage(named: monsterInfo.picPath)
+        var icon: UIImageView? = cell.viewWithTag(portraitTag) as? UIImageView
+        if icon == nil {
+            icon = UIImageView(image: monsterPortrait)
+            icon!.contentMode = .scaleAspectFit;
+            icon!.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+            cell.contentView.addSubview(icon!)
+            icon!.snp.makeConstraints { make in
+                make.top.left.right.equalTo(0)
+                make.bottom.equalTo(nameLabel!.snp_topMargin).offset(-10)
+            }
+            icon!.tag = portraitTag
+        }
+        icon!.image = monsterPortrait
         return cell
     }
 }
@@ -95,6 +126,29 @@ extension MonsterListViewController: UICollectionViewDelegate {
         }
         let monsterInfo = monsterOfRace.clan[indexPath.row]
         let monsterDetail = MonsterInfoViewController(monster: monsterInfo)
+        monsterDetail.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(monsterDetail, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: monsterHeaderIdentifier, for: indexPath)
+        guard let dataSource = dataSource else {
+            return headerView
+        }
+        headerView.backgroundColor = .white
+        var titleLabel: UILabel? = headerView.viewWithTag(headerTag) as? UILabel
+        if titleLabel == nil {
+            titleLabel = UILabel(frame: .zero)
+            titleLabel!.tintColor = .black
+            titleLabel!.textAlignment  = .center
+            titleLabel!.font = .boldSystemFont(ofSize: 14)
+            headerView.addSubview(titleLabel!)
+            titleLabel!.snp.makeConstraints { make in
+                make.edges.equalTo(0)
+            }
+            titleLabel!.tag = headerTag
+        }
+        titleLabel?.text = typeToStringMapping[dataSource[indexPath.section].race]
+        return headerView
     }
 }

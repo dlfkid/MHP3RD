@@ -14,8 +14,6 @@
 
 + (PlistManager *)getInstanceWithPlist:(NSString *)plist;
 
-- (NSMutableArray *)findAllMonsterInfoForType:(int)monsterType;
-
 - (NSMutableArray *)findAllQuestInfoForStar:(int)stars;
 
 - (NSMutableArray *)findAllWeaponInfo;

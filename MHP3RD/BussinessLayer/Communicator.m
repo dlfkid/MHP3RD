@@ -10,7 +10,6 @@
 #import "CoreDataManager.h"
 #import "WeaponInfo.h"
 #import "QuestInfo.h"
-#import "MonsterInfo.h"
 #import "PlistManager.h"
 #import "HunterProfile.h"
 #import "ProfileDataAssistObject.h"
@@ -36,11 +35,6 @@
     NSMutableArray *resultArr = [dataPass findAllQuestInfoForStar:stars];
     MHPLog(@"QuestNumber: %ld", (unsigned long)resultArr.count);
     return resultArr;
-}
-
-+ (NSMutableArray *)getMonsterInfomattionForType:(MONSTERTYPE)monsterType {
-    PlistManager *dataPass = [PlistManager  getInstanceWithPlist:@"Monster.plist"];
-    return [dataPass findAllMonsterInfoForType:monsterType];
 }
 
 + (NSMutableArray *)getWeaponInfomation{
