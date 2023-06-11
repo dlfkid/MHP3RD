@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class MonsterListViewController: UIViewController {
+final class MonsterListViewController: UIViewController {
     
     let portraitTag = 10001
     let nameTag = 10002

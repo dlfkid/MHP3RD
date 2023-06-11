@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class MonsterInfoViewController: UIViewController {
+final class MonsterInfoViewController: UIViewController {
     
     init(monster: Monster) {
         monsterInfo = monster

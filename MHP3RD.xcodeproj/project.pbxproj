@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35446FE72A360F0400C69143 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35446FE62A360F0400C69143 /* Weapon.swift */; };
+		35446FE92A36129C00C69143 /* WeaponListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35446FE82A36129C00C69143 /* WeaponListViewController.swift */; };
+		35446FEB2A36140100C69143 /* WeaponInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35446FEA2A36140100C69143 /* WeaponInfoViewController.swift */; };
 		35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */; };
 		35BCA6272201829B00721CC9 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCA6262201829B00721CC9 /* AboutViewController.m */; };
 		35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */; };
@@ -53,6 +56,9 @@
 /* Begin PBXFileReference section */
 		0ADD17C9FAC4004BBC1536AF /* libPods-MHP3RD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MHP3RD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE3095C400AD09B73B0B646 /* Pods-MHP3RD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHP3RD.release.xcconfig"; path = "Target Support Files/Pods-MHP3RD/Pods-MHP3RD.release.xcconfig"; sourceTree = "<group>"; };
+		35446FE62A360F0400C69143 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		35446FE82A36129C00C69143 /* WeaponListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponListViewController.swift; sourceTree = "<group>"; };
+		35446FEA2A36140100C69143 /* WeaponInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponInfoViewController.swift; sourceTree = "<group>"; };
 		35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHPTabBarController.swift; sourceTree = "<group>"; };
 		35BCA6252201829B00721CC9 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		35BCA6262201829B00721CC9 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -299,7 +305,6 @@
 			isa = PBXGroup;
 			children = (
 				B474AAED1E8A2F3C007CD59A /* weapon.plist */,
-				35C554432A34755B0028D11E /* Monster.swift */,
 				B474AAEE1E8A2F3C007CD59A /* WeaponInfo.h */,
 				B474AAEF1E8A2F3C007CD59A /* WeaponInfo.m */,
 			);
@@ -363,6 +368,9 @@
 				B474AB141E8A3009007CD59A /* ArmouryViewController.m */,
 				B474AB151E8A3009007CD59A /* WeaponDetailViewViewController.h */,
 				B474AB161E8A3009007CD59A /* WeaponDetailViewViewController.m */,
+				35446FE62A360F0400C69143 /* Weapon.swift */,
+				35446FE82A36129C00C69143 /* WeaponListViewController.swift */,
+				35446FEA2A36140100C69143 /* WeaponInfoViewController.swift */,
 			);
 			path = armoury;
 			sourceTree = "<group>";
@@ -383,6 +391,7 @@
 			children = (
 				35C5543A2A346ABA0028D11E /* MonsterInfoViewController.swift */,
 				35C5543E2A346FD20028D11E /* MonsterListViewController.swift */,
+				35C554432A34755B0028D11E /* Monster.swift */,
 			);
 			path = monster;
 			sourceTree = "<group>";
@@ -525,6 +534,7 @@
 				B474AAF51E8A2F3C007CD59A /* PlistManager.m in Sources */,
 				B474AB081E8A2FE0007CD59A /* Communicator.m in Sources */,
 				B474AB361E8A3009007CD59A /* QuestViewController.m in Sources */,
+				35446FE72A360F0400C69143 /* Weapon.swift in Sources */,
 				B474AB2E1E8A3009007CD59A /* WeaponDetailViewViewController.m in Sources */,
 				B474AAF01E8A2F3C007CD59A /* CoreDataManager.m in Sources */,
 				B474AAF11E8A2F3C007CD59A /* HunterProfile.m in Sources */,
@@ -544,9 +554,11 @@
 				B474AB351E8A3009007CD59A /* QuestDetailTableViewController.m in Sources */,
 				B4EEE0BB1E9E0DD400B63A01 /* HP+CoreDataProperties.m in Sources */,
 				B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */,
+				35446FEB2A36140100C69143 /* WeaponInfoViewController.swift in Sources */,
 				35C554462A349AB90028D11E /* MonsterInfoViewController.swift in Sources */,
 				35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */,
 				35C554452A349AB40028D11E /* MonsterListViewController.swift in Sources */,
+				35446FE92A36129C00C69143 /* WeaponListViewController.swift in Sources */,
 				B474AAF21E8A2F3C007CD59A /* HunterProfile.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,7 +14,7 @@ class MHPTabBarController: UITabBarController {
         let map = MapScrollerViewController()
         let quest = QuestViewController()
         let monster = MonsterListViewController()
-        let armoury = ArmouryViewController()
+        let armoury = WeaponListViewController()
         let about = AboutViewController()
         return [map, quest, monster, armoury, about]
     }

@@ -16,20 +16,36 @@ enum CustomPlistType: String {
     case monster = "Monster"
 }
 
-struct CustomPlistReader {
-    let plistName: String;
+protocol PlistDataReadable {
     
+    var plistName: String { get }
+    
+    var plistPath: String { get }
+    
+    func readPlistData() -> NSArray?
+}
+
+extension PlistDataReadable {
     var plistPath: String {
         let result = Bundle.main.path(forResource: plistName, ofType: "plist")
         return result ?? ""
     }
+    
+    func readPlistData() -> NSArray? {
+        return NSArray(contentsOfFile: plistPath)
+    }
+}
+
+struct CustomPlistReader: PlistDataReadable {
+    
+    var plistName: String
     
     init(type: CustomPlistType) {
         plistName = type.rawValue
     }
     
     func monstersForType(type: MONSTERTYPE) -> [Monster] {
-        let allMonster = NSArray(contentsOfFile: plistPath)
+        let allMonster = self.readPlistData()
         let monsterArray = allMonster![Int(type.rawValue)] as! NSArray
         var result = [Monster]()
         for monster in monsterArray {
@@ -39,6 +55,21 @@ struct CustomPlistReader {
             let atk = (monster as! NSDictionary).object(forKey: "atk") as! String
             let newMonster = Monster(name: name, picPath: pic, weakness: weak, atkStyle: atk, type: type)
             result.append(newMonster)
+        }
+        return result
+    }
+    
+    func weaponInfo() -> [Weapon] {
+        var result = [Weapon]()
+        guard let weapons = self.readPlistData() else {
+            return result
+        }
+        for weaponDic in weapons {
+            let name = (weaponDic as! NSDictionary).object(forKey: "name") as! String
+            let pic = (weaponDic as! NSDictionary).object(forKey: "pic") as! String
+            let brief = (weaponDic as! NSDictionary).object(forKey: "brief") as! String
+            let weaponElement = Weapon(name: name, pic: pic, brief: brief)
+            result.append(weaponElement)
         }
         return result
     }
