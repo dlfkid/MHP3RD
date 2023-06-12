@@ -45,6 +45,7 @@ extension WeaponListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: weaponCellIdentfier, for: indexPath)
+        cell.selectionStyle = .none
         guard let weaponModel = self.dataSource?[indexPath.row] else {
             return cell
         }
@@ -59,6 +60,7 @@ extension WeaponListViewController: UITableViewDelegate {
             return
         }
         let infoController = WeaponInfoViewController(weapon: weaponModel)
+        infoController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(infoController, animated: true)
     }
 }

@@ -54,6 +54,7 @@ final class MonsterInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        navigationItem.title = monsterInfo.name
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaInsets.top)
