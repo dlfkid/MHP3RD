@@ -38,10 +38,14 @@ extension PlistDataReadable {
 
 struct CustomPlistReader: PlistDataReadable {
     
-    var plistName: String
+    let type: CustomPlistType
+    
+    var plistName: String {
+        return type.rawValue
+    }
     
     init(type: CustomPlistType) {
-        plistName = type.rawValue
+        self.type = type
     }
     
     func monstersForType(type: MONSTERTYPE) -> [Monster] {
@@ -70,6 +74,37 @@ struct CustomPlistReader: PlistDataReadable {
             let brief = (weaponDic as! NSDictionary).object(forKey: "brief") as! String
             let weaponElement = Weapon(name: name, pic: pic, brief: brief)
             result.append(weaponElement)
+        }
+        return result
+    }
+    
+    func questList() -> [Quest] {
+        var result = [Quest]()
+        guard let quests = self.readPlistData() else {
+            return result
+        }
+        for quest in quests {
+            /*
+             NSString *name = [info objectForKey:@"name"];
+             NSString *pic = [info objectForKey:@"pic"];
+             NSString *brief = [info objectForKey:@"brief"];
+             BOOL key = [(NSNumber *)[info objectForKey:@"key"] boolValue];
+             */
+            let name = (quest as! NSDictionary).object(forKey: "name") as! String
+            let pic = (quest as! NSDictionary).object(forKey: "pic") as! String
+            let brief = (quest as! NSDictionary).object(forKey: "brief") as! String
+            let key = (quest as! NSDictionary).object(forKey: "key") as! Bool
+            var questType: QuestType = .guildLow(CustomPlistType.guildlow.rawValue)
+            switch type {
+            case .guildhigh:
+                questType = .guildHigh(CustomPlistType.guildhigh.rawValue)
+            case .quest:
+                questType = .village(CustomPlistType.quest.rawValue)
+            default:
+                questType = .guildLow(CustomPlistType.guildlow.rawValue)
+            }
+            let questInfo = Quest(questName: name, questBrief: brief, questPic: pic, key: key, type: questType)
+            result.append(questInfo)
         }
         return result
     }
