@@ -18,6 +18,7 @@ final class WeaponListViewController: UIViewController {
         super.viewDidLoad()
         loadData()
         setupContente()
+        navigationItem.title = "武器库"
     }
     
     private func loadData() {

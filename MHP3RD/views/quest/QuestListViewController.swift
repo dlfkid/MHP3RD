@@ -35,7 +35,7 @@ class QuestListViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: questCollectionCellIdentifier)
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
-            make.edges.equalTo(0)
+            make.edges.equalTo(0).labeled("tableviewEdges")
         }
         tableView.delegate = self
         tableView.dataSource = self

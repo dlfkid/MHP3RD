@@ -8,49 +8,11 @@
 
 #import "Communicator.h"
 #import "CoreDataManager.h"
-#import "WeaponInfo.h"
-#import "QuestInfo.h"
-#import "PlistManager.h"
 #import "HunterProfile.h"
 #import "ProfileDataAssistObject.h"
 #import "MHPLogger.h"
 
 @implementation Communicator
-
-+ (NSMutableArray *)getQuestInfoMationForType:(MISSIONTYPE)questType andStars:(int)stars{
-    NSString *questFileName;
-    switch (questType) {
-        case VILLAGE:
-            questFileName = @"quest.plist";
-            MHPLog(@"Plist name is %@", questFileName);
-            break;
-        case GUILD_LOW:
-            questFileName = @"guildlow.plist";
-            break;
-        default:
-            questFileName = @"guildhigh.plist";
-            break;
-    }
-    PlistManager *dataPass = [PlistManager getInstanceWithPlist:questFileName];
-    NSMutableArray *resultArr = [dataPass findAllQuestInfoForStar:stars];
-    MHPLog(@"QuestNumber: %ld", (unsigned long)resultArr.count);
-    return resultArr;
-}
-
-+ (NSMutableArray *)getWeaponInfomation{
-    PlistManager *dataPass = [PlistManager getInstanceWithPlist:@"weapon.plist"];
-    return [dataPass findAllWeaponInfo];
-}
-
-+ (void)refreshPlistData{
-    PlistManager *dataPass = [PlistManager getInstanceWithPlist:@"quest.plist"];
-    [dataPass reloadPlistFileAgain];
-}
-
-+ (void)refreshMonsterData{
-    PlistManager *dataPass = [PlistManager getInstanceWithPlist:@"Monster.plist"];
-    [dataPass reloadPlistFile];
-}
 
 #pragma mark - HunterProfile
 

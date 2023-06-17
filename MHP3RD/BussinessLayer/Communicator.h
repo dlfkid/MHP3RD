@@ -28,14 +28,6 @@ typedef NS_ENUM(NSUInteger, MONSTERTYPE) {
 @class HunterProfile;
 @interface Communicator : NSObject
 
-+ (NSMutableArray *)getQuestInfoMationForType:(MISSIONTYPE)questType andStars:(int)stars;
-
-+ (NSMutableArray *)getWeaponInfomation;
-
-+ (void)refreshPlistData;
-
-+ (void)refreshMonsterData;
-
 + (NSMutableArray *)getAllHunterProfile;
 
 + (HunterProfile *)getHunterpProfileByName:(NSString *)name;

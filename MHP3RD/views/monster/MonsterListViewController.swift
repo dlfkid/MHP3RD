@@ -51,6 +51,7 @@ final class MonsterListViewController: UIViewController {
         collectionView.snp.makeConstraints { make in
             make.edges.equalTo(0)
         }
+        navigationItem.title = "怪物图鉴"
     }
 }
 

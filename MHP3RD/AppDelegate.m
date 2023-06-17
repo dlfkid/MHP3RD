@@ -10,8 +10,6 @@
 
 #import <MHP3RD-Swift.h>
 #import "AboutViewController.h"
-#import "QuestViewController.h"
-#import "ArmouryViewController.h"
 #import "MapScrollerViewController.h"
 #import "MHPLogger.h"
 
