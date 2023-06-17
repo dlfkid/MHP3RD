@@ -78,34 +78,41 @@ struct CustomPlistReader: PlistDataReadable {
         return result
     }
     
-    func questList() -> [Quest] {
-        var result = [Quest]()
-        guard let quests = self.readPlistData() else {
-            return result
+    func questList() -> QuestCategory {
+        var questType: QuestType = .guildLow("集会所下位任务")
+        var baseStar = 1
+        switch type {
+        case .guildhigh:
+            questType = .guildHigh("集会所上位任务")
+            baseStar = 6
+        case .quest:
+            questType = .village("村任务")
+        default:
+            questType = .guildLow("集会所下位任务")
         }
-        for quest in quests {
-            /*
-             NSString *name = [info objectForKey:@"name"];
-             NSString *pic = [info objectForKey:@"pic"];
-             NSString *brief = [info objectForKey:@"brief"];
-             BOOL key = [(NSNumber *)[info objectForKey:@"key"] boolValue];
-             */
-            let name = (quest as! NSDictionary).object(forKey: "name") as! String
-            let pic = (quest as! NSDictionary).object(forKey: "pic") as! String
-            let brief = (quest as! NSDictionary).object(forKey: "brief") as! String
-            let key = (quest as! NSDictionary).object(forKey: "key") as! Bool
-            var questType: QuestType = .guildLow(CustomPlistType.guildlow.rawValue)
-            switch type {
-            case .guildhigh:
-                questType = .guildHigh(CustomPlistType.guildhigh.rawValue)
-            case .quest:
-                questType = .village(CustomPlistType.quest.rawValue)
-            default:
-                questType = .guildLow(CustomPlistType.guildlow.rawValue)
+        
+        guard let questSeriesCollection = self.readPlistData() else {
+            return QuestCategory(type: questType, questSeries: [])
+        }
+        var result = [QuestSeries]()
+        for (index, value) in questSeriesCollection.enumerated() {
+            guard let quests: NSArray = value as? NSArray else {
+                continue
             }
-            let questInfo = Quest(questName: name, questBrief: brief, questPic: pic, key: key, type: questType)
-            result.append(questInfo)
+            var questModels = [Quest]()
+            for quest in quests {
+                let name = (quest as! NSDictionary).object(forKey: "name") as! String
+                let pic = (quest as! NSDictionary).object(forKey: "pic") as! String
+                let brief = (quest as! NSDictionary).object(forKey: "brief") as! String
+                let key = (quest as! NSDictionary).object(forKey: "key") as! Bool
+                let questInfo = Quest(questName: name, questBrief: brief, questPic: pic, key: key)
+                questModels.append(questInfo)
+            }
+            // 构造这个星级的任务集合
+            let questSeries = QuestSeries(stars: UInt8(index + baseStar), quests: questModels)
+            result.append(questSeries)
         }
-        return result
+        let category = QuestCategory(type: questType, questSeries: result)
+        return category
     }
 }

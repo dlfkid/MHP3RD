@@ -15,9 +15,30 @@ enum QuestType {
 }
 
 struct Quest {
-    var questName: String
-    var questBrief: String
-    var questPic: String
-    var key: Bool
-    var type: QuestType
+    let questName: String
+    let questBrief: String
+    let questPic: String
+    let key: Bool
+}
+
+struct QuestSeries {
+    let stars: UInt8
+    let quests: [Quest]
+}
+
+struct QuestCategory {
+    let type: QuestType
+    
+    var typeName: String {
+        switch type {
+        case .guildHigh(let typeNameString1):
+            return typeNameString1
+        case .guildLow(let typeNameString2):
+            return typeNameString2
+        case .village(let typeNameString3):
+            return typeNameString3
+        }
+    }
+    
+    let questSeries: [QuestSeries]
 }

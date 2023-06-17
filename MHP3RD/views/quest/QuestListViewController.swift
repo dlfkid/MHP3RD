@@ -17,8 +17,11 @@ class QuestListViewController: UIViewController {
     
     var dataSource: [Quest]
     
-    init(quests: [Quest]) {
-        dataSource = quests
+    let displayTitle: String
+    
+    init(quests: QuestSeries) {
+        dataSource = quests.quests
+        displayTitle = String("\(quests.stars)星任务")
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -28,6 +31,8 @@ class QuestListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = displayTitle
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: questCollectionCellIdentifier)
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(0)
@@ -48,12 +53,18 @@ extension QuestListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: questCollectionCellIdentifier, for: indexPath)
+        cell.selectionStyle = .none
         let model = dataSource[indexPath.row]
         cell.textLabel?.text = model.questName
+        cell.textLabel?.textColor = model.key ? .red : .black
         return cell
     }
 }
 
 extension QuestListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = dataSource[indexPath.row]
+        let questBriefController = QuestBriefViewController(quest: model)
+        navigationController?.pushViewController(questBriefController, animated: true)
+    }
 }
