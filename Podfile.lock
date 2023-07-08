@@ -4,12 +4,20 @@ PODS:
     - LookinServer/Core (= 1.1.7)
   - LookinServer/Core (1.1.7)
   - Masonry (1.1.0)
+  - Reusable (4.1.2):
+    - Reusable/Storyboard (= 4.1.2)
+    - Reusable/View (= 4.1.2)
+  - Reusable/Storyboard (4.1.2)
+  - Reusable/View (4.1.2)
+  - SnapKit (5.6.0)
   - SwiftyBeaver (1.9.5)
 
 DEPENDENCIES:
   - iOSDeviceScreenAdapter (~> 1.0.2)
   - LookinServer
   - Masonry (~> 1.1.0)
+  - Reusable
+  - SnapKit
   - SwiftyBeaver
 
 SPEC REPOS:
@@ -18,14 +26,18 @@ SPEC REPOS:
     - Masonry
   trunk:
     - LookinServer
+    - Reusable
+    - SnapKit
     - SwiftyBeaver
 
 SPEC CHECKSUMS:
   iOSDeviceScreenAdapter: 359c45fa7398a736978d6432e2686c76f763b9a5
   LookinServer: 4ce0469b066871525611d009d8d16a7a50c23491
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftyBeaver: 84069991dd5dca07d7069100985badaca7f0ce82
 
-PODFILE CHECKSUM: f3e5d17f1988c8b17c55b56e0ab14a0b39f96487
+PODFILE CHECKSUM: fdd979311ec88b47a9ba87acdea40e8d9c6bba75
 
 COCOAPODS: 1.11.2

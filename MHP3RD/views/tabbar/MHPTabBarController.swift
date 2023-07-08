@@ -11,7 +11,7 @@ import UIKit
 class MHPTabBarController: UITabBarController {
     
     var subContriollers: [UIViewController] {
-        let map = MapScrollerViewController()
+        let map = PreviewMapViewController()
         let quest = QuestIndexViewController()
         let monster = MonsterListViewController()
         let armoury = WeaponListViewController()

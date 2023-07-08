@@ -1,15 +1,15 @@
 # Uncomment the next line to define a global platform for your project
+
+$LOAD_PATH << "."
+require "Podfile_defs.rb"
+
 platform :ios, '12.4'
 
 target 'MHP3RD' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
   # Pods for MHP3RD
-  pod 'Masonry', '~> 1.1.0', :inhibit_warnings => true
-  pod 'iOSDeviceScreenAdapter', '~> 1.0.2', :inhibit_warnings => true
-  pod 'SwiftyBeaver'
-  pod 'SnapKit'
-  pod 'LookinServer', :configurations => ['Debug']
+  pods_for_mhp3rd
 end
 
 post_install do |installer|

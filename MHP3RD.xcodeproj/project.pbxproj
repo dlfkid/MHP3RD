@@ -14,6 +14,10 @@
 		35446FE72A360F0400C69143 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35446FE62A360F0400C69143 /* Weapon.swift */; };
 		35446FE92A36129C00C69143 /* WeaponListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35446FE82A36129C00C69143 /* WeaponListViewController.swift */; };
 		35446FEB2A36140100C69143 /* WeaponInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35446FEA2A36140100C69143 /* WeaponInfoViewController.swift */; };
+		35733C982A594FD20069C3CD /* PreviewMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733C972A594FD20069C3CD /* PreviewMapViewController.swift */; };
+		35733C9A2A5950BF0069C3CD /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733C992A5950BF0069C3CD /* MapModel.swift */; };
+		35733C9C2A5951650069C3CD /* PreviewMapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733C9B2A5951650069C3CD /* PreviewMapCollectionViewCell.swift */; };
+		35733C9E2A5958CC0069C3CD /* DetailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733C9D2A5958CC0069C3CD /* DetailMapViewController.swift */; };
 		35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */; };
 		35BCA6272201829B00721CC9 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCA6262201829B00721CC9 /* AboutViewController.m */; };
 		35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */; };
@@ -59,6 +63,10 @@
 		35446FE62A360F0400C69143 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		35446FE82A36129C00C69143 /* WeaponListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponListViewController.swift; sourceTree = "<group>"; };
 		35446FEA2A36140100C69143 /* WeaponInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponInfoViewController.swift; sourceTree = "<group>"; };
+		35733C972A594FD20069C3CD /* PreviewMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMapViewController.swift; sourceTree = "<group>"; };
+		35733C992A5950BF0069C3CD /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		35733C9B2A5951650069C3CD /* PreviewMapCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMapCollectionViewCell.swift; sourceTree = "<group>"; };
+		35733C9D2A5958CC0069C3CD /* DetailMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapViewController.swift; sourceTree = "<group>"; };
 		35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHPTabBarController.swift; sourceTree = "<group>"; };
 		35BCA6252201829B00721CC9 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		35BCA6262201829B00721CC9 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -356,6 +364,10 @@
 				B474AB191E8A3009007CD59A /* MapDetailViewController.m */,
 				B474AB1A1E8A3009007CD59A /* MapScrollerViewController.h */,
 				B474AB1B1E8A3009007CD59A /* MapScrollerViewController.m */,
+				35733C972A594FD20069C3CD /* PreviewMapViewController.swift */,
+				35733C9D2A5958CC0069C3CD /* DetailMapViewController.swift */,
+				35733C992A5950BF0069C3CD /* MapModel.swift */,
+				35733C9B2A5951650069C3CD /* PreviewMapCollectionViewCell.swift */,
 			);
 			path = map;
 			sourceTree = "<group>";
@@ -499,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35733C9E2A5958CC0069C3CD /* DetailMapViewController.swift in Sources */,
 				352397302A3A136D0046A201 /* Quest.swift in Sources */,
 				35C5543D2A346BA10028D11E /* CustomPlistReader.swift in Sources */,
 				352397322A3CB37A0046A201 /* QuestBriefViewController.swift in Sources */,
@@ -509,6 +522,7 @@
 				B474AAF01E8A2F3C007CD59A /* CoreDataManager.m in Sources */,
 				B474AAF11E8A2F3C007CD59A /* HunterProfile.m in Sources */,
 				35BCA6272201829B00721CC9 /* AboutViewController.m in Sources */,
+				35733C982A594FD20069C3CD /* PreviewMapViewController.swift in Sources */,
 				B474AAC61E8A2DF4007CD59A /* AppDelegate.m in Sources */,
 				352397342A3D9A120046A201 /* QuestIndexViewController.swift in Sources */,
 				35C554442A34755B0028D11E /* Monster.swift in Sources */,
@@ -518,6 +532,7 @@
 				B474AB2A1E8A3009007CD59A /* OLDAboutViewController.m in Sources */,
 				B4EEE0BA1E9E0DD400B63A01 /* HP+CoreDataClass.m in Sources */,
 				B40F9F272000FB6700604D98 /* ProfileViewController.m in Sources */,
+				35733C9C2A5951650069C3CD /* PreviewMapCollectionViewCell.swift in Sources */,
 				B474AB2F1E8A3009007CD59A /* MapDetailViewController.m in Sources */,
 				B4EEE0BB1E9E0DD400B63A01 /* HP+CoreDataProperties.m in Sources */,
 				B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */,
@@ -525,6 +540,7 @@
 				35C554462A349AB90028D11E /* MonsterInfoViewController.swift in Sources */,
 				35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */,
 				35C554452A349AB40028D11E /* MonsterListViewController.swift in Sources */,
+				35733C9A2A5950BF0069C3CD /* MapModel.swift in Sources */,
 				35446FE92A36129C00C69143 /* WeaponListViewController.swift in Sources */,
 				B474AAF21E8A2F3C007CD59A /* HunterProfile.xcdatamodeld in Sources */,
 				3523972E2A3A10CA0046A201 /* QuestListViewController.swift in Sources */,
