@@ -43,8 +43,6 @@
 		B474AAFB1E8A2F3C007CD59A /* weapon.plist in Resources */ = {isa = PBXBuildFile; fileRef = B474AAED1E8A2F3C007CD59A /* weapon.plist */; };
 		B474AB081E8A2FE0007CD59A /* Communicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB071E8A2FE0007CD59A /* Communicator.m */; };
 		B474AB2A1E8A3009007CD59A /* OLDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB0D1E8A3009007CD59A /* OLDAboutViewController.m */; };
-		B474AB2F1E8A3009007CD59A /* MapDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB191E8A3009007CD59A /* MapDetailViewController.m */; };
-		B474AB301E8A3009007CD59A /* MapScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB1B1E8A3009007CD59A /* MapScrollerViewController.m */; };
 		B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48761D01F6B69EC00174FEA /* WebViewController.m */; };
 		B4EEE0AB1E8E587A00B63A01 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EEE0AA1E8E587A00B63A01 /* MapKit.framework */; };
 		B4EEE0AD1E94D30F00B63A01 /* guildlow.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EEE0AC1E94D30F00B63A01 /* guildlow.plist */; };
@@ -108,10 +106,6 @@
 		B474AB071E8A2FE0007CD59A /* Communicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Communicator.m; path = BussinessLayer/Communicator.m; sourceTree = "<group>"; };
 		B474AB0C1E8A3009007CD59A /* OLDAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLDAboutViewController.h; sourceTree = "<group>"; };
 		B474AB0D1E8A3009007CD59A /* OLDAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLDAboutViewController.m; sourceTree = "<group>"; };
-		B474AB181E8A3009007CD59A /* MapDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDetailViewController.h; sourceTree = "<group>"; };
-		B474AB191E8A3009007CD59A /* MapDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDetailViewController.m; sourceTree = "<group>"; };
-		B474AB1A1E8A3009007CD59A /* MapScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapScrollerViewController.h; sourceTree = "<group>"; };
-		B474AB1B1E8A3009007CD59A /* MapScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapScrollerViewController.m; sourceTree = "<group>"; };
 		B48761CF1F6B69EC00174FEA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		B48761D01F6B69EC00174FEA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		B4EEE0AA1E8E587A00B63A01 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -360,10 +354,6 @@
 		B474AB171E8A3009007CD59A /* map */ = {
 			isa = PBXGroup;
 			children = (
-				B474AB181E8A3009007CD59A /* MapDetailViewController.h */,
-				B474AB191E8A3009007CD59A /* MapDetailViewController.m */,
-				B474AB1A1E8A3009007CD59A /* MapScrollerViewController.h */,
-				B474AB1B1E8A3009007CD59A /* MapScrollerViewController.m */,
 				35733C972A594FD20069C3CD /* PreviewMapViewController.swift */,
 				35733C9D2A5958CC0069C3CD /* DetailMapViewController.swift */,
 				35733C992A5950BF0069C3CD /* MapModel.swift */,
@@ -515,7 +505,6 @@
 				352397302A3A136D0046A201 /* Quest.swift in Sources */,
 				35C5543D2A346BA10028D11E /* CustomPlistReader.swift in Sources */,
 				352397322A3CB37A0046A201 /* QuestBriefViewController.swift in Sources */,
-				B474AB301E8A3009007CD59A /* MapScrollerViewController.m in Sources */,
 				35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */,
 				B474AB081E8A2FE0007CD59A /* Communicator.m in Sources */,
 				35446FE72A360F0400C69143 /* Weapon.swift in Sources */,
@@ -533,7 +522,6 @@
 				B4EEE0BA1E9E0DD400B63A01 /* HP+CoreDataClass.m in Sources */,
 				B40F9F272000FB6700604D98 /* ProfileViewController.m in Sources */,
 				35733C9C2A5951650069C3CD /* PreviewMapCollectionViewCell.swift in Sources */,
-				B474AB2F1E8A3009007CD59A /* MapDetailViewController.m in Sources */,
 				B4EEE0BB1E9E0DD400B63A01 /* HP+CoreDataProperties.m in Sources */,
 				B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */,
 				35446FEB2A36140100C69143 /* WeaponInfoViewController.swift in Sources */,

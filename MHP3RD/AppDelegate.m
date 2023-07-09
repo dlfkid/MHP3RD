@@ -10,7 +10,6 @@
 
 #import <MHP3RD-Swift.h>
 #import "AboutViewController.h"
-#import "MapScrollerViewController.h"
 #import "MHPLogger.h"
 
 @interface AppDelegate ()
