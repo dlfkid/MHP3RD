@@ -18,37 +18,28 @@
 		35733C9A2A5950BF0069C3CD /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733C992A5950BF0069C3CD /* MapModel.swift */; };
 		35733C9C2A5951650069C3CD /* PreviewMapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733C9B2A5951650069C3CD /* PreviewMapCollectionViewCell.swift */; };
 		35733C9E2A5958CC0069C3CD /* DetailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733C9D2A5958CC0069C3CD /* DetailMapViewController.swift */; };
+		35733CA02A5C5F150069C3CD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733C9F2A5C5F150069C3CD /* AboutViewController.swift */; };
+		35733CA22A5C5F460069C3CD /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733CA12A5C5F460069C3CD /* MineViewController.swift */; };
 		35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */; };
-		35BCA6272201829B00721CC9 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCA6262201829B00721CC9 /* AboutViewController.m */; };
+		35BCA6272201829B00721CC9 /* MHPAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCA6262201829B00721CC9 /* MHPAboutViewController.m */; };
 		35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */; };
 		35C5543D2A346BA10028D11E /* CustomPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5543C2A346BA10028D11E /* CustomPlistReader.swift */; };
 		35C554442A34755B0028D11E /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C554432A34755B0028D11E /* Monster.swift */; };
 		35C554452A349AB40028D11E /* MonsterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5543E2A346FD20028D11E /* MonsterListViewController.swift */; };
 		35C554462A349AB90028D11E /* MonsterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5543A2A346ABA0028D11E /* MonsterInfoViewController.swift */; };
 		74D5DB8C765CB8F74D0C5B39 /* libPods-MHP3RD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADD17C9FAC4004BBC1536AF /* libPods-MHP3RD.a */; };
-		B40F9F272000FB6700604D98 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40F9F262000FB6700604D98 /* ProfileViewController.m */; };
 		B42CC25F1F3AB1E80023D05F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */; };
 		B42CC2611F3AB1FC0023D05F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */; };
 		B43F2C561E8B92C500E30853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43F2C551E8B92C500E30853 /* Assets.xcassets */; };
-		B43F2C5B1E8BB11400E30853 /* ProfileAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F2C5A1E8BB11400E30853 /* ProfileAddViewController.m */; };
 		B474AAC31E8A2DF4007CD59A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAC21E8A2DF4007CD59A /* main.m */; };
 		B474AAC61E8A2DF4007CD59A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAC51E8A2DF4007CD59A /* AppDelegate.m */; };
 		B474AAD11E8A2DF4007CD59A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B474AACF1E8A2DF4007CD59A /* LaunchScreen.storyboard */; };
-		B474AAF01E8A2F3C007CD59A /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAD91E8A2F3C007CD59A /* CoreDataManager.m */; };
-		B474AAF11E8A2F3C007CD59A /* HunterProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AADB1E8A2F3C007CD59A /* HunterProfile.m */; };
-		B474AAF21E8A2F3C007CD59A /* HunterProfile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B474AADC1E8A2F3C007CD59A /* HunterProfile.xcdatamodeld */; };
 		B474AAF31E8A2F3C007CD59A /* Monster.plist in Resources */ = {isa = PBXBuildFile; fileRef = B474AADE1E8A2F3C007CD59A /* Monster.plist */; };
-		B474AAF61E8A2F3C007CD59A /* ProfileDataAssistObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AAE41E8A2F3C007CD59A /* ProfileDataAssistObject.m */; };
 		B474AAF91E8A2F3C007CD59A /* quest.plist in Resources */ = {isa = PBXBuildFile; fileRef = B474AAEA1E8A2F3C007CD59A /* quest.plist */; };
 		B474AAFB1E8A2F3C007CD59A /* weapon.plist in Resources */ = {isa = PBXBuildFile; fileRef = B474AAED1E8A2F3C007CD59A /* weapon.plist */; };
-		B474AB081E8A2FE0007CD59A /* Communicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB071E8A2FE0007CD59A /* Communicator.m */; };
-		B474AB2A1E8A3009007CD59A /* OLDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B474AB0D1E8A3009007CD59A /* OLDAboutViewController.m */; };
-		B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48761D01F6B69EC00174FEA /* WebViewController.m */; };
 		B4EEE0AB1E8E587A00B63A01 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EEE0AA1E8E587A00B63A01 /* MapKit.framework */; };
 		B4EEE0AD1E94D30F00B63A01 /* guildlow.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EEE0AC1E94D30F00B63A01 /* guildlow.plist */; };
 		B4EEE0AF1E94D32800B63A01 /* guildhigh.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EEE0AE1E94D32800B63A01 /* guildhigh.plist */; };
-		B4EEE0BA1E9E0DD400B63A01 /* HP+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EEE0B71E9E0DD400B63A01 /* HP+CoreDataClass.m */; };
-		B4EEE0BB1E9E0DD400B63A01 /* HP+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EEE0B91E9E0DD400B63A01 /* HP+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,9 +56,11 @@
 		35733C992A5950BF0069C3CD /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		35733C9B2A5951650069C3CD /* PreviewMapCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMapCollectionViewCell.swift; sourceTree = "<group>"; };
 		35733C9D2A5958CC0069C3CD /* DetailMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapViewController.swift; sourceTree = "<group>"; };
+		35733C9F2A5C5F150069C3CD /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		35733CA12A5C5F460069C3CD /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHPTabBarController.swift; sourceTree = "<group>"; };
-		35BCA6252201829B00721CC9 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
-		35BCA6262201829B00721CC9 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		35BCA6252201829B00721CC9 /* MHPAboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPAboutViewController.h; sourceTree = "<group>"; };
+		35BCA6262201829B00721CC9 /* MHPAboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHPAboutViewController.m; sourceTree = "<group>"; };
 		35C2C5BE2A1107AC0029C1B3 /* MHP3RD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHP3RD-Bridging-Header.h"; sourceTree = "<group>"; };
 		35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyBeaverBridge.swift; path = addon/SwiftyBeaverBridge.swift; sourceTree = "<group>"; };
 		35C2C5C12A110DAB0029C1B3 /* MHPLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPLogger.h; sourceTree = "<group>"; };
@@ -80,42 +73,21 @@
 		B40BB5001FD4E9A700EBF57D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		B40F9F221FFF74CB00604D98 /* MHPDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPDefinition.h; sourceTree = "<group>"; };
 		B40F9F251FFF763100604D98 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		B40F9F262000FB6700604D98 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B43F2C551E8B92C500E30853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B43F2C591E8BB11400E30853 /* ProfileAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileAddViewController.h; sourceTree = "<group>"; };
-		B43F2C5A1E8BB11400E30853 /* ProfileAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileAddViewController.m; sourceTree = "<group>"; };
 		B474AABE1E8A2DF4007CD59A /* MHP3RD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHP3RD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B474AAC21E8A2DF4007CD59A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B474AAC41E8A2DF4007CD59A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B474AAC51E8A2DF4007CD59A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B474AAD01E8A2DF4007CD59A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B474AAD21E8A2DF4007CD59A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B474AAD81E8A2F3C007CD59A /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = DataBaseDao/CoreDataManager.h; sourceTree = "<group>"; };
-		B474AAD91E8A2F3C007CD59A /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = DataBaseDao/CoreDataManager.m; sourceTree = "<group>"; };
-		B474AADA1E8A2F3C007CD59A /* HunterProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HunterProfile.h; path = DataBaseDao/HunterProfile.h; sourceTree = "<group>"; };
-		B474AADB1E8A2F3C007CD59A /* HunterProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HunterProfile.m; path = DataBaseDao/HunterProfile.m; sourceTree = "<group>"; };
-		B474AADD1E8A2F3C007CD59A /* HunterProfile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HunterProfile.xcdatamodel; sourceTree = "<group>"; };
 		B474AADE1E8A2F3C007CD59A /* Monster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Monster.plist; path = DataBaseDao/Monster.plist; sourceTree = "<group>"; };
-		B474AAE31E8A2F3C007CD59A /* ProfileDataAssistObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileDataAssistObject.h; path = DataBaseDao/ProfileDataAssistObject.h; sourceTree = "<group>"; };
-		B474AAE41E8A2F3C007CD59A /* ProfileDataAssistObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileDataAssistObject.m; path = DataBaseDao/ProfileDataAssistObject.m; sourceTree = "<group>"; };
 		B474AAEA1E8A2F3C007CD59A /* quest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = quest.plist; path = DataBaseDao/quest.plist; sourceTree = "<group>"; };
 		B474AAED1E8A2F3C007CD59A /* weapon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = weapon.plist; path = DataBaseDao/weapon.plist; sourceTree = "<group>"; };
-		B474AB061E8A2FE0007CD59A /* Communicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Communicator.h; path = BussinessLayer/Communicator.h; sourceTree = "<group>"; };
-		B474AB071E8A2FE0007CD59A /* Communicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Communicator.m; path = BussinessLayer/Communicator.m; sourceTree = "<group>"; };
-		B474AB0C1E8A3009007CD59A /* OLDAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLDAboutViewController.h; sourceTree = "<group>"; };
-		B474AB0D1E8A3009007CD59A /* OLDAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLDAboutViewController.m; sourceTree = "<group>"; };
-		B48761CF1F6B69EC00174FEA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		B48761D01F6B69EC00174FEA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		B4EEE0AA1E8E587A00B63A01 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B4EEE0AC1E94D30F00B63A01 /* guildlow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = guildlow.plist; path = DataBaseDao/guildlow.plist; sourceTree = "<group>"; };
 		B4EEE0AE1E94D32800B63A01 /* guildhigh.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = guildhigh.plist; path = DataBaseDao/guildhigh.plist; sourceTree = "<group>"; };
-		B4EEE0B01E9C739300B63A01 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		B4EEE0B61E9E0DD400B63A01 /* HP+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HP+CoreDataClass.h"; sourceTree = "<group>"; };
-		B4EEE0B71E9E0DD400B63A01 /* HP+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HP+CoreDataClass.m"; sourceTree = "<group>"; };
-		B4EEE0B81E9E0DD400B63A01 /* HP+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HP+CoreDataProperties.h"; sourceTree = "<group>"; };
-		B4EEE0B91E9E0DD400B63A01 /* HP+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HP+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +161,6 @@
 				B43F2C551E8B92C500E30853 /* Assets.xcassets */,
 				35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */,
 				B474AB0A1E8A3009007CD59A /* views */,
-				B474AB091E8A2FE5007CD59A /* Communicator */,
 				B474AAFD1E8A2F52007CD59A /* DataBaseDao */,
 				B474AAC11E8A2DF4007CD59A /* Supporting Files */,
 				35C2C5BE2A1107AC0029C1B3 /* MHP3RD-Bridging-Header.h */,
@@ -205,47 +176,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B474AAE51E8A2F3C007CD59A /* propertyDataClass */ = {
-			isa = PBXGroup;
-			children = (
-				B4EEE0B61E9E0DD400B63A01 /* HP+CoreDataClass.h */,
-				B4EEE0B71E9E0DD400B63A01 /* HP+CoreDataClass.m */,
-				B4EEE0B81E9E0DD400B63A01 /* HP+CoreDataProperties.h */,
-				B4EEE0B91E9E0DD400B63A01 /* HP+CoreDataProperties.m */,
-			);
-			name = propertyDataClass;
-			path = DataBaseDao/propertyDataClass;
-			sourceTree = "<group>";
-		};
 		B474AAFD1E8A2F52007CD59A /* DataBaseDao */ = {
 			isa = PBXGroup;
 			children = (
-				B474AAFE1E8A2F60007CD59A /* CoreDataManager */,
 				B474AB051E8A2FC0007CD59A /* UnitClass */,
 				B474AB011E8A2F95007CD59A /* PlistManager */,
-				B474AB021E8A2F9B007CD59A /* ProfileDataAssistObject */,
-				B474AAE51E8A2F3C007CD59A /* propertyDataClass */,
 			);
 			name = DataBaseDao;
-			sourceTree = "<group>";
-		};
-		B474AAFE1E8A2F60007CD59A /* CoreDataManager */ = {
-			isa = PBXGroup;
-			children = (
-				B474AAD81E8A2F3C007CD59A /* CoreDataManager.h */,
-				B474AAD91E8A2F3C007CD59A /* CoreDataManager.m */,
-			);
-			name = CoreDataManager;
-			sourceTree = "<group>";
-		};
-		B474AAFF1E8A2F6B007CD59A /* HunterProfile */ = {
-			isa = PBXGroup;
-			children = (
-				B474AADC1E8A2F3C007CD59A /* HunterProfile.xcdatamodeld */,
-				B474AADA1E8A2F3C007CD59A /* HunterProfile.h */,
-				B474AADB1E8A2F3C007CD59A /* HunterProfile.m */,
-			);
-			name = HunterProfile;
 			sourceTree = "<group>";
 		};
 		B474AB001E8A2F86007CD59A /* MonsterInfo */ = {
@@ -262,15 +199,6 @@
 				35C5543C2A346BA10028D11E /* CustomPlistReader.swift */,
 			);
 			name = PlistManager;
-			sourceTree = "<group>";
-		};
-		B474AB021E8A2F9B007CD59A /* ProfileDataAssistObject */ = {
-			isa = PBXGroup;
-			children = (
-				B474AAE31E8A2F3C007CD59A /* ProfileDataAssistObject.h */,
-				B474AAE41E8A2F3C007CD59A /* ProfileDataAssistObject.m */,
-			);
-			name = ProfileDataAssistObject;
 			sourceTree = "<group>";
 		};
 		B474AB031E8A2FAA007CD59A /* QuestInfo */ = {
@@ -294,21 +222,11 @@
 		B474AB051E8A2FC0007CD59A /* UnitClass */ = {
 			isa = PBXGroup;
 			children = (
-				B474AAFF1E8A2F6B007CD59A /* HunterProfile */,
 				B474AB001E8A2F86007CD59A /* MonsterInfo */,
 				B474AB031E8A2FAA007CD59A /* QuestInfo */,
 				B474AB041E8A2FB2007CD59A /* WeaponInfo */,
 			);
 			name = UnitClass;
-			sourceTree = "<group>";
-		};
-		B474AB091E8A2FE5007CD59A /* Communicator */ = {
-			isa = PBXGroup;
-			children = (
-				B474AB061E8A2FE0007CD59A /* Communicator.h */,
-				B474AB071E8A2FE0007CD59A /* Communicator.m */,
-			);
-			name = Communicator;
 			sourceTree = "<group>";
 		};
 		B474AB0A1E8A3009007CD59A /* views */ = {
@@ -327,16 +245,10 @@
 		B474AB0B1E8A3009007CD59A /* about */ = {
 			isa = PBXGroup;
 			children = (
-				B474AB0C1E8A3009007CD59A /* OLDAboutViewController.h */,
-				B474AB0D1E8A3009007CD59A /* OLDAboutViewController.m */,
-				35BCA6252201829B00721CC9 /* AboutViewController.h */,
-				35BCA6262201829B00721CC9 /* AboutViewController.m */,
-				B48761CF1F6B69EC00174FEA /* WebViewController.h */,
-				B48761D01F6B69EC00174FEA /* WebViewController.m */,
-				B4EEE0B01E9C739300B63A01 /* ProfileViewController.h */,
-				B40F9F262000FB6700604D98 /* ProfileViewController.m */,
-				B43F2C591E8BB11400E30853 /* ProfileAddViewController.h */,
-				B43F2C5A1E8BB11400E30853 /* ProfileAddViewController.m */,
+				35BCA6252201829B00721CC9 /* MHPAboutViewController.h */,
+				35BCA6262201829B00721CC9 /* MHPAboutViewController.m */,
+				35733CA12A5C5F460069C3CD /* MineViewController.swift */,
+				35733C9F2A5C5F150069C3CD /* AboutViewController.swift */,
 			);
 			path = about;
 			sourceTree = "<group>";
@@ -502,35 +414,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				35733C9E2A5958CC0069C3CD /* DetailMapViewController.swift in Sources */,
+				35733CA22A5C5F460069C3CD /* MineViewController.swift in Sources */,
 				352397302A3A136D0046A201 /* Quest.swift in Sources */,
 				35C5543D2A346BA10028D11E /* CustomPlistReader.swift in Sources */,
 				352397322A3CB37A0046A201 /* QuestBriefViewController.swift in Sources */,
 				35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */,
-				B474AB081E8A2FE0007CD59A /* Communicator.m in Sources */,
 				35446FE72A360F0400C69143 /* Weapon.swift in Sources */,
-				B474AAF01E8A2F3C007CD59A /* CoreDataManager.m in Sources */,
-				B474AAF11E8A2F3C007CD59A /* HunterProfile.m in Sources */,
-				35BCA6272201829B00721CC9 /* AboutViewController.m in Sources */,
+				35BCA6272201829B00721CC9 /* MHPAboutViewController.m in Sources */,
+				35733CA02A5C5F150069C3CD /* AboutViewController.swift in Sources */,
 				35733C982A594FD20069C3CD /* PreviewMapViewController.swift in Sources */,
 				B474AAC61E8A2DF4007CD59A /* AppDelegate.m in Sources */,
 				352397342A3D9A120046A201 /* QuestIndexViewController.swift in Sources */,
 				35C554442A34755B0028D11E /* Monster.swift in Sources */,
-				B43F2C5B1E8BB11400E30853 /* ProfileAddViewController.m in Sources */,
 				B474AAC31E8A2DF4007CD59A /* main.m in Sources */,
-				B474AAF61E8A2F3C007CD59A /* ProfileDataAssistObject.m in Sources */,
-				B474AB2A1E8A3009007CD59A /* OLDAboutViewController.m in Sources */,
-				B4EEE0BA1E9E0DD400B63A01 /* HP+CoreDataClass.m in Sources */,
-				B40F9F272000FB6700604D98 /* ProfileViewController.m in Sources */,
 				35733C9C2A5951650069C3CD /* PreviewMapCollectionViewCell.swift in Sources */,
-				B4EEE0BB1E9E0DD400B63A01 /* HP+CoreDataProperties.m in Sources */,
-				B48761D11F6B69EC00174FEA /* WebViewController.m in Sources */,
 				35446FEB2A36140100C69143 /* WeaponInfoViewController.swift in Sources */,
 				35C554462A349AB90028D11E /* MonsterInfoViewController.swift in Sources */,
 				35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */,
 				35C554452A349AB40028D11E /* MonsterListViewController.swift in Sources */,
 				35733C9A2A5950BF0069C3CD /* MapModel.swift in Sources */,
 				35446FE92A36129C00C69143 /* WeaponListViewController.swift in Sources */,
-				B474AAF21E8A2F3C007CD59A /* HunterProfile.xcdatamodeld in Sources */,
 				3523972E2A3A10CA0046A201 /* QuestListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -727,20 +630,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B474AADC1E8A2F3C007CD59A /* HunterProfile.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B474AADD1E8A2F3C007CD59A /* HunterProfile.xcdatamodel */,
-			);
-			currentVersion = B474AADD1E8A2F3C007CD59A /* HunterProfile.xcdatamodel */;
-			name = HunterProfile.xcdatamodeld;
-			path = DataBaseDao/HunterProfile.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B474AAB61E8A2DF4007CD59A /* Project object */;
 }

@@ -27,6 +27,8 @@ class DetailMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
+        
         let mapImage = UIImage(named: mapModel.mapDetailImageName)
         let contentHeight = (mapImage?.size.height ?? 0) * 2
         let contentWidth = (mapImage?.size.width ?? 0) * 2

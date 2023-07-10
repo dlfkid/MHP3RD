@@ -1,5 +1,5 @@
 //
-//  AboutViewController.h
+//  MHPAboutViewController.h
 //  MHP3RD
 //
 //  Created by LeonDeng on 2019/1/30.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AboutViewController : UIViewController
+@interface MHPAboutViewController : UIViewController
 
 @end
 

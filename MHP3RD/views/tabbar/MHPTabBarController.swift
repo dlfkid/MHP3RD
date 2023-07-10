@@ -15,8 +15,8 @@ class MHPTabBarController: UITabBarController {
         let quest = QuestIndexViewController()
         let monster = MonsterListViewController()
         let armoury = WeaponListViewController()
-        let about = AboutViewController()
-        return [map, quest, monster, armoury, about]
+        let mine = MineViewController()
+        return [map, quest, monster, armoury, mine]
     }
 
     override func viewDidLoad() {

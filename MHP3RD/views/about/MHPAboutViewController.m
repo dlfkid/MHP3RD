@@ -1,22 +1,22 @@
 //
-//  AboutViewController.m
+//  MHPAboutViewController.m
 //  MHP3RD
 //
 //  Created by LeonDeng on 2019/1/30.
 //  Copyright © 2019 Ivan_deng. All rights reserved.
 //
 
-#import "AboutViewController.h"
+#import "MHPAboutViewController.h"
 
 // Helpers
 #import <Masonry/Masonry.h>
 #import "MHPLogger.h"
 
-@interface AboutViewController ()
+@interface MHPAboutViewController ()
 
 @end
 
-@implementation AboutViewController
+@implementation MHPAboutViewController
 
 - (void)loadView {
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectZero];

@@ -42,6 +42,7 @@ final class MonsterListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         readAllMonsterInfo()
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: monsterIdentifier)
         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: monsterHeaderIdentifier)
