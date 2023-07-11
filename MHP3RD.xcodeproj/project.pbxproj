@@ -20,6 +20,7 @@
 		35733C9E2A5958CC0069C3CD /* DetailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733C9D2A5958CC0069C3CD /* DetailMapViewController.swift */; };
 		35733CA02A5C5F150069C3CD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733C9F2A5C5F150069C3CD /* AboutViewController.swift */; };
 		35733CA22A5C5F460069C3CD /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733CA12A5C5F460069C3CD /* MineViewController.swift */; };
+		35733CA42A5DAD8F0069C3CD /* MineDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733CA32A5DAD8F0069C3CD /* MineDataModel.swift */; };
 		35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */; };
 		35BCA6272201829B00721CC9 /* MHPAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCA6262201829B00721CC9 /* MHPAboutViewController.m */; };
 		35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */; };
@@ -58,6 +59,7 @@
 		35733C9D2A5958CC0069C3CD /* DetailMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapViewController.swift; sourceTree = "<group>"; };
 		35733C9F2A5C5F150069C3CD /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		35733CA12A5C5F460069C3CD /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		35733CA32A5DAD8F0069C3CD /* MineDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineDataModel.swift; sourceTree = "<group>"; };
 		35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHPTabBarController.swift; sourceTree = "<group>"; };
 		35BCA6252201829B00721CC9 /* MHPAboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPAboutViewController.h; sourceTree = "<group>"; };
 		35BCA6262201829B00721CC9 /* MHPAboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHPAboutViewController.m; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				35BCA6252201829B00721CC9 /* MHPAboutViewController.h */,
 				35BCA6262201829B00721CC9 /* MHPAboutViewController.m */,
 				35733CA12A5C5F460069C3CD /* MineViewController.swift */,
+				35733CA32A5DAD8F0069C3CD /* MineDataModel.swift */,
 				35733C9F2A5C5F150069C3CD /* AboutViewController.swift */,
 			);
 			path = about;
@@ -419,6 +422,7 @@
 				35C5543D2A346BA10028D11E /* CustomPlistReader.swift in Sources */,
 				352397322A3CB37A0046A201 /* QuestBriefViewController.swift in Sources */,
 				35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */,
+				35733CA42A5DAD8F0069C3CD /* MineDataModel.swift in Sources */,
 				35446FE72A360F0400C69143 /* Weapon.swift in Sources */,
 				35BCA6272201829B00721CC9 /* MHPAboutViewController.m in Sources */,
 				35733CA02A5C5F150069C3CD /* AboutViewController.swift in Sources */,
