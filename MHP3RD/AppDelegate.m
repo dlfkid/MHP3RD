@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 
 #import <MHP3RD-Swift.h>
-#import "MHPAboutViewController.h"
 #import "MHPLogger.h"
 
 @interface AppDelegate ()

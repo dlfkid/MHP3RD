@@ -22,7 +22,6 @@
 		35733CA22A5C5F460069C3CD /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733CA12A5C5F460069C3CD /* MineViewController.swift */; };
 		35733CA42A5DAD8F0069C3CD /* MineDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35733CA32A5DAD8F0069C3CD /* MineDataModel.swift */; };
 		35978B9C2A2C84DB00327CFC /* MHPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */; };
-		35BCA6272201829B00721CC9 /* MHPAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCA6262201829B00721CC9 /* MHPAboutViewController.m */; };
 		35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */; };
 		35C5543D2A346BA10028D11E /* CustomPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5543C2A346BA10028D11E /* CustomPlistReader.swift */; };
 		35C554442A34755B0028D11E /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C554432A34755B0028D11E /* Monster.swift */; };
@@ -61,8 +60,6 @@
 		35733CA12A5C5F460069C3CD /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		35733CA32A5DAD8F0069C3CD /* MineDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineDataModel.swift; sourceTree = "<group>"; };
 		35978B9B2A2C84DB00327CFC /* MHPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHPTabBarController.swift; sourceTree = "<group>"; };
-		35BCA6252201829B00721CC9 /* MHPAboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPAboutViewController.h; sourceTree = "<group>"; };
-		35BCA6262201829B00721CC9 /* MHPAboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHPAboutViewController.m; sourceTree = "<group>"; };
 		35C2C5BE2A1107AC0029C1B3 /* MHP3RD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHP3RD-Bridging-Header.h"; sourceTree = "<group>"; };
 		35C2C5BF2A1107AC0029C1B3 /* SwiftyBeaverBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyBeaverBridge.swift; path = addon/SwiftyBeaverBridge.swift; sourceTree = "<group>"; };
 		35C2C5C12A110DAB0029C1B3 /* MHPLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPLogger.h; sourceTree = "<group>"; };
@@ -73,8 +70,6 @@
 		5EA6B0E79FCCDD49F63A9D77 /* Pods-MHP3RD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHP3RD.debug.xcconfig"; path = "Target Support Files/Pods-MHP3RD/Pods-MHP3RD.debug.xcconfig"; sourceTree = "<group>"; };
 		B40BB4FF1FD4E95C00EBF57D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B40BB5001FD4E9A700EBF57D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		B40F9F221FFF74CB00604D98 /* MHPDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPDefinition.h; sourceTree = "<group>"; };
-		B40F9F251FFF763100604D98 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B42CC25E1F3AB1E80023D05F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B42CC2601F3AB1FC0023D05F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B43F2C551E8B92C500E30853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,8 +150,6 @@
 			children = (
 				B474AAC41E8A2DF4007CD59A /* AppDelegate.h */,
 				B474AAC51E8A2DF4007CD59A /* AppDelegate.m */,
-				B40F9F221FFF74CB00604D98 /* MHPDefinition.h */,
-				B40F9F251FFF763100604D98 /* PrefixHeader.pch */,
 				35C2C5C12A110DAB0029C1B3 /* MHPLogger.h */,
 				B474AACF1E8A2DF4007CD59A /* LaunchScreen.storyboard */,
 				B474AAD21E8A2DF4007CD59A /* Info.plist */,
@@ -247,8 +240,6 @@
 		B474AB0B1E8A3009007CD59A /* about */ = {
 			isa = PBXGroup;
 			children = (
-				35BCA6252201829B00721CC9 /* MHPAboutViewController.h */,
-				35BCA6262201829B00721CC9 /* MHPAboutViewController.m */,
 				35733CA12A5C5F460069C3CD /* MineViewController.swift */,
 				35733CA32A5DAD8F0069C3CD /* MineDataModel.swift */,
 				35733C9F2A5C5F150069C3CD /* AboutViewController.swift */,
@@ -424,7 +415,6 @@
 				35C2C5C02A1107AC0029C1B3 /* SwiftyBeaverBridge.swift in Sources */,
 				35733CA42A5DAD8F0069C3CD /* MineDataModel.swift in Sources */,
 				35446FE72A360F0400C69143 /* Weapon.swift in Sources */,
-				35BCA6272201829B00721CC9 /* MHPAboutViewController.m in Sources */,
 				35733CA02A5C5F150069C3CD /* AboutViewController.swift in Sources */,
 				35733C982A594FD20069C3CD /* PreviewMapViewController.swift in Sources */,
 				B474AAC61E8A2DF4007CD59A /* AppDelegate.m in Sources */,
@@ -505,6 +495,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -552,6 +543,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -569,8 +561,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = VSH7W5Y66V;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/MHP3RD/PrefixHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MHP3RD/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -596,8 +588,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = VSH7W5Y66V;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/MHP3RD/PrefixHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MHP3RD/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
